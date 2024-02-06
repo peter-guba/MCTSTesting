@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<Behavior Name="UnitMicroAttackValue" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sequence>
+    <Behaviors>
+      <Selector>
+        <Behaviors>
+          <Sequence>
+            <Behaviors>
+              <GetEnemyUnitsInRange/>
+              <SelectBestValueUnit/>
+            </Behaviors>
+          </Sequence>
+          <Sequence>
+            <Behaviors>
+              <GetAllEnemyUnits/>
+              <SelectClosestUnit/>
+            </Behaviors>
+          </Sequence>
+        </Behaviors>
+      </Selector>
+      <Selector>
+        <Behaviors>
+          <Sequence>
+            <Behaviors>
+              <UnitIsTargetInRange/>
+              <UnitAttackAction/>
+            </Behaviors>
+          </Sequence>
+          <BehaviorReference ReferenceName="MoveToTarget"/>
+        </Behaviors>
+      </Selector>
+    </Behaviors>
+  </Sequence>
+</Behavior>

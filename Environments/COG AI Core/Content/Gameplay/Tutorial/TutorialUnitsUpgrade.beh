@@ -1,0 +1,157 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="TutorialUnitsUpgrade" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="Init" />
+          
+          <CreateGameSession SessionMode="Tutorial" />
+          <AddPlayer IsAIControlled="false" RaceId="0" Energy="10000" 
+                     UnitActions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock Extract ShieldRecharge Colonize Orbit MiniJump EstablishTradeRoute Cancel">
+            <Color>
+              <R>45</R>
+              <G>100</G>
+              <B>140</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>135</R>
+              <G>182</G>
+              <B>217</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+          <SetSessionPlayer PlayerIndex="0" />
+
+          <CreateGalaxy GalaxyType="Spiral" GalaxyBodyCount="1" GalaxyRadius="25" GalaxyBodyMinDistance="2" PlayersMinDistance="2">
+            <StarSystems>
+              <StarSystemData Name="Solar System" StarSpectralType="ClassG" StarName="Sun" StarTemperature="5778" StarMass="1" StarRadius="1" StarAge="4600000000" StarComfortZone="1.34" IsHomeSystem="true">
+                <Planets>
+                  <PlanetData Name="Mercury" Type="Iron" Distance="0.4" Mass="0.055" Radius="0.38" OrbitalPeriod="88" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Venus" Type="Desert" Distance="0.7" Mass="0.815" Radius="0.94" OrbitalPeriod="225" Population="0" BaseEnergy="0" PrefabName="Venus"/>
+                  <PlanetData Name="Earth" Type="Rocky" Distance="1" Mass="1" Radius="1" OrbitalPeriod="350" HexDistance="8" Population="1" BaseEnergy="10" ConstructionSlotsCount="10" IsHomePlanet="true"/>
+                  <PlanetData Name="Mars" Type="Desert" Distance="1.5" Mass="0.107" Radius="0.53" OrbitalPeriod="687" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Jupiter" Type="Gas" Distance="5.2" Mass="318" Radius="11.2" OrbitalPeriod="4333" Population="0" BaseEnergy="0" PrefabName="Jupiter"/>
+                  <PlanetData Name="Saturn" Type="Gas" Distance="9.5" Mass="95" Radius="9.4" OrbitalPeriod="10759" Population="0" BaseEnergy="0" PrefabName="Saturn"/>
+                  <PlanetData Name="Uranus" Type="Ice" Distance="19.2" Mass="14" Radius="4" OrbitalPeriod="30689" Population="0" BaseEnergy="0" PrefabName="Uranus"/>
+                  <PlanetData Name="Neptune" Type="Ice" Distance="30.1" Mass="17" Radius="3.88" OrbitalPeriod="60182" Population="0" BaseEnergy="0" PrefabName="Neptune"/>
+                </Planets>
+              </StarSystemData>
+            </StarSystems>            
+          </CreateGalaxy>
+         
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionStart" />
+
+          <SetHudVisibility Visibility="All" />
+          <SetInputState Enabled="true" />
+          <AcquireAllTechnologies />
+          <CreateTutorialWindow Top="300" Left="10" />
+          <SetPhase Phase="PhaseIntro" />          
+          
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseIntro" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialUnitsUpgrade_Intro_Text" NextPhase="PhaseSelectStarSystem" />          
+          <SetPhase Phase="Phase1_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectStarSystem" />
+          <SetCameraToStarSystem StarSystemName="Solar System" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialUnitsUpgrade_SelectStarSystem_Text" IsNextButtonVisible="false" />
+          <SetPhase Phase="PhaseSelectStarSystem_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectStarSystem_InProgress" />
+          <IsStarSystemView StarSystemName="Solar System" />
+          <AddUnit Name="Scout" PlayerIndex="0" FactoryItemId="3" Rank="1" Q="1" R="3"/>
+          <SetSelectedUnit UnitName="Scout" />
+          <SetPhase Phase="PhaseGettingRank" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseGettingRank" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialUnitsUpgrade_GettingRank_Text" IsNextButtonVisible="false" />
+          <SetHighlightWindow HighlightedElementName="xp" IsVisible="true" />
+          <SetPhase Phase="PhaseGettingRank_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseGettingRank_InProgress" />
+          <HasUnitRank UnitName="Scout" PlayerIndex="0" Rank="2" />
+          <SetPhase Phase="PhaseNewRank" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseNewRank" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialUnitsUpgrade_NewRank_Text" IsNextButtonVisible="false" />
+          <SetHighlightWindow HighlightedElementName="activateUpgrade" IsVisible="true" />
+          <SetPhase Phase="PhaseNewRank_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseNewRank_InProgress" />
+          <HasUnitUpgrade UnitName="Scout" PlayerIndex="0" UpgradeId="0" />
+          <SetHighlightWindow IsVisible="false" />
+          <SetPhase Phase="PhaseLimitedUse" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseLimitedUse" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialUnitsUpgrade_LimitedUse_Text" NextPhase="PhaseResearch" />
+          <SetPhase Phase="PhaseLimitedUse_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseResearch" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialUnitsUpgrade_Research_Text" NextPhase="SessionEnd" />
+          <SetPhase Phase="PhaseResearch_InProgress" />
+        </Behaviors>
+      </Sequence>
+        
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionEnd" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialUnitsUpgrade_SessionEnd_Text" NextPhase="BackToMenu" />          
+          <SetPhase Phase="SessionEnd_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="BackToMenu" />
+          <BackToMainMenu />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

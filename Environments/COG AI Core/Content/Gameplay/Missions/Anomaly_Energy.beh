@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Anomaly_Energy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <IsAssignedState />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>          
+          <FinishMission />
+          <GiveRandomEnergyReward MinTotalPercentage="1" MaxTotalPercentage="5"/>
+        </Behaviors>
+      </Sequence>
+      
+    </Behaviors>
+  </Selector>
+</Behavior>

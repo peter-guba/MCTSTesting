@@ -1,0 +1,105 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainDiplomacy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+      <PlayerHasAnyRelation />
+      <PlayerGetAllPlayerRelations />
+
+      <Succeeder>
+        <RepeatUntilFail>
+          <Sequence>
+            <Behaviors>
+
+              <PlayerUpdateRelationsValue InfluenceRelationChange="1" TechnologyRelationChange="-1" GlobalTradeRelationChange="1"
+                                          OpenBordersRelationChange="0" CloseBordersRelationChange="-1" OpenEmbassyRelationChange="1" />
+
+              <Succeeder>
+                <PlayerDiplomacyBehavior />
+              </Succeeder>
+
+              <Succeeder>
+                <Sequence>
+                  <Behaviors>
+                    <Inverter>
+                      <PlayerIsDiplomaticActionAvailable Action="BordersControl" />
+                    </Inverter>
+
+                    <PlayerAcquireDiplomacyItem DiplomacyItemId="0" />
+                  </Behaviors>
+                </Sequence>
+              </Succeeder>
+
+              <Succeeder>
+                <Sequence>
+                  <Behaviors>
+                    <PlayerIsDiplomaticActionAvailable Action="BordersControl" />
+
+                    <Inverter>
+                      <PlayerHasDeclaredWarRelation />
+                    </Inverter>
+
+                    <PlayerIsHostileRelation />
+
+                    <PlayerRelationSetDiplomaticAction Action="BordersControl" State="false"/>
+                  </Behaviors>
+                </Sequence>
+              </Succeeder>
+
+              <Succeeder>
+                <Sequence>
+                  <Behaviors>
+                    <PlayerIsDiplomaticActionAvailable Action="BordersControl" />
+
+                    <PlayerIsFriendlyRelation />
+
+                    <PlayerRelationSetDiplomaticAction Action="BordersControl" State="true"/>
+                  </Behaviors>
+                </Sequence>
+              </Succeeder>
+
+              <Succeeder>
+                <Sequence>
+                  <Behaviors>
+                    <PlayerHasWarScoreBelowValue WarScore="-100"/>
+
+                    <PlayerRelationMakePeace />
+                  </Behaviors>
+                </Sequence>
+              </Succeeder>
+
+              <Succeeder>
+                <Sequence>
+                  <Behaviors>
+                    <PlayerIsAtWarRelation />
+
+                    <PlayerRelationDeclareWar />
+                  </Behaviors>
+                </Sequence>
+              </Succeeder>
+
+              <Succeeder>
+                <Sequence>
+                  <Behaviors>
+                    <Inverter>
+                      <PlayerHasDeclaredWarRelation />
+                    </Inverter>
+                    <Inverter>
+                      <PlayerIsAtWar />
+                    </Inverter>
+
+                    <PlayerHasRelationBelowValue RelationValue="-199"/>
+                    <PlayerRelationDeclareWar />
+                  </Behaviors>
+                </Sequence>
+              </Succeeder>              
+
+              <PlayerNextPlayerRelations />
+            </Behaviors>
+          </Sequence>
+        </RepeatUntilFail>
+      </Succeeder>
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

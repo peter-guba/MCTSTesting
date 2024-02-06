@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+   <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNoTrace|AnyCPU'">
+    <OutputPath>bin\ReleaseNoTrace\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>true</Optimize>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EmptyKeys.Strategy">
+      <HintPath>bin\Debug\EmptyKeys.Strategy.dll</HintPath>
+    </Reference>
+    <Reference Include="EmptyKeys.Strategy.UserInterface">
+      <HintPath>bin\Debug\EmptyKeys.Strategy.UserInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="EmptyKeys.UserInterface">
+      <HintPath>bin\Debug\EmptyKeys.UserInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="EmptyKeys.UserInterface.Core">
+      <HintPath>bin\Debug\EmptyKeys.UserInterface.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>bin\Debug\protobuf-net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMS\CMS.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.410601">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Components\ConditionsUnit\Conditional.cs" />
+  </ItemGroup>
+  <PropertyGroup />
+</Project>

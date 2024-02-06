@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Environment>
+  <Radius>66</Radius> <!-- How big should the environment be -->
+  <Sun Q="0" R="0" /> <!-- Where should be the sun placed-->
+  <AsteroidBelts>
+    <!-- Since there are many asteroids we use random generated belts.
+    Density specifies probability that a hex in belt will be an asteroid.
+    Seed is passed to random generator to ensure belts will be the same each time -->
+    <AsteroidBelt CenterQ="0" CenterR="0" Radius="10" Width="2" Density="0.8" Seed="1" />
+    <AsteroidBelt CenterQ="0" CenterR="0" Radius="12" Width="2" Density="0.5" Seed="1" />
+  </AsteroidBelts>
+  <!-- <Planets> ... </Planets> Not implemented yet -->
+  <EnvTypes>
+    <!-- Other obstacles can be specified here 
+    Double cost means that to pass through the hex, 
+    unit will need to use 2x the energy to pass through a regular hex. -->
+    <EnvType Type="Impassable" Q="3" R="3" />
+    <EnvType Type="DoubleCost" Q="2" R="3" />
+  </EnvTypes>
+</Environment>

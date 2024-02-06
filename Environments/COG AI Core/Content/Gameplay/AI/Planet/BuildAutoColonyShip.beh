@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BuildAutoColonyShip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>      
+
+      <Sequence>
+        <Behaviors>          
+
+          <PlanetCanBuildColonyShip />
+          <Inverter>
+            <PlanetIsBuilding />
+          </Inverter>          
+          <PlanetBuildFactoryItem ItemTypeName="ColonyShip" BehaviorName="AutoColonize"/>
+
+          <PlanetResetBehavior />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Sequence>
+
+</Behavior>

@@ -1,0 +1,193 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainCoreBalanced" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <FindPlanetForBuild DoPlanetBuildingCheck="true" />
+
+            <Selector>
+              <Behaviors>
+
+                <Sequence>
+                  <Behaviors>
+                    <PlayerIsAtWar />
+                    
+                    <DecisionTree>
+                      <Branch Name="Root" GoalPercentage="1" >
+                        <Children>
+                          <Branch Name="Agressive" GoalPercentage="0.8" >
+                            <Children>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Scout" BehaviorName="UnitBrainAggressive" GoalPercentage="0.1"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Destroyer" BehaviorName="UnitBrainAggressive" GoalPercentage="0.4"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Battleship" BehaviorName="UnitBrainAggressive" GoalPercentage="0.2"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Frigate" BehaviorName="UnitBrainAggressive" GoalPercentage="0.3"/>
+                            </Children>
+                          </Branch>
+                          
+                          <Branch Name="Defensive" GoalPercentage="0.2" >
+                            <Children>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Scout" BehaviorName="UnitBrainDefensive" GoalPercentage="0.2"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Destroyer" BehaviorName="UnitBrainDefensive" GoalPercentage="0.4"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Frigate" BehaviorName="UnitBrainDefensive" GoalPercentage="0.4"/>                              
+                            </Children>
+                          </Branch>                          
+                        </Children>
+                      </Branch>
+                    </DecisionTree>
+                    
+                  </Behaviors>
+                </Sequence>
+
+                <Sequence>
+                  <Behaviors>
+                    <PlayerHasEnemy />
+
+                    <DecisionTree>
+                      <Branch Name="Root" GoalPercentage="1" >
+                        <Children>
+                          <Branch Name="Agressive" GoalPercentage="0.6" >
+                            <Children>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Scout" BehaviorName="UnitBrainAggressive" GoalPercentage="0.1"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Destroyer" BehaviorName="UnitBrainAggressive" GoalPercentage="0.4"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Battleship" BehaviorName="UnitBrainAggressive" GoalPercentage="0.2"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Frigate" BehaviorName="UnitBrainAggressive" GoalPercentage="0.3"/>
+                            </Children>
+                          </Branch>
+
+                          <Branch Name="Defensive" GoalPercentage="0.4" >
+                            <Children>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Scout" BehaviorName="UnitBrainDefensive" GoalPercentage="0.4"/>
+                              <PlayerUnitDecisionLeaf UnitTypeName="Destroyer" BehaviorName="UnitBrainDefensive" GoalPercentage="0.6"/>
+                            </Children>
+                          </Branch>
+                        </Children>
+                      </Branch>
+                    </DecisionTree>
+
+                  </Behaviors>
+                </Sequence>
+                
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <Branch Name="Defensive" GoalPercentage="0.9" >
+                        <Children>
+                          <PlayerUnitDecisionLeaf UnitTypeName="Scout" BehaviorName="UnitBrainDefensive" GoalPercentage="0.1"/>
+                          <PlayerUnitDecisionLeaf UnitTypeName="Destroyer" BehaviorName="UnitBrainDefensive" GoalPercentage="0.2"/>
+                          <PlayerUnitDecisionLeaf UnitTypeName="Battleship" BehaviorName="UnitBrainDefensive" GoalPercentage="0.3"/>
+                          <PlayerUnitDecisionLeaf UnitTypeName="Frigate" BehaviorName="UnitBrainDefensive" GoalPercentage="0.4"/>
+                        </Children>
+                      </Branch>
+                      <Branch Name="Agressive" GoalPercentage="0.1" >
+                        <Children>
+                          <PlayerUnitDecisionLeaf UnitTypeName="Scout" BehaviorName="UnitBrainAggressive" GoalPercentage="0.4"/>
+                          <PlayerUnitDecisionLeaf UnitTypeName="Destroyer" BehaviorName="UnitBrainAggressive" GoalPercentage="0.6"/>
+                        </Children>
+                      </Branch>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+                
+              </Behaviors>
+            </Selector>
+
+            <PlayerSetPlanetBehavior BehaviorName="BuildUnits" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <OptionSelector>
+        <Behaviors>
+
+          <Option>
+            <Considerations>
+              <DecayCurve Max ="1" K="3">
+                <ExplorationRatioValue Ratio="8" />
+              </DecayCurve>
+            </Considerations>
+
+            <Sequence>
+              <Behaviors>
+                <FindPlanetForBuild />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <Branch Name="ExploreUnits" GoalPercentage="1" >
+                        <Children>
+                          <PlayerUnitDecisionLeaf UnitTypeName="Scout" BehaviorName="ExploreGalaxy" GoalPercentage="0.7"/>
+                          <PlayerUnitDecisionLeaf UnitTypeName="Scout" BehaviorName="ExploreEmptySpace" GoalPercentage="0.3"/>
+                        </Children>
+                      </Branch>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+                <PlayerSetPlanetBehavior BehaviorName="BuildUnits" />
+              </Behaviors>
+            </Sequence>
+
+          </Option>
+
+          <Option>
+
+            <Considerations>
+              <LogCurve Middle="5" Denominator="10">
+                <ColonizationRatioValue Ratio="2" />
+              </LogCurve>
+            </Considerations>
+
+            <Sequence>
+              <Behaviors>
+                <FindPlanetForBuildColonyShip DistanceSystemUtilityCoefficient="100"/>
+                <PlayerSetPlanetBehavior BehaviorName="BuildColonyShip" />
+              </Behaviors>
+            </Sequence>
+
+          </Option>
+
+          <Option>
+            <Considerations>
+              <DecayCurve Max ="20" K="3">
+                <PlayerValue Property="EnergyIncome" />
+              </DecayCurve>
+            </Considerations>
+
+            <Sequence>
+              <Behaviors>
+                <FindPlanetWithMinValue PlanetValueType="Energy" />
+                <FindPlanetUpgradeToBuild UpgradeModifier="Energy" />
+                <PlayerSetPlanetBehavior BehaviorName="PlanetEnergy" />
+              </Behaviors>
+            </Sequence>
+
+          </Option>
+
+          <Option>
+            <Considerations>
+              <DecayCurve Max="30" K="0.5">
+                <ProductionAverageValue />
+              </DecayCurve>
+            </Considerations>
+
+            <Sequence>
+              <Behaviors>
+                <FindPlanetWithMinValue PlanetValueType="Production" />
+                <FindPlanetUpgradeToBuild UpgradeModifier="Production" />
+                <PlayerSetPlanetBehavior BehaviorName="PlanetProduction" />
+              </Behaviors>
+            </Sequence>
+
+          </Option>
+
+        </Behaviors>
+      </OptionSelector>
+
+    </Behaviors>
+  </Sequence>
+
+</Behavior>

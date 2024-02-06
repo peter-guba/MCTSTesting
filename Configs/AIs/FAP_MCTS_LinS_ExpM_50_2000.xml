@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AI>
+ <FapMcts
+  MaxPlayouts="2000"
+  NumOfSegments="50"
+  ExponentialSegmentation="false"
+  ExponentialMultiplication="true"
+  PlayoutRoundLimit="100"
+ >
+
+  <Script>NOKAV</Script>
+  <Script>Kiter</Script>
+
+</FapMcts>
+</AI>

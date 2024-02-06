@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainDefensive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <UnitIsHullBelow HullPercentage="0.25" />
+          </Inverter>
+
+          <Inverter>
+            <UnitIsOnOrbit />
+          </Inverter>
+          <FindPlanetUnderSiege />
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <UnitCanWarp />
+                  <UnitIsInPlanetSystem />
+                  <UnitMiniWarpAction />
+                </Behaviors>
+              </Sequence>
+
+              <Sequence>
+                <Behaviors>
+                  <UnitIsInPlanetSystem />
+                  <UnitIsInEnvTargetPosition />
+                  <UnitCanOrbit />
+                  <UnitEnterOrbitAction />
+                </Behaviors>
+              </Sequence>              
+
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <UnitIsOnOrbit />
+          </Inverter>
+          <UnitIsHullBelow HullPercentage="0.25" />
+          <UnitSetBehavior BehaviorName="UnitBrainRepair" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitIsOnOrbit />
+          <Inverter>
+            <UnitIsPlanetOwned />
+          </Inverter>
+
+          <UnitLeaveOrbitAction />
+        </Behaviors>
+      </Sequence>
+
+      <BehaviorReference ReferenceName="SearchAndAttack" />
+
+      <Selector>
+        <Behaviors>          
+
+          <Sequence>
+            <Behaviors>
+              <Inverter>
+                <UnitIsMoving />
+              </Inverter>
+              <UnitIsInGalaxyEnvironment />
+              <FindClosestFriendlySystem />
+              <FindPathToEnvTarget />
+              <UnitMoveAction />
+            </Behaviors>
+          </Sequence>
+
+          <BehaviorReference ReferenceName="Explore" />
+
+        </Behaviors>
+      </Selector>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

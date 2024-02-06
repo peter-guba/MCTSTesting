@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StarSystemConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  DaysPerTurn="30"
+  HexDistanceCoeficient="40"
+  AsteroidSizeCoeficient="5"
+  MinPlanetsPerSystem="3"
+  MaxPlanetsPerSystem="10"
+  MinHexesFromStar="4"
+  SystemMargin="1.1"
+  MinMapRadius="30"
+  MinAsteroidMass="0.1"
+  MaxAsteroidMass="0.4"
+  AsteroidPropability="0.8"
+  MinHexesBetweenPlanets="3" />

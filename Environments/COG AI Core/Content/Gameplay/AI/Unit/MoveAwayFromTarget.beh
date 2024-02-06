@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="MoveAwayFromTarget" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <UnitHasTarget />
+      <UnitIsTargetInRange />      
+      <Inverter>
+        <UnitIsMoving />
+      </Inverter>
+      <FindPathAwayFromTarget />
+      <UnitMoveAction />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

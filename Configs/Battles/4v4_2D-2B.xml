@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SymmetricBattle>
+  <Environment Id="DefaultEnv" />
+  <Player Index="0">
+    <Units>
+      <Unit Id="battleship_0" Q="-11" R="2" />
+	  <Unit Id="battleship_0" Q="-8" R="1" />
+	  <Unit Id="destroyer_0" Q="-9" R="-1" />
+	  <Unit Id="destroyer_0" Q="-11" R="-2" />
+    </Units>
+  </Player>
+</SymmetricBattle>

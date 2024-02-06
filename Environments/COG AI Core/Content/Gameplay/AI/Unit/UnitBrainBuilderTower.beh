@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainBuilderTower" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <PlayerHasEnergyForUnitMaintenance ItemTypeName="DefenseTowerUnit"/>
+          </Inverter>
+
+          <UnitResetBehavior />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitIsInEnvTargetPosition />
+
+          <PlayerHasEnergyForUnitMaintenance ItemTypeName="DefenseTowerUnit"/>
+          <UnitCanBuild />
+          <UnitResetBehavior />
+          <UnitBuildAction UnitTypeName="DefenseTowerUnit" UnitBehaviorName="UnitBrainTower" />
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <UnitCanMove />
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+          <FindDefensivePosition />
+          <Inverter>
+            <UnitIsInEnvTargetPosition />
+          </Inverter>
+          <FindPathToEnvTarget />
+          <UnitMoveAction />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

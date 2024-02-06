@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Tech122" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <HasAcquiredTechnology TechnologyId="121"/>
+      <HasAcquiredTechnology TechnologyId="120"/>
+      <HasAcquiredTechnology TechnologyId="123"/>      
+      <AddFactoryItem Id="30"/>      
+    </Behaviors>
+  </Sequence>
+</Behavior>

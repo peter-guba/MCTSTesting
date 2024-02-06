@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainBuilderMiner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <PlayerHasEnergyForUnitMaintenance ItemTypeName="ResourcesExtractor"/>
+          </Inverter>
+
+          <UnitResetBehavior />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitIsInEnvTargetPosition />
+
+          <PlayerHasEnergyForUnitMaintenance ItemTypeName="ResourcesExtractor"/>
+          <UnitCanBuild />
+          <UnitBuildAction UnitTypeName="ResourcesExtractor" UnitBehaviorName="UnitBrainMiner" />
+          <UnitResetBehavior />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitCanMove />
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+
+          <Selector>
+            <Behaviors>
+              <FindAsteroid EnableIsExtractedCheck="true" />
+
+              <Inverter>
+                <UnitResetBehavior />
+              </Inverter>
+            </Behaviors>
+          </Selector>
+
+          <Inverter>
+            <UnitIsInEnvTargetPosition />
+          </Inverter>
+          <FindPathToEnvTarget />
+          <UnitMoveAction />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

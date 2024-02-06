@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="PlanetBalanced" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <BehaviorReference ReferenceName="MoveUnitFromOrbit" />
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+
+            <PlanetIsUnderSiege />
+            <PlanetSetBehavior BehaviorName="PlanetSiege" />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <Inverter>
+              <PlanetHasConstructionSlot />
+            </Inverter>
+
+            <PlanetSetBehavior BehaviorName="PlanetNeutral" />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <BehaviorReference ReferenceName="BuildBalanced" />
+
+    </Behaviors>
+  </Sequence>
+
+</Behavior>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Tech100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <AddPlanetBonus PlanetUpgradeType="Resources" BonusValue="1" IsFlatBonus="true" />
+      <AddPlanetBonus PlanetUpgradeType="Production" BonusValue="1" IsFlatBonus="true" />
+      <AddPlanetBonus PlanetUpgradeType="Energy" BonusValue="1" IsFlatBonus="true" />
+      <AddPlayerMaxEnergy Increment="10000" />
+    </Behaviors>
+  </Sequence>
+</Behavior>

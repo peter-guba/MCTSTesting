@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="ExploreEmptySpace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <UnitIsInGalaxyEnvironment />
+          </Inverter>
+          <FindUnscannedAnomaly />
+          <BehaviorReference ReferenceName="ScanAnomaly" />
+          
+        </Behaviors>
+      </Sequence>
+
+      <BehaviorReference ReferenceName="JumpAway" />
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+
+          <Succeeder>
+            <Sequence>
+              <Behaviors>
+
+                <UnitIsAtEmptySpace />
+                <UnitCanExplore />
+                <UnitExploreAction />
+
+              </Behaviors>
+            </Sequence>
+          </Succeeder>
+
+          <UnitIsInGalaxyEnvironment />
+          <FindClosestFriendlySystem />
+          <FindEmptySpaceEnvTarget RadiusDenominator="3"/>
+          <UnitMoveAction />
+
+        </Behaviors>
+      </Sequence>           
+
+    </Behaviors>
+  </Selector>
+</Behavior>

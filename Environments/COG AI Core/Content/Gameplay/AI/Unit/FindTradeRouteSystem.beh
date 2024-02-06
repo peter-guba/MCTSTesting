@@ -1,0 +1,75 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="FindTradeRouteSystem" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+
+          <FindClosestTradeSystem />
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <Inverter>
+                    <UnitIsInGalaxyEnvironment />
+                  </Inverter>
+                  <UnitCanWarp />
+                  <UnitWarpJumpAction />
+                  <Inverter>
+                    <UnitIsInEnvTargetPosition />
+                  </Inverter>
+                  <FindPathToEnvTarget />
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitIsInGalaxyEnvironment />
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <Inverter>
+                    <UnitIsInEnvTargetPosition />
+                  </Inverter>
+                  <FindPathToEnvTarget />
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+              <Sequence>
+                <Behaviors>
+                  <BehaviorReference ReferenceName="Explore" />
+                  <UnitResetBehavior />
+                </Behaviors>
+              </Sequence>
+              
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+
+</Behavior>

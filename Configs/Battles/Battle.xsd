@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+  attributeFormDefault="unqualified" 
+  elementFormDefault="qualified" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="../SchemaTypes/Types.xsd" />
+  
+  <xs:element name="Battle" type="Battle" />
+  <xs:element name="SymmetricBattle" type="SymmetricBattle" />
+
+  <xs:complexType name="EnvironmentRef">
+    <xs:attribute name="Id" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="Player">
+    <xs:sequence>
+      <xs:element name="Units">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Unit">
+              <xs:complexType>
+                <xs:attribute name="Id" type="xs:string" use="required" />
+                <xs:attribute name="Q" type="xs:short" use="required" />
+                <xs:attribute name="R" type="xs:short" use="required" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Index" type="PlayerIndex" use="required" />
+  </xs:complexType>
+  
+  <xs:complexType name="Battle">
+      <xs:sequence>
+        <xs:element name="Environment" type="EnvironmentRef" />
+        <xs:element name="Player" minOccurs="2" maxOccurs="2" type="Player" />
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SymmetricBattle">
+    <xs:sequence>
+      <xs:element name="Environment" type="EnvironmentRef" />
+      <xs:element name="Player" type="Player" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

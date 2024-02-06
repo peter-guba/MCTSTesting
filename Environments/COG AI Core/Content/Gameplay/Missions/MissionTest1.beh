@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="MissionTest1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+      
+      <Sequence>
+        <Behaviors>
+          <IsAssignedState />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <ReachAttributeOnPlanets Attribute="Energy" AttributeValue="10" Count="1"/>
+          <FinishMission />          
+        </Behaviors>
+      </Sequence>
+      
+    </Behaviors>
+  </Selector>
+</Behavior>

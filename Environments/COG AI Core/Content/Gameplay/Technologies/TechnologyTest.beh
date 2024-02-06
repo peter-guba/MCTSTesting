@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="TechnologyTest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <AddFactoryItem Id="1" />      
+      <AddPlanetBonus PlanetUpgradeType="Energy" BonusValue="100">        
+      </AddPlanetBonus>
+      <AddUnitAction Action="DoNothing" />
+    </Behaviors>
+  </Sequence>
+</Behavior>

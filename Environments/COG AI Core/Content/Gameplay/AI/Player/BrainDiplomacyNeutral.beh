@@ -1,0 +1,213 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainDiplomacyNeutral" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+
+      <!-- ******************** Proposition Decisions ******************** -->
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <PlayerHasDiplomaticProposition Action="MapExchange" />
+
+            <Inverter>
+              <Sequence>
+                <Behaviors>
+                  <PlayerIsFriendlyRelation />
+                  <PlayerRelationSetDiplomaticAction Action="MapExchange" State="true" IsProposition="true"/>
+                  <PlayerRelationAcceptProposition />
+                </Behaviors>
+              </Sequence>
+            </Inverter>
+
+            <PlayerRelationDeclineProposition />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <PlayerHasDiplomaticProposition Action="Research" />
+
+            <Inverter>
+              <Sequence>
+                <Behaviors>
+                  <PlayerIsFriendlyRelation />
+
+                  <PlayerRelationSetDiplomaticAction Action="Research" State="true" IsProposition="true"/>
+                  <PlayerRelationAcceptProposition />
+                </Behaviors>
+              </Sequence>
+            </Inverter>
+
+            <PlayerRelationDeclineProposition />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <!-- ******************** Propositions ******************** -->
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <PlayerIsDiplomaticActionAvailable Action="MapExchange" />
+
+            <PlayerIsFriendlyRelation />
+            <PlayerRelationProposeAction DiplomaticAction="MapExchange" />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <PlayerIsDiplomaticActionAvailable Action="Research" />
+
+            <PlayerIsFriendlyRelation />
+            <PlayerHasRelationAboveValue RelationValue="175" />
+            <PlayerRelationProposeAction DiplomaticAction="Research" />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <PlayerIsDiplomaticActionAvailable Action="DefensivePact" />
+
+            <PlayerIsFriendlyRelation />
+            <PlayerHasRelationAboveValue RelationValue="199" />
+            <PlayerRelationProposeAction DiplomaticAction="DefensivePact" />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <!-- ******************** Diplomatic Actions ******************** -->
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <PlayerIsDiplomaticActionAvailable Action="Friendship" />
+
+            <Succeeder>
+              <Sequence>
+                <Behaviors>
+                  <PlayerHasRelationAboveValue RelationValue="50" />
+                  <PlayerRelationSetDiplomaticAction Action="Friendship" State="true"/>
+                </Behaviors>
+              </Sequence>
+            </Succeeder>
+
+            <Succeeder>
+              <Sequence>
+                <Behaviors>
+                  <PlayerHasRelationBelowValue RelationValue="-25" />
+                  <PlayerRelationSetDiplomaticAction Action="Friendship" State="false"/>
+                </Behaviors>
+              </Sequence>
+            </Succeeder>
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <PlayerIsDiplomaticActionAvailable Action="TradeEmbargo" />
+
+            <Succeeder>
+              <Sequence>
+                <Behaviors>
+                  <PlayerHasRelationAboveValue RelationValue="50" />
+                  <PlayerRelationSetDiplomaticAction Action="TradeEmbargo" State="false"/>
+                </Behaviors>
+              </Sequence>
+            </Succeeder>
+
+            <Succeeder>
+              <Sequence>
+                <Behaviors>
+                  <PlayerHasRelationBelowValue RelationValue="-25" />
+                  <PlayerRelationSetDiplomaticAction Action="TradeEmbargo" State="true"/>
+                </Behaviors>
+              </Sequence>
+            </Succeeder>
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <!-- ******************** Diplomatic tree ******************** -->
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <Inverter>
+              <PlayerIsDiplomaticActionAvailable Action="Friendship" />
+            </Inverter>
+
+            <PlayerAcquireDiplomacyItem DiplomacyItemId="1" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <Inverter>
+              <PlayerIsDiplomaticActionAvailable Action="TradeEmbargo" />
+            </Inverter>
+
+            <PlayerAcquireDiplomacyItem DiplomacyItemId="2" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <Inverter>
+              <PlayerIsDiplomaticActionAvailable Action="MapExchange" />
+            </Inverter>
+
+            <PlayerAcquireDiplomacyItem DiplomacyItemId="3" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <Inverter>
+              <PlayerIsDiplomaticActionAvailable Action="Research" />
+            </Inverter>
+
+            <PlayerAcquireDiplomacyItem DiplomacyItemId="4" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <Inverter>
+              <PlayerIsDiplomaticActionAvailable Action="DefensivePact" />
+            </Inverter>
+
+            <PlayerAcquireDiplomacyItem DiplomacyItemId="6" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+    </Behaviors>
+  </Sequence>
+
+</Behavior>

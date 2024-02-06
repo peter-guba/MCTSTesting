@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="MissionTest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <IsAssignedState />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <FailMission />
+          <FinishMission />
+          <GiveStatsReward Energy="100" Intelligence="100" Research="0" />
+          <AddMission Id="1" />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

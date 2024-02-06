@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Benchmark>
+ <MaxRounds>1000</MaxRounds>
+ <IsSymmetric>true</IsSymmetric>
+ <Repeats>3</Repeats>
+
+ <Player Index="0">
+  <AIRef Id="Basic_MCTS_100" />
+ </Player>
+
+ <Player Index="1">
+  <AIRef Id="WP_MCTS_1.0_0.5_100" />
+ </Player>
+
+ <BattleSet Id="BasicBattleSet" />
+</Benchmark>

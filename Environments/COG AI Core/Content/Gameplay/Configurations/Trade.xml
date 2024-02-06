@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TradeConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  BaseMaxTradePointDistance="25"
+  BaseTradePercentage="10"
+  BaseExpiration="10"
+  BonusDistanceDenominator="3"
+  ExpirationDistanceDenominator="3" />

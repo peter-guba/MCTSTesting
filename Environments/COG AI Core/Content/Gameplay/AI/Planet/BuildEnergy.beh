@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BuildEnergy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <PlanetHasConstructionSlot />
+      <Inverter>
+        <PlanetIsBuilding />
+      </Inverter>
+      
+      <OptionSelector>
+        <Behaviors>
+
+          <Option>
+            <Considerations>
+              <DecayCurve Max ="20" K="3">
+                <PlanetValue Property="AvailEnergy" />
+              </DecayCurve>
+              <BoolConsideration TrueBoundary="0">
+                <PlanetUpgradesValue UpgradeModifier="Energy" />
+              </BoolConsideration>
+            </Considerations>
+
+            <BehaviorReference ReferenceName="UpgradePlanetEnergy" />
+
+          </Option>
+
+          <Option>
+            <Considerations>
+              <Constant Value ="0.3" />
+            </Considerations>
+
+            <Selector>
+              <Behaviors>
+                
+                <BehaviorReference ReferenceName="UpgradePlanetMaintenanceCost" />
+                <BehaviorReference ReferenceName="UpgradePlanetPopulation" />
+                <BehaviorReference ReferenceName="UpgradePlanetResources" />                
+                
+              </Behaviors>
+            </Selector>
+          </Option>
+
+        </Behaviors>
+      </OptionSelector>
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

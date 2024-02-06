@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainStation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>      
+
+      <Sequence>
+        <Behaviors>
+          <UnitCanAttack />
+          <FindEnemyTargetInRange />
+          <UnitAttackAction />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitCanStayAlert />
+          <UnitAlertAction />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

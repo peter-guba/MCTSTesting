@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="SearchAndAttack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+
+          <UnitHasTarget />
+          <Inverter>
+            <UnitIsTargetInSystem />
+          </Inverter>
+
+          <UnitResetTarget />
+          <UnitStopMoving />
+
+        </Behaviors>
+      </Sequence>
+
+      <BehaviorReference ReferenceName="SearchWeakEnemy" />
+      <BehaviorReference ReferenceName="AttackTarget" />      
+
+    </Behaviors>
+  </Selector>
+
+</Behavior>

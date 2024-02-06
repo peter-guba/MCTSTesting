@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BuildBalanced" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+      <PlanetHasConstructionSlot />
+      <Inverter>
+        <PlanetIsBuilding />
+      </Inverter>
+
+      <DecisionTree>
+        <Branch Name="Root" GoalPercentage="1" >
+          <Children>
+            <PlanetDecisionLeaf UpgradeModifier="Energy" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="Production" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="Population" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="Resources" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="Research" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="Intelligence" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="TradeRoutesCount" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="UnitsStartingRank" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="UpgradeMaintenanceCost" GoalPercentage="0.125"/>
+            <PlanetDecisionLeaf UpgradeModifier="RepairCost" GoalPercentage="0.125"/>
+          </Children>
+        </Branch>
+      </DecisionTree>
+      <PlanetBuildFactoryItem />
+    </Behaviors>
+  </Sequence>
+
+</Behavior>

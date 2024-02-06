@@ -1,0 +1,4 @@
+1 csv for each benchmark
+AI 1 vs AI 2 in file name
+
+battleName; repeats; p1win; p2win; p1symWin; p2symWin; p1hull; p2hull; minRounds; maxRounds; medianRounds

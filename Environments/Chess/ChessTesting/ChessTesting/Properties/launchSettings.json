@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ChessTesting": {
+      "commandName": "Project",
+      "commandLineArgs": "TestBenchSet"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Mission_BuildConstruction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <IsAssignedState />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <BuildConstructions Count="1" />
+          <FinishMission />
+          <GiveStatsReward Energy="1" />
+          <AddMission Id="14" />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

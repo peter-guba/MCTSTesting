@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Tech5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <AddPlanetBonus PlanetUpgradeType="Energy" BonusValue="1" IsFlatBonus="true">
+        <PlanetType>Rocky</PlanetType>
+      </AddPlanetBonus>
+      <AddUnitUpgrade UpgradeId="1" />
+      <AddPlayerMaxEnergy Increment="1000" />
+    </Behaviors>
+  </Sequence>
+</Behavior>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainTower" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <FindWarpMagnet />
+          </Inverter>
+          
+          <UnitWakeUpAction />
+          <UnitWarpMagnetAction />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitCanAttack />
+          <FindEnemyTargetInRange />
+          <UnitAttackAction />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitCanStayAlert />
+          <UnitAlertAction />
+        </Behaviors>
+      </Sequence>
+      
+
+    </Behaviors>
+  </Selector>
+</Behavior>

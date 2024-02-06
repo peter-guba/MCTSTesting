@@ -1,0 +1,132 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBasic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState NullState="true"/>
+            <UnitHasChangedDirection />
+            <InitializeTurnAnimation TurnSpeed="0.01" InitializeTime="true"/>
+            <SetAnimationState AnimationState="Turn" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="Turn"/>
+            <DoTurnAnimation />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <Inverter>
+              <UnitHasAnimationState AnimationState="Turn"/>
+            </Inverter>
+            <UnitHasChangedPosition />
+            <InitializeMoveAnimation MoveSpeed="0.01" />
+            <SetAnimationState AnimationState="Move" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="Move"/>
+            <DoMoveAnimation MaxMoveDistance="3" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="ShieldsUp"/>
+            <DoShieldsUpAnimation />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="BigLaserAttack"/>
+            <DoLaserAttackAnimation />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="MissileAttack"/>
+            <DoMissileAttackAnimation />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="SmallLaserAttack"/>
+            <DoSmallLaserAttackAnimation />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="Explosion"/>            
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="Warp"/>
+            <DoWarpAnimation AnimationTime="1000"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="ShieldRecharge"/>
+            <DoShieldRechargeAnimation AnimationTime="6000"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="Scan"/>
+            <!-- PlaySound SoundType="Scan"/ -->
+          </Behaviors>
+        </Sequence>
+      </Succeeder>      
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitHasAnimationState AnimationState="WarpMagnet"/>
+            <!-- PlaySound SoundType="WarpMagnet"/ -->
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <UpdateCurrentTime />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

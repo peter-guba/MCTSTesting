@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="MoveToTarget" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <UnitHasTarget />
+      <Inverter>
+        <UnitIsTargetInRange />
+      </Inverter>
+      <Inverter>
+        <UnitIsMoving />
+      </Inverter>
+      <FindPathToTarget />
+      <UnitMoveAction />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

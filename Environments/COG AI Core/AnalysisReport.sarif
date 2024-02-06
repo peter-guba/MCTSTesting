@@ -1,0 +1,168 @@
+﻿{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Dependency Analysis",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview",
+          "rules": [
+            {
+              "id": "UA106",
+              "name": "PackageToBeAdded",
+              "fullDescription": {
+                "text": "Packages that need to be added in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA103",
+              "name": "ReferenceToBeDeleted",
+              "fullDescription": {
+                "text": "References that need to be deleted in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            },
+            {
+              "id": "UA105",
+              "name": "PackageToBeDeleted",
+              "fullDescription": {
+                "text": "Packages that need to be deleted in order to upgrade the project to chosen TFM"
+              },
+              "helpUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///I:/Harddisk%2026.09.2022/D%202016-09-05/School/_Tento%20Semester/Diplomov%C3%A9%20%C5%A1t%C3%BAdium/MCTS%20paper/COG%20AI%20Core/EmptyKeys.Strategy.AI/EmptyKeys.Strategy.AI.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///I:/Harddisk%2026.09.2022/D%202016-09-05/School/_Tento%20Semester/Diplomov%C3%A9%20%C5%A1t%C3%BAdium/MCTS%20paper/COG%20AI%20Core/CMS/CMS.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA103",
+          "level": "note",
+          "message": {
+            "text": "Reference to System.Configuration needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///I:/Harddisk%2026.09.2022/D%202016-09-05/School/_Tento%20Semester/Diplomov%C3%A9%20%C5%A1t%C3%BAdium/MCTS%20paper/COG%20AI%20Core/CMS.Benchmark/CMS.Benchmark.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA105",
+          "level": "note",
+          "message": {
+            "text": "Package System.Threading.Tasks.Extensions, Version=4.3.0 needs to be deleted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///I:/Harddisk%2026.09.2022/D%202016-09-05/School/_Tento%20Semester/Diplomov%C3%A9%20%C5%A1t%C3%BAdium/MCTS%20paper/COG%20AI%20Core/CMS.Benchmark/CMS.Benchmark.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package System.Configuration.ConfigurationManager, Version=5.0.0 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///I:/Harddisk%2026.09.2022/D%202016-09-05/School/_Tento%20Semester/Diplomov%C3%A9%20%C5%A1t%C3%BAdium/MCTS%20paper/COG%20AI%20Core/CMS.Benchmark/CMS.Benchmark.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "UA106",
+          "level": "note",
+          "message": {
+            "text": "Package Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.4.410601 needs to be added."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///I:/Harddisk%2026.09.2022/D%202016-09-05/School/_Tento%20Semester/Diplomov%C3%A9%20%C5%A1t%C3%BAdium/MCTS%20paper/COG%20AI%20Core/CMS.Benchmark/CMS.Benchmark.csproj"
+                },
+                "region": {}
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "API Upgradability",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+        }
+      },
+      "results": [],
+      "columnKind": "utf16CodeUnits"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": "Component Analysis",
+          "semanticVersion": "0.4.410601",
+          "informationUri": "https://docs.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-overview"
+        }
+      },
+      "results": [],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

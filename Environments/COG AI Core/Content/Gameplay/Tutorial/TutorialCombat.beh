@@ -1,0 +1,214 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="TutorialCombat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="Init" />
+          
+          <CreateGameSession SessionMode="Tutorial" />
+          <AddPlayer IsAIControlled="false" RaceId="0" Energy="10000"
+                     UnitActions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock Extract ShieldRecharge Colonize Orbit MiniJump EstablishTradeRoute Cancel">
+            <Color>
+              <R>45</R>
+              <G>100</G>
+              <B>140</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>135</R>
+              <G>182</G>
+              <B>217</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+
+          <AddPlayer IsAIControlled="false" RaceId="1" Energy="0"
+                     UnitActions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock Extract ShieldRecharge Colonize Orbit MiniJump EstablishTradeRoute">
+            <Color>
+              <R>213</R>
+              <G>15</G>
+              <B>7</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>221</R>
+              <G>201</G>
+              <B>174</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+          <SetSessionPlayer PlayerIndex="0" />
+
+          <CreateGalaxy GalaxyType="Spiral" GalaxyBodyCount="1" GalaxyRadius="25" GalaxyBodyMinDistance="2" PlayersMinDistance="2">
+            <StarSystems>
+              <StarSystemData Name="Solar System" StarSpectralType="ClassG" StarName="Sun" StarTemperature="5778" StarMass="1" StarRadius="1" StarAge="4600000000" StarComfortZone="1.34" IsHomeSystem="true">
+                <Planets>
+                  <PlanetData Name="Mercury" Type="Iron" Distance="0.4" Mass="0.055" Radius="0.38" OrbitalPeriod="88" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Venus" Type="Desert" Distance="0.7" Mass="0.815" Radius="0.94" OrbitalPeriod="225" Population="0" BaseEnergy="0" PrefabName="Venus"/>
+                  <PlanetData Name="Earth" Type="Rocky" Distance="1" Mass="1" Radius="1" OrbitalPeriod="350" HexDistance="8" Population="1" BaseEnergy="10" ConstructionSlotsCount="10" IsHomePlanet="true"/>
+                  <PlanetData Name="Mars" Type="Desert" Distance="1.5" Mass="0.107" Radius="0.53" OrbitalPeriod="687" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Jupiter" Type="Gas" Distance="5.2" Mass="318" Radius="11.2" OrbitalPeriod="4333" Population="0" BaseEnergy="0" PrefabName="Jupiter"/>
+                  <PlanetData Name="Saturn" Type="Gas" Distance="9.5" Mass="95" Radius="9.4" OrbitalPeriod="10759" Population="0" BaseEnergy="0" PrefabName="Saturn"/>
+                  <PlanetData Name="Uranus" Type="Ice" Distance="19.2" Mass="14" Radius="4" OrbitalPeriod="30689" Population="0" BaseEnergy="0" PrefabName="Uranus"/>
+                  <PlanetData Name="Neptune" Type="Ice" Distance="30.1" Mass="17" Radius="3.88" OrbitalPeriod="60182" Population="0" BaseEnergy="0" PrefabName="Neptune"/>
+                </Planets>
+              </StarSystemData>
+
+              <StarSystemData Name="HD 10180" StarSpectralType="ClassG" StarName="HD 10180" StarTemperature="5911" StarMass="1.062" StarRadius="1.2" StarAge="7300000000" StarComfortZone="1.35">
+                <Planets>
+                  <PlanetData Name="HD 10180 b" Type="Lava" Distance="0.0222" Mass="1.3" Radius="1" OrbitalPeriod="1" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 c" Type="Iron" Distance="0.0641" Mass="13" Radius="3" OrbitalPeriod="6" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 i" Type="Iron" Distance="0.0904" Mass="1.9" Radius="1.5" OrbitalPeriod="10" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 d" Type="Desert" Distance="0.1284" Mass="11.9" Radius="2.8" OrbitalPeriod="16" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 e" Type="Desert" Distance="0.270" Mass="25" Radius="4.5" OrbitalPeriod="50" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 j" Type="Desert" Distance="0.330" Mass="5.1" Radius="2" OrbitalPeriod="68" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 f" Type="Desert" Distance="0.494" Mass="22.8" Radius="4.3" OrbitalPeriod="123" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 g" Type="Rocky" Distance="1.415" Mass="22" Radius="4" OrbitalPeriod="596" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 h" Type="Gas" Distance="3.49" Mass="65.8" Radius="3.8" OrbitalPeriod="2300" Population="0" BaseEnergy="0" />
+                </Planets>
+              </StarSystemData>
+              
+            </StarSystems>            
+          </CreateGalaxy>          
+         
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionStart" />
+
+          <SetHudVisibility Visibility="All" />
+          <CreateTutorialWindow Top="300" Left="10" />
+          <SetPhase Phase="PhaseIntro" />          
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseIntro" />
+          <SetTechnologyState TechnologyId="0" State="InProgress" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_Intro_Text" NextPhase="PhaseSelectStarSystem" />
+          <SetInputState Enabled="true" />
+          <SetPhase Phase="PhaseIntro_InProgress" />
+
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectStarSystem" />
+          <SetCameraToStarSystem StarSystemName="Solar System" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_SelectStarSystem_Text" IsNextButtonVisible="false" />
+          <SetPhase Phase="PhaseSelectStarSystem_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectStarSystem_InProgress" />
+          <IsStarSystemView StarSystemName="Solar System" />
+          <AddUnit Name="Scout" PlayerIndex="0" FactoryItemId="3" Rank="1" Q="1" R="3"/>
+          <AddUnit Name="Carrier" PlayerIndex="0" FactoryItemId="4" Rank="1" Q="4" R="4"/>
+          <AddUnit Name="Battleship" PlayerIndex="0" FactoryItemId="5" Rank="1" Q="2" R="5"/>
+          <AddUnit Name="Destroyer" PlayerIndex="0" FactoryItemId="6" Rank="1" Q="3" R="6"/>
+          <AddUnit Name="Frigate" PlayerIndex="0" FactoryItemId="7" Rank="1" Q="5" R="7"/>          
+          
+          <SetPhase Phase="PhaseUnitTypes" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseUnitTypes" />          
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_UnitTypes_Text" NextPhase="PhaseScout" />
+          <SetPhase Phase="PhaseUnitTypes_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseScout" />
+          <SetSelectedUnit UnitName="Scout" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_Scout_Text" NextPhase="PhaseDestroyer" />
+          <SetPhase Phase="PhaseScout_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseDestroyer" />
+          <SetSelectedUnit UnitName="Destroyer" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_Destroyer_Text" NextPhase="PhaseFrigate" />
+          <SetPhase Phase="PhaseDestroyer_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseFrigate" />
+          <SetSelectedUnit UnitName="Frigate" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_Frigate_Text" NextPhase="PhaseBattleship" />
+          <SetPhase Phase="PhaseFrigate_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseBattleship" />
+          <SetSelectedUnit UnitName="Battleship" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_Battleship_Text" NextPhase="PhaseCarrier" />
+          <SetPhase Phase="PhaseBattleship_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseCarrier" />
+          <SetSelectedUnit UnitName="Carrier" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_Carrier_Text" NextPhase="PhaseEnemyUnit" />
+          <SetPhase Phase="PhaseCarrier_InProgress" />
+        </Behaviors>
+      </Sequence>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseEnemyUnit" />
+          <AddUnit Name="Enemy Scout" PlayerIndex="1" FactoryItemId="3" Rank="1" Q="-1" R="3"/>
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_EnemyUnit_Text" IsNextButtonVisible="false" />
+          <SetHighlightWindow HighlightedElementName="unitAttack" IsVisible="true" />
+          <SetPhase Phase="PhaseEnemyUnit_InProgress" />
+        </Behaviors>
+      </Sequence>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseEnemyUnit_InProgress" />
+          <IsUnitDead UnitName="Enemy Scout" PlayerIndex="1" />
+          <SetPhase Phase="SessionEnd" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionEnd" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialCombat_SessionEnd_Text" NextPhase="BackToMenu" />          
+          <SetPhase Phase="SessionEnd_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="BackToMenu" />
+          <BackToMainMenu />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

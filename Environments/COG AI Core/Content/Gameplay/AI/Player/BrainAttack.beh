@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainAttack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+
+      <PlayerIsAtWar />
+      <FindClosestEnemySystem DistanceSystemUtilityCoefficient="1000"/>
+      <PlayerSetUnitsEnvTarget BehaviorName="UnitBrainAggressive" />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

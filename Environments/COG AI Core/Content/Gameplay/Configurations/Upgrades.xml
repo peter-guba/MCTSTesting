@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<UpgradesConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Upgrades>
+    <BaseUnitUpgrade xsi:type="HullUpgrade" Id="0" AvailRank="1" Modifier="10" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="WeaponEnergyUpgrade" Id="1" AvailRank="1" Modifier="5" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="WeaponDamageUpgrade" Id="2" AvailRank="2" Modifier="15" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="ShieldsEnergyUpgrade" Id="3" AvailRank="2" Modifier="10" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="EngineUpgrade" Id="4" AvailRank="3" Modifier="5" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="SensorsEnergyUpgrade" Id="5" AvailRank="3" Modifier="10" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="ShieldRechargeUpgrade" Id="6" AvailRank="4" Modifier="1" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="AutoRepairUpgrade" Id="7" AvailRank="5" Modifier="3" UsageLimit="1" />
+    <BaseUnitUpgrade xsi:type="TotalEnergyUpgrade" Id="8" AvailRank="6" Modifier="5" UsageLimit="3" />
+    <BaseUnitUpgrade xsi:type="WeaponShieldDamageUpgrade" Id="9" AvailRank="4" Modifier="10" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="WarpRechargeRateUpgrade" Id="10" AvailRank="5" Modifier="10" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="WarpSpeedUpgrade" Id="11" AvailRank="6" Modifier="1" UsageLimit="0" />
+    <BaseUnitUpgrade xsi:type="ExperienceUpgrade" Id="12" AvailRank="1" Modifier="25" UsageLimit="3" />
+    <BaseUnitUpgrade xsi:type="TradeBonusUpgrade" Id="13" AvailRank="4" Modifier="5" UsageLimit="3" />
+    <BaseUnitUpgrade xsi:type="BuilderProductionUpgrade" Id="14" AvailRank="4" Modifier="10" UsageLimit="5" />
+  </Upgrades>
+</UpgradesConfiguration>

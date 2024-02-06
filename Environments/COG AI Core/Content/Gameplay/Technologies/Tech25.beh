@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Tech25" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <AddFactoryItem Id="8"/>
+      <AddFactoryItem Id="17"/>
+    </Behaviors>
+  </Sequence>
+</Behavior>

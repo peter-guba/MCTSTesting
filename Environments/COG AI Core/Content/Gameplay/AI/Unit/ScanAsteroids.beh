@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="ScanAsteroids" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsSystemBodyScanned />
+          </Inverter>
+          <UnitIsInEnvTargetPosition />
+          <UnitCanScan />
+          <UnitScanAction />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+          <FindAsteroid EnableUnscannedCheck="true" />
+          <Inverter>
+            <UnitIsInEnvTargetPosition />
+          </Inverter>
+          <FindPathToEnvTarget />
+          <UnitMoveAction />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Environment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Radius" type="xs:short" />
+        <xs:element name="Sun" minOccurs="0">
+          <xs:complexType>
+            <xs:attribute name="Q" type="xs:short" use="required" />
+            <xs:attribute name="R" type="xs:short" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AsteroidBelts" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AsteroidBelt" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="CenterQ" type="xs:short" use="required" />
+                  <xs:attribute name="CenterR" type="xs:short" use="required" />
+                  <xs:attribute name="Radius" type="xs:short" use="required" />
+                  <xs:attribute name="Width" type="xs:short" use="required" />
+                  <xs:attribute name="Density" type="xs:decimal" use="required" />
+                  <xs:attribute name="Seed" type="xs:int" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EnvTypes" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EnvType" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Type" type="HexType" use="required" />
+                  <xs:attribute name="Q" type="xs:short" use="required" />
+                  <xs:attribute name="R" type="xs:short" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="HexType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Empty" />
+      <xs:enumeration value="Impassable" />
+      <xs:enumeration value="DoubleCost" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

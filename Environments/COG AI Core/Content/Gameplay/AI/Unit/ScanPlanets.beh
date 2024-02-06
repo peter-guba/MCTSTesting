@@ -1,0 +1,81 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="ScanPlanets" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitHasEnvTarget />
+          </Inverter>
+          <FindUnscannedPlanet />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitHasEnvTarget />
+          <Inverter>
+            <UnitIsInGalaxyEnvironment />
+          </Inverter>
+          <Inverter>
+            <UnitIsSystemBodyScanned />
+          </Inverter>
+          <UnitCanScan />
+          <UnitIsInEnvTargetRange />
+          <UnitScanAction />
+
+          <FindUnscannedPlanet />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitHasEnvTarget />
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <UnitCanMiniJump />
+                  <UnitMiniWarpAction />
+                </Behaviors>
+              </Sequence>
+
+              <Sequence>
+                <Behaviors>
+
+                  <Inverter>
+                    <UnitOwnerCanDoUnitAction Action="MiniJump" />
+                  </Inverter>
+                  
+                  <Inverter>
+                    <UnitIsMoving />
+                  </Inverter>
+                  
+                  <Inverter>
+                    <UnitIsInEnvTargetPosition />
+                  </Inverter>
+                  <FindPathToEnvTarget UsePlanetNextPosition="true"/>
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <FindUnscannedPlanet />
+          <UnitDoNothingAction />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+
+</Behavior>

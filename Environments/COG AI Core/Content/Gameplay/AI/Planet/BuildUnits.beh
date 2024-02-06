@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BuildUnits" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <BehaviorReference ReferenceName="MoveUnitFromOrbit" />
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+
+            <PlanetIsUnderSiege />
+            <PlanetSetBehavior BehaviorName="PlanetSiege" />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <PlanetIsBuilding />
+          </Inverter>
+
+          <Succeeder>
+            <Sequence>
+              <Behaviors>
+                <Inverter>
+                  <PlanetAnyBuilderUnitInSystem />
+                </Inverter>
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitDecisionLeaf UnitTypeName="Builder" BehaviorName="UnitBrainBuilder" GoalPercentage="1"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+          </Succeeder>
+
+          <PlayerHasEnergyForUnitMaintenance />
+          <PlanetBuildFactoryItem />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Sequence>
+
+</Behavior>

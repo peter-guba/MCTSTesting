@@ -1,0 +1,120 @@
+﻿<?xml version="1.0"?>
+<RareResourcesConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Resources>
+    <RareResource ResourceType="Carbon">
+      <PlanetTypeProportions>
+        <float>0.3</float>
+        <float>0.2</float>
+        <float>0.4</float>
+        <float>0</float>
+        <float>0.4</float>
+        <float>0</float>
+        <float>0.4</float>
+      </PlanetTypeProportions>
+      <SpectralTypeProportions />
+      <AsteroidProportion>0.8</AsteroidProportion>
+    </RareResource>
+    <RareResource ResourceType="Helium">
+      <PlanetTypeProportions>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.27</float>
+        <float>0.27</float>
+        <float>0</float>
+        <float>0</float>
+      </PlanetTypeProportions>
+      <SpectralTypeProportions>
+        <float>0.27</float>
+        <float>0.27</float>
+        <float>0.27</float>
+        <float>0.27</float>
+        <float>0.27</float>
+        <float>0.27</float>
+        <float>0.27</float>
+      </SpectralTypeProportions>
+      <AsteroidProportion>0</AsteroidProportion>
+    </RareResource>
+    <RareResource ResourceType="Hydrogen">
+      <PlanetTypeProportions>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.7</float>
+        <float>0.7</float>
+        <float>0</float>
+        <float>0</float>
+      </PlanetTypeProportions>
+      <SpectralTypeProportions>
+        <float>0.7</float>
+        <float>0.7</float>
+        <float>0.7</float>
+        <float>0.7</float>
+        <float>0.7</float>
+        <float>0.7</float>
+        <float>0.7</float>
+      </SpectralTypeProportions>
+      <AsteroidProportion>0</AsteroidProportion>
+    </RareResource>
+    <RareResource ResourceType="Iron">
+      <PlanetTypeProportions>
+        <float>0.5</float>
+        <float>0.5</float>
+        <float>0.5</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.42</float>
+      </PlanetTypeProportions>
+      <SpectralTypeProportions />
+      <AsteroidProportion>0.4</AsteroidProportion>
+    </RareResource>
+    <RareResource ResourceType="Promethium">
+      <PlanetTypeProportions />
+      <SpectralTypeProportions>
+        <float>0.1</float>
+        <float>0.1</float>
+      </SpectralTypeProportions>
+      <AsteroidProportion>0</AsteroidProportion>
+    </RareResource>
+    <RareResource ResourceType="Silicon">
+      <PlanetTypeProportions>
+        <float>0.2</float>
+        <float>0.3</float>
+        <float>0.4</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </PlanetTypeProportions>
+      <SpectralTypeProportions />
+      <AsteroidProportion>0.4</AsteroidProportion>
+    </RareResource>
+    <RareResource ResourceType="Titanium">
+      <PlanetTypeProportions>
+        <float>0.1</float>
+        <float>0.1</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.1</float>
+      </PlanetTypeProportions>
+      <SpectralTypeProportions />
+      <AsteroidProportion>0.2</AsteroidProportion>
+    </RareResource>
+    <RareResource ResourceType="Uranium">
+      <PlanetTypeProportions>
+        <float>0.01</float>
+        <float>0.01</float>
+        <float>0.01</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </PlanetTypeProportions>
+      <SpectralTypeProportions />
+      <AsteroidProportion>0.2</AsteroidProportion>
+    </RareResource>
+  </Resources>
+</RareResourcesConfiguration>

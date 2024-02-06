@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="JumpAway" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>      
+      
+      <Inverter>
+        <UnitIsInGalaxyEnvironment />
+      </Inverter>      
+      <UnitCanWarp />
+      <UnitWarpJumpAction />
+
+    </Behaviors>
+  </Sequence>
+
+</Behavior>

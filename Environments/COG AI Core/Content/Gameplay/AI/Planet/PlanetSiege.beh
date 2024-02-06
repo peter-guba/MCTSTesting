@@ -1,0 +1,62 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="PlanetSiege" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+
+          <PlanetIsUnderSiege />
+
+          <Succeeder>
+            <Sequence>
+              <Behaviors>
+
+                <PlanetIsUnitOnOrbit />
+                <PlanetRepairUnitsOnOrbit HullPercentage="0.1" />
+
+              </Behaviors>
+            </Sequence>
+          </Succeeder>
+
+          <Sequence>
+            <Behaviors>
+              <PlanetHasSpaceOnOrbit />
+              <Inverter>
+                <PlanetHasEnoughDefense DefensiveBehaviorName="UnitBrainDefensive"/>
+              </Inverter>
+
+              <DecisionTree>
+                <Branch Name="Root" GoalPercentage="1" >
+                  <Children>
+                    <UnitDecisionLeaf UnitTypeName="Battleship" BehaviorName="UnitBrainDefensive" GoalPercentage="0.3"/>
+                    <UnitDecisionLeaf UnitTypeName="Frigate" BehaviorName="UnitBrainDefensive" GoalPercentage="0.2"/>
+                    <UnitDecisionLeaf UnitTypeName="Scout" BehaviorName="UnitBrainDefensive" GoalPercentage="0.5"/>
+                  </Children>
+                </Branch>
+              </DecisionTree>
+
+              <PlayerHasEnergyForUnitMaintenance />
+              <PlanetBuyFactoryItem />
+
+            </Behaviors>
+          </Sequence>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <PlanetIsUnderSiege />
+          </Inverter>
+          <PlanetSetBehavior BehaviorName="PlanetBalanced" />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+
+</Behavior>

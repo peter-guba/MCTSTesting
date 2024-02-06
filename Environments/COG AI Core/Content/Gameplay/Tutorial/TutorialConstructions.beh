@@ -1,0 +1,159 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="TutorialConstructions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="Init" />
+          
+          <CreateGameSession SessionMode="Tutorial" />
+          <AddPlayer IsAIControlled="false" RaceId="0" Energy="10000" 
+                     UnitActions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock Extract ShieldRecharge Colonize Orbit MiniJump EstablishTradeRoute Cancel">
+            <Color>
+              <R>45</R>
+              <G>100</G>
+              <B>140</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>135</R>
+              <G>182</G>
+              <B>217</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+          <SetSessionPlayer PlayerIndex="0" />
+
+          <CreateGalaxy GalaxyType="Spiral" GalaxyBodyCount="1" GalaxyRadius="25" GalaxyBodyMinDistance="2" PlayersMinDistance="2">
+            <StarSystems>
+              <StarSystemData Name="Solar System" StarSpectralType="ClassG" StarName="Sun" StarTemperature="5778" StarMass="1" StarRadius="1" StarAge="4600000000" StarComfortZone="1.34" IsHomeSystem="true">
+                <Planets>
+                  <PlanetData Name="Mercury" Type="Iron" Distance="0.4" Mass="0.055" Radius="0.38" OrbitalPeriod="88" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Venus" Type="Desert" Distance="0.7" Mass="0.815" Radius="0.94" OrbitalPeriod="225" Population="0" BaseEnergy="0" PrefabName="Venus"/>
+                  <PlanetData Name="Earth" Type="Rocky" Distance="1" Mass="1" Radius="1" OrbitalPeriod="350" HexDistance="8" Population="1" BaseEnergy="10" ConstructionSlotsCount="10" IsHomePlanet="true"/>
+                  <PlanetData Name="Mars" Type="Desert" Distance="1.5" Mass="0.107" Radius="0.53" OrbitalPeriod="687" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Jupiter" Type="Gas" Distance="5.2" Mass="318" Radius="11.2" OrbitalPeriod="4333" Population="0" BaseEnergy="0" PrefabName="Jupiter"/>
+                  <PlanetData Name="Saturn" Type="Gas" Distance="9.5" Mass="95" Radius="9.4" OrbitalPeriod="10759" Population="0" BaseEnergy="0" PrefabName="Saturn"/>
+                  <PlanetData Name="Uranus" Type="Ice" Distance="19.2" Mass="14" Radius="4" OrbitalPeriod="30689" Population="0" BaseEnergy="0" PrefabName="Uranus"/>
+                  <PlanetData Name="Neptune" Type="Ice" Distance="30.1" Mass="17" Radius="3.88" OrbitalPeriod="60182" Population="0" BaseEnergy="0" PrefabName="Neptune"/>
+                </Planets>
+              </StarSystemData>
+            </StarSystems>            
+          </CreateGalaxy>
+         
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionStart" />
+
+          <SetHudVisibility Visibility="All" />
+          <SetInputState Enabled="true" />
+          <AcquireAllTechnologies />
+          <CreateTutorialWindow Top="60" Left="400" />
+          <SetPhase Phase="PhaseIntro" />          
+          
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseIntro" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialConstructions_Intro_Text" NextPhase="PhaseSelectStarSystem" />          
+          <SetPhase Phase="Phase1_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectStarSystem" />
+          <SetCameraToStarSystem StarSystemName="Solar System" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialConstructions_SelectStarSystem_Text" IsNextButtonVisible="false" />
+          <SetPhase Phase="PhaseSelectStarSystem_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectStarSystem_InProgress" />
+          <IsStarSystemView StarSystemName="Solar System" />          
+          <SetPhase Phase="PhaseSelectEarth" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectEarth" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialConstructions_SelectEarth_Text" IsNextButtonVisible="false" />          
+          <SetPhase Phase="PhaseSelectEarth_InProgress" />
+        </Behaviors>
+      </Sequence>
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectEarth_InProgress" />
+          <IsPlanetSelected PlanetName="Earth" />
+          <SetPhase Phase="PhaseAvailItems" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseAvailItems" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialConstructions_AvailItems_Text" NextPhase="PhaseConstructions" />
+          <SetPhase Phase="PhaseAvailItems_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseConstructions" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialConstructions_Constructions_Text" NextPhase="PhaseImproveEarth" />
+          <SetPhase Phase="PhaseConstructions_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseImproveEarth" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialConstructions_ImproveEarth_Text" IsNextButtonVisible="false" />
+          <SetPhase Phase="PhaseImproveEarth_InProgress" />
+        </Behaviors>
+      </Sequence>
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseImproveEarth_InProgress" />
+          <HasPlanetAttributes PlanetName="Earth" PlayerIndex="0" MinResources="8" MinEnergy="7" MinProduction="14" />
+          <SetPhase Phase="PhaseRemove" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseRemove" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialConstructions_Remove_Text" NextPhase="SessionEnd" />
+          <SetPhase Phase="PhaseRemove_InProgress" />
+        </Behaviors>
+      </Sequence>
+        
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionEnd" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialConstructions_SessionEnd_Text" NextPhase="BackToMenu" />          
+          <SetPhase Phase="SessionEnd_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="BackToMenu" />
+          <BackToMainMenu />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

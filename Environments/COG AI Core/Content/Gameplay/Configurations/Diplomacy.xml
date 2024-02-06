@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DiplomacyConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  NeutralRelationValueMin="-100"
+  NeutralRelationValueMax="100"
+  FriendlyRelationValueMin="101"
+  FriendlyRelationValueMax="200"
+  HostileRelationValueMin="-200"
+  HostileRelationValueMax="-101"
+  UnitKillRelationChange="-100"
+  SiegePlanetRelationChange="-100"
+  LostPlanetScorePoints="10"
+  OpponentPeaceRelationValueBonus="50"
+  RelationTierExponent="4"
+  AcquiredItemScoreReward="10">
+  <ActionCost>
+    <ActionCostConfiguration
+      Action="BordersControl"
+      Cost="500"
+      Cooldown="25"
+      RequiredActive="None"
+      RequiredDisabled="DeclareWar" />
+    <ActionCostConfiguration
+      Action="DeclareWar"
+      Cost="1000"
+      Cooldown="50"
+      RequiredActive="None"
+      RequiredDisabled="MilitaryVision CreateAlliance DefensivePact" />
+    <ActionCostConfiguration
+      Action="TradeEmbargo"
+      Cost="1000"
+      Cooldown="10"
+      RequiredActive="None"
+      RequiredDisabled="CreateAlliance" />
+    <ActionCostConfiguration
+      Action="Friendship"
+      Cost="1000"
+      Cooldown="10"
+      RequiredActive="None"
+      RequiredDisabled="DeclareWar BordersControl" />
+    <ActionCostConfiguration
+      Action="MapExchange"
+      Cost="2000"
+      Cooldown="10"
+      RequiredActive="None"
+      RequiredDisabled="DeclareWar TradeEmbargo" />
+    <ActionCostConfiguration
+      Action="Research"
+      Cost="2000"
+      Cooldown="10"
+      RequiredActive="Friendship"
+      RequiredDisabled="DeclareWar TradeEmbargo" />
+    <ActionCostConfiguration
+      Action="MilitaryVision"
+      Cost="5000"
+      Cooldown="10"
+      RequiredActive="Friendship"
+      RequiredDisabled="DeclareWar BordersControl" />
+    <ActionCostConfiguration
+      Action="DefensivePact"
+      Cost="5000"
+      Cooldown="10"
+      RequiredActive="Friendship"
+      RequiredDisabled="DeclareWar BordersControl" />
+    <ActionCostConfiguration
+      Action="CreateAlliance"
+      Cost="10000"
+      Cooldown="10"
+      RequiredActive="Friendship MilitaryVision DefensivePact"
+      RequiredDisabled="DeclareWar BordersControl TradeEmbargo" />
+  </ActionCost>
+  <DiplomacyItems>
+    <DiplomacyItemData
+      Id="0"
+      Tier="1" />
+    <DiplomacyItemData
+      Id="1"
+      Tier="2" />
+    <DiplomacyItemData
+      Id="2"
+      Tier="2" />
+    <DiplomacyItemData
+      Id="3"
+      Tier="3" />
+    <DiplomacyItemData
+      Id="4"
+      Tier="3" />
+    <DiplomacyItemData
+      Id="5"
+      Tier="4" />
+    <DiplomacyItemData
+      Id="6"
+      Tier="4" />
+    <DiplomacyItemData
+      Id="7"
+      Tier="5" />
+  </DiplomacyItems>
+</DiplomacyConfiguration>

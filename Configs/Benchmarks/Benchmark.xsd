@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:include schemaLocation="../SchemaTypes/Types.xsd" />
+  
+  <xs:element name="Benchmark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MaxRounds" type="xs:int" />
+        <xs:element name="IsSymmetric" type="xs:boolean" />
+        <xs:element name="Repeats" type="xs:int" />
+        <xs:element minOccurs="2" maxOccurs="2" name="Player">
+          <xs:complexType>
+            <xs:choice>
+              <xs:element name="AI" type="AI" />
+              <xs:element name="AIRef" type="AIRef" />
+            </xs:choice>
+            <xs:attribute name="Index" type="PlayerIndex" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BattleSet" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Id" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="AIRef">
+    <xs:attribute name="Id" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

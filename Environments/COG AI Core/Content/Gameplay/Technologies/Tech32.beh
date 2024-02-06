@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Tech32" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <AddPlanetBonus PlanetUpgradeType="Energy" BonusValue="1" IsFlatBonus="true">
+        <PlanetType>Ocean</PlanetType>
+      </AddPlanetBonus>
+      <AddPlanetBonus PlanetUpgradeType="Production" BonusValue="1" IsFlatBonus="true">
+        <PlanetType>Ocean</PlanetType>
+      </AddPlanetBonus>
+    </Behaviors>
+  </Sequence>
+</Behavior>

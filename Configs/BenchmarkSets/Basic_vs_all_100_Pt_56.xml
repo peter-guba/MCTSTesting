@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BenchmarkSet>
+ <Benchmark Id="Basic_MCTS_100_vs_WP_MCTS_0.1_5.0_100"/>
+</BenchmarkSet>

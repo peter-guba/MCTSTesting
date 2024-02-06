@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainColonize" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <RepeatUntilFail>
+          <Sequence>
+            <Behaviors>
+
+              <PlayerHasUnitType UnitTypeName="ColonyShip" />
+              <FindUnitWithoutBehavior UnitTypeName="ColonyShip" />
+              <PlayerSetUnitBehavior BehaviorName="FindPlanetAndColonize" />
+
+            </Behaviors>
+          </Sequence>
+        </RepeatUntilFail>
+      </Succeeder>
+
+      <Succeeder>
+        <RepeatUntilFail>
+          <Sequence>
+            <Behaviors>
+              <FindPlanetWithoutBehavior />
+              <PlayerSetPlanetBehavior BehaviorName="PlanetBalanced" />
+            </Behaviors>
+          </Sequence>
+        </RepeatUntilFail>
+      </Succeeder>
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

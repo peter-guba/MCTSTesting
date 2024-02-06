@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainExplore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <RepeatUntilFail>
+    <Sequence>
+      <Behaviors>
+
+        <PlayerHasUnitType UnitTypeName="Scout" />
+        <FindUnitWithoutBehavior UnitTypeName="Scout" />
+
+        <DecisionTree>
+          <Branch Name="Root" GoalPercentage="1" >
+            <Children>
+              <Branch Name="ExploreGalaxy" GoalPercentage="0.7" >
+                <Children>
+                  <UnitBehaviorLeaf BehaviorName="ExploreGalaxy" />
+                </Children>
+              </Branch>
+              <Branch Name="ExploreEmptySpace" GoalPercentage="0.3" >
+                <Children>
+                  <UnitBehaviorLeaf BehaviorName="ExploreEmptySpace" />
+                </Children>
+              </Branch>
+            </Children>
+          </Branch>
+        </DecisionTree>
+
+      </Behaviors>
+    </Sequence>
+  </RepeatUntilFail>
+  
+</Behavior>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainSiege" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Selector>
+        <Behaviors>
+
+          <Sequence>
+            <Behaviors>
+              <Inverter>
+                <UnitIsOnOrbit />
+              </Inverter>
+              <Inverter>
+                <UnitIsInGalaxyEnvironment />
+              </Inverter>
+              <UnitCanWarp />
+              <FindWeakestEnemyPlanet />
+              <UnitMiniWarpAction />
+            </Behaviors>
+          </Sequence>
+
+          <Sequence>
+            <Behaviors>
+              <Inverter>
+                <UnitIsOnOrbit />
+              </Inverter>
+              <Inverter>
+                <UnitIsEnvTargetSystem />
+              </Inverter>
+              <Inverter>
+                <UnitIsInGalaxyEnvironment />
+              </Inverter>
+              <UnitCanOrbit />
+              <UnitIsInEnvTargetPosition />
+              <UnitEnterOrbitAction />
+              <UnitBeginSiegeAction />
+            </Behaviors>
+          </Sequence>
+
+        </Behaviors>
+      </Selector>
+
+      <Sequence>
+        <Behaviors>
+          
+          <Inverter>
+            <UnitIsOnOrbit />
+          </Inverter>          
+          <FindWeakestEnemyTarget />
+          <BehaviorReference ReferenceName="SearchAndAttack" />
+          
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+
+          <UnitIsOnOrbit />
+          <Inverter>
+            <UnitIsSiegingPlanet />
+          </Inverter>
+          <UnitLeaveOrbitAction />
+          <UnitSetBehavior BehaviorName="UnitBrainAggressive" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+
+          <UnitIsHullBelow HullPercentage="0.1" />
+          <UnitIsOnOrbit />
+          <UnitLeaveOrbitAction />
+          <UnitSetBehavior BehaviorName="UnitBrainRepair" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <UnitIsOnOrbit />
+          </Inverter>
+          <UnitSetBehavior BehaviorName="UnitBrainAggressive" />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

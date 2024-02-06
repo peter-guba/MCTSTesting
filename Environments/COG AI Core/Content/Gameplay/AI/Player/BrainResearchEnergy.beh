@@ -1,0 +1,149 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainResearchEnergy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <Inverter>
+        <PlayerIsResearching />
+      </Inverter>
+
+      <Selector>
+        <Behaviors>
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="Goal_0" GoalPercentage="1" >
+                  <Children>
+                    <ResearchGoalLeaf GoalTechnologyId="5" GoalPercentage="0.5"/>
+                    <ResearchGoalLeaf GoalTechnologyId="0" GoalPercentage="0.5"/>                    
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>
+          
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="GoalOne" GoalPercentage="1" >
+                  <Children>
+                    <ResearchGoalLeaf GoalTechnologyId="75" GoalPercentage="0.22"/>
+                    <ResearchGoalLeaf GoalTechnologyId="78" GoalPercentage="0.20"/>
+                    <ResearchGoalLeaf GoalTechnologyId="27" GoalPercentage="0.22"/>
+                    <ResearchGoalLeaf GoalTechnologyId="12" GoalPercentage="0.12"/>
+                    <ResearchGoalLeaf GoalTechnologyId="15" GoalPercentage="0.08"/>
+                    <ResearchGoalLeaf GoalTechnologyId="18" GoalPercentage="0.08"/>
+                    <ResearchGoalLeaf GoalTechnologyId="21" GoalPercentage="0.08"/>                    
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>
+
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="GoalTwo" GoalPercentage="1" >
+                  <Children>
+                    <ResearchGoalLeaf GoalTechnologyId="114" GoalPercentage="0.20"/>
+                    <ResearchGoalLeaf GoalTechnologyId="115" GoalPercentage="0.19"/>
+                    <ResearchGoalLeaf GoalTechnologyId="98" GoalPercentage="0.20"/>
+                    <ResearchGoalLeaf GoalTechnologyId="30" GoalPercentage="0.07"/>
+                    <ResearchGoalLeaf GoalTechnologyId="33" GoalPercentage="0.06"/>
+                    <ResearchGoalLeaf GoalTechnologyId="72" GoalPercentage="0.07"/>
+                    <ResearchGoalLeaf GoalTechnologyId="69" GoalPercentage="0.06"/>
+                  
+                    <ResearchGoalLeaf GoalTechnologyId="13" GoalPercentage="0.02"/>
+                    <ResearchGoalLeaf GoalTechnologyId="14" GoalPercentage="0.02"/>
+                    <ResearchGoalLeaf GoalTechnologyId="20" GoalPercentage="0.02"/>
+                    <ResearchGoalLeaf GoalTechnologyId="19" GoalPercentage="0.02"/>
+                    <ResearchGoalLeaf GoalTechnologyId="17" GoalPercentage="0.02"/>
+                    <ResearchGoalLeaf GoalTechnologyId="16" GoalPercentage="0.02"/>
+                    
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>
+          
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="GoalThree" GoalPercentage="1" >
+                  <Children>
+                    <ResearchGoalLeaf GoalTechnologyId="99" GoalPercentage="0.18"/>
+                    <ResearchGoalLeaf GoalTechnologyId="113" GoalPercentage="0.17"/>
+                    <ResearchGoalLeaf GoalTechnologyId="100" GoalPercentage="0.18"/>
+                    <ResearchGoalLeaf GoalTechnologyId="112" GoalPercentage="0.17"/>                    
+                    
+                    <ResearchGoalLeaf GoalTechnologyId="66" GoalPercentage="0.06"/>
+                    <ResearchGoalLeaf GoalTechnologyId="63" GoalPercentage="0.06"/>
+                    <ResearchGoalLeaf GoalTechnologyId="39" GoalPercentage="0.06"/>                  
+                    <ResearchGoalLeaf GoalTechnologyId="36" GoalPercentage="0.06"/>
+                    <ResearchGoalLeaf GoalTechnologyId="54" GoalPercentage="0.06"/>
+                                       
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>          
+
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="Goal4" GoalPercentage="1" >
+                  <Children>                    
+                    <ResearchGoalLeaf GoalTechnologyId="101" GoalPercentage="0.1"/>
+                    <ResearchGoalLeaf GoalTechnologyId="102" GoalPercentage="0.09"/>
+                    <ResearchGoalLeaf GoalTechnologyId="103" GoalPercentage="0.08"/>
+                    <ResearchGoalLeaf GoalTechnologyId="104" GoalPercentage="0.09"/>
+                    <ResearchGoalLeaf GoalTechnologyId="111" GoalPercentage="0.09"/>
+                    <ResearchGoalLeaf GoalTechnologyId="110" GoalPercentage="0.09"/>
+                    <ResearchGoalLeaf GoalTechnologyId="105" GoalPercentage="0.09"/>
+                    <ResearchGoalLeaf GoalTechnologyId="106" GoalPercentage="0.09"/>
+                    <ResearchGoalLeaf GoalTechnologyId="108" GoalPercentage="0.09"/>
+                    <ResearchGoalLeaf GoalTechnologyId="109" GoalPercentage="0.09"/>
+                    <ResearchGoalLeaf GoalTechnologyId="107" GoalPercentage="0.09"/>                                        
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>
+          
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="Goal5" GoalPercentage="1" >
+                  <Children>
+                    <ResearchGoalLeaf GoalTechnologyId="123" GoalPercentage="1"/>
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>
+
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="Goal6" GoalPercentage="1" >
+                  <Children>
+                    <ResearchGoalLeaf GoalTechnologyId="120" GoalPercentage="0.35"/>
+                    <ResearchGoalLeaf GoalTechnologyId="121" GoalPercentage="0.3"/>
+                    <ResearchGoalLeaf GoalTechnologyId="122" GoalPercentage="0.35"/>
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>
+
+        </Behaviors>
+      </Selector>
+    </Behaviors>
+  </Sequence>
+</Behavior>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Unit xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TotalEnergy>20</TotalEnergy>
+  <Hull>20</Hull>
+  <HullMax>20</HullMax>
+  <IsResourcePenaltyActive>false</IsResourcePenaltyActive>
+  <Direction>0</Direction>
+  <ShieldsEnergyPct>40</ShieldsEnergyPct>
+  <ShieldsRechargeRate>7</ShieldsRechargeRate>
+  <WeaponsEnergyPct>10</WeaponsEnergyPct>
+  <WeaponDamage>0.5</WeaponDamage>
+  <TotalWeaponsEnergy>2</TotalWeaponsEnergy>
+  <AvailWeaponsEnergy>2</AvailWeaponsEnergy>
+  <SensorsEnergyPct>20</SensorsEnergyPct>
+  <TotalSensorsEnergy>4</TotalSensorsEnergy>
+  <SensorsEnergy>4</SensorsEnergy>
+  <WeaponShieldDamage>0.5</WeaponShieldDamage>
+  <Shields>
+    <float>6</float>
+    <float>8</float>
+    <float>8</float>
+    <float>6</float>
+    <float>8</float>
+    <float>8</float>
+  </Shields>
+  <ShieldsStr>
+    <float>0.75</float>
+    <float>1</float>
+    <float>1</float>
+    <float>0.75</float>
+    <float>1</float>
+    <float>1</float>
+  </ShieldsStr>
+  <EnginesEnergyPct>30</EnginesEnergyPct>
+  <AvailEnginesEnergy>6</AvailEnginesEnergy>
+  <TotalEnginesEnergy>6</TotalEnginesEnergy>
+  <ResourcePenaltyModifier>0.75</ResourcePenaltyModifier>
+</Unit>

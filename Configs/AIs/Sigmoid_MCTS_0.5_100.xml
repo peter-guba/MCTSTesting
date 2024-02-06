@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AI>
+ <SigmoidMcts
+  MaxPlayouts="100"
+  K="0.5"
+  PlayoutRoundLimit="100"
+ >
+
+  <Script>NOKAV</Script>
+  <Script>Kiter</Script>
+
+</SigmoidMcts>
+</AI>

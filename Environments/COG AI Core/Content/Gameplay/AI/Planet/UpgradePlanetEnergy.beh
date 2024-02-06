@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UpgradePlanetEnergy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>              
+      
+      <FindPlanetUpgradeToBuild UpgradeModifier="Energy" />
+      <PlanetBuildFactoryItem />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

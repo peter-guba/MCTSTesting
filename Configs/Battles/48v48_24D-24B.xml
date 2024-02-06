@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SymmetricBattle>
+  <Environment Id="DefaultEnv" />
+  <Player Index="0">
+    <Units>
+	  <Unit Id="battleship_0" Q="-32" R="1" />
+	  <Unit Id="battleship_0" Q="-19" R="-2" />
+	  <Unit Id="battleship_0" Q="-19" R="-4" />
+	  <Unit Id="battleship_0" Q="-17" R="-6" />
+	  <Unit Id="battleship_0" Q="-26" R="8" />
+	  <Unit Id="battleship_0" Q="-24" R="-8" />
+	  <Unit Id="battleship_0" Q="-29" R="-5" />
+	  <Unit Id="battleship_0" Q="-26" R="2" />
+	  <Unit Id="battleship_0" Q="-20" R="-5" />
+	  <Unit Id="battleship_0" Q="-30" R="-3" />
+	  <Unit Id="battleship_0" Q="-21" R="-1" />
+	  <Unit Id="battleship_0" Q="-15" R="-2" />
+	  <Unit Id="battleship_0" Q="-21" R="1" />
+	  <Unit Id="battleship_0" Q="-31" R="9" />
+	  <Unit Id="battleship_0" Q="-26" R="-9" />
+	  <Unit Id="battleship_0" Q="-26" R="9" />
+	  <Unit Id="battleship_0" Q="-24" R="7" />
+	  <Unit Id="battleship_0" Q="-17" R="-2" />
+	  <Unit Id="battleship_0" Q="-20" R="-7" />
+	  <Unit Id="battleship_0" Q="-15" R="0" />
+	  <Unit Id="battleship_0" Q="-30" R="-6" />
+	  <Unit Id="battleship_0" Q="-24" R="0" />
+	  <Unit Id="battleship_0" Q="-31" R="-8" />
+	  <Unit Id="battleship_0" Q="-23" R="-6" />
+	  <Unit Id="destroyer_0" Q="-32" R="6" />
+	  <Unit Id="destroyer_0" Q="-16" R="2" />
+	  <Unit Id="destroyer_0" Q="-32" R="-9" />
+	  <Unit Id="destroyer_0" Q="-25" R="7" />
+	  <Unit Id="destroyer_0" Q="-28" R="5" />
+	  <Unit Id="destroyer_0" Q="-29" R="-3" />
+	  <Unit Id="destroyer_0" Q="-17" R="0" />
+	  <Unit Id="destroyer_0" Q="-22" R="3" />
+	  <Unit Id="destroyer_0" Q="-16" R="-3" />
+	  <Unit Id="destroyer_0" Q="-30" R="6" />
+	  <Unit Id="destroyer_0" Q="-17" R="2" />
+	  <Unit Id="destroyer_0" Q="-28" R="-1" />
+	  <Unit Id="destroyer_0" Q="-29" R="4" />
+	  <Unit Id="destroyer_0" Q="-23" R="3" />
+	  <Unit Id="destroyer_0" Q="-23" R="2" />
+	  <Unit Id="destroyer_0" Q="-21" R="0" />
+	  <Unit Id="destroyer_0" Q="-26" R="-5" />
+	  <Unit Id="destroyer_0" Q="-29" R="-2" />
+	  <Unit Id="destroyer_0" Q="-20" R="2" />
+	  <Unit Id="destroyer_0" Q="-22" R="-3" />
+	  <Unit Id="destroyer_0" Q="-19" R="-5" />
+	  <Unit Id="destroyer_0" Q="-32" R="2" />
+	  <Unit Id="destroyer_0" Q="-21" R="-9" />
+	  <Unit Id="destroyer_0" Q="-22" R="-7" />
+    </Units>
+  </Player>
+</SymmetricBattle>

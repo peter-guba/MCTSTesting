@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainRareResources" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+      <Inverter>
+        <PlayerHasEnoughResources />
+      </Inverter>
+      <PlayerHasUnitType UnitTypeName="Builder" />
+      
+      <Succeeder>
+        <RepeatUntilFail>
+          <Sequence>
+            <Behaviors>
+              
+              <FindUnitWithoutBehavior UnitTypeName="Builder" AsteroidCheckEnabled="true" />
+              <PlayerSetUnitBehavior BehaviorName="UnitBrainBuilderMiner" />
+
+            </Behaviors>
+          </Sequence>
+        </RepeatUntilFail>
+      </Succeeder>      
+      
+    </Behaviors>
+  </Sequence>
+</Behavior>

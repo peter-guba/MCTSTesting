@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Tech41" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <AddPlayerMaxEnergy Increment="4000" />
+    </Behaviors>
+  </Sequence>
+</Behavior>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BuildDiplomacy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <PlanetHasConstructionSlot />
+      <Inverter>
+        <PlanetIsBuilding />
+      </Inverter>
+
+      <OptionSelector>
+        <Behaviors>
+
+          <Option>
+            <Considerations>
+              <DecayCurve Max ="20" K="0.5">
+                <PlanetValue Property="AvailEnergy" />
+              </DecayCurve>
+              <BoolConsideration TrueBoundary="2">
+                <PlanetUpgradesValue UpgradeModifier="Energy" />
+              </BoolConsideration>
+            </Considerations>
+
+            <Succeeder>
+              <BehaviorReference ReferenceName="UpgradePlanetEnergy" />
+            </Succeeder>
+
+          </Option>
+
+          <Option>
+            <Considerations>
+              <Constant Value ="0.5" />
+            </Considerations>
+
+            <Selector>
+              <Behaviors>
+
+                <BehaviorReference ReferenceName="UpgradePlanetDiplomacy" />
+                <BehaviorReference ReferenceName="UpgradePlanetPopulation" />
+                <BehaviorReference ReferenceName="UpgradePlanetResources" />
+              </Behaviors>
+            </Selector>
+          </Option>
+
+        </Behaviors>
+      </OptionSelector>
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

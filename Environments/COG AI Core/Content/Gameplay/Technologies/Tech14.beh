@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Tech14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <SubtractUnitRepairCost Decrement="10" />
+      <AddUnitUpgrade UpgradeId="13" />
+      <AddTradeShipsLimit Increment="2" />
+    </Behaviors>
+  </Sequence>
+</Behavior>

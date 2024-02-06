@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="ExploreGalaxy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+
+          <UnitIsOnOrbit />
+          <UnitLeaveOrbitAction />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsInGalaxyEnvironment />
+          </Inverter>
+          <UnitCanScan />
+          <BehaviorReference ReferenceName="ScanPlanets" />
+        </Behaviors>
+      </Sequence>
+
+      <BehaviorReference ReferenceName="ExploreSystems" />
+
+      <Sequence>
+        <Behaviors>
+
+          <UnitIsInGalaxyEnvironment />
+          <Inverter>
+            <FindClosestUnexploredSystem />
+          </Inverter>
+          <UnitSetBehavior BehaviorName="ExploreEmptySpace" />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

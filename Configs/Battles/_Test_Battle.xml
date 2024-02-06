@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SymmetricBattle>
+  <Environment Id="DefaultEnv" />
+  <Player Index="0">
+    <Units>
+      <Unit Id="Light" Q="3" R="8" />
+	  <Unit Id="Light" Q="12" R="4" />
+	  <Unit Id="Heavy" Q="7" R="1" />
+	  <Unit Id="Heavy" Q="14" R="12" />
+    </Units>
+  </Player>
+</SymmetricBattle>

@@ -1,0 +1,2689 @@
+﻿<?xml version="1.0"?>
+<FactoryConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" EnergyCostDestroyDenominator="10" EnergyCostRepairDenominator="3" ResourcePenaltyModifier="0.75" ShieldRechargeXpPercentage="10" BuildXpPercentage="10" UnitMaintenanceCostRankPercentage="10" UnitMaxRank="20" ExploreXpPercentage="5" ScanXpPercentage="2">
+  <FactoryItems>
+    <FactoryItem Id="0" FactoryTypeName="EmptyKeys.Strategy.Units.ColonyShip" BaseProductionCost="50" ItemType="Unit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="5" MaintenanceCost="2" TotalEnergy="10" EnginesEnergyPct="40" ShieldsEnergyPct="40" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="20" WarpSpeed="2" WarpEngineEnergyRechargeRate="50" WeaponDamage="0" AvailProduction="0" BaseInfluence="5" DockSize="100" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Scan Sleep WakeUp DoNothing Colonize Orbit MiniJump Destroy Cancel" AttackState="None" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="2" FactoryTypeName="EmptyKeys.Strategy.Units.Builder" BaseProductionCost="20" ItemType="Unit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="5" MaintenanceCost="0.1" TotalEnergy="10" EnginesEnergyPct="40" ShieldsEnergyPct="40" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="20" WarpSpeed="1" WarpEngineEnergyRechargeRate="10" WeaponDamage="0" AvailProduction="10" BaseInfluence="5" DockSize="2" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Sleep WakeUp DoNothing Dock Orbit MiniJump Destroy Cancel" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="3" FactoryTypeName="EmptyKeys.Strategy.Units.Scout" BaseProductionCost="15" ItemType="Unit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="5" MaintenanceCost="0.5" TotalEnergy="10" EnginesEnergyPct="50" ShieldsEnergyPct="20" ShieldsRechargeRate="2" WeaponsEnergyPct="10" SensorsEnergyPct="20" WarpSpeed="3" WarpEngineEnergyRechargeRate="25" WeaponDamage="1" AvailProduction="0" BaseInfluence="5" DockSize="1" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing Dock Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="50" />
+          <ShieldConfiguration Direction="AftLeft" Strength="50" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="50" />
+          <ShieldConfiguration Direction="FrontRight" Strength="50" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="4" FactoryTypeName="EmptyKeys.Strategy.Units.Carrier" BaseProductionCost="100" ItemType="Unit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <UnitConfig HullMax="15" MaintenanceCost="2" TotalEnergy="20" EnginesEnergyPct="50" ShieldsEnergyPct="10" ShieldsRechargeRate="7" WeaponsEnergyPct="10" SensorsEnergyPct="30" WarpSpeed="5" WarpEngineEnergyRechargeRate="20" WeaponDamage="0.5" AvailProduction="0" BaseInfluence="10" DockSize="100" MaxDockSize="14" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="4">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>3</float>
+        <float>0</float>
+        <float>3</float>
+        <float>0</float>
+        <float>0</float>
+        <float>3</float>
+        <float>3</float>
+        <float>0.1</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="5" FactoryTypeName="EmptyKeys.Strategy.Units.Battleship" BaseProductionCost="50" ItemType="Unit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="3">
+      <UnitConfig HullMax="20" MaintenanceCost="1.5" TotalEnergy="20" EnginesEnergyPct="30" ShieldsEnergyPct="40" ShieldsRechargeRate="7" WeaponsEnergyPct="10" SensorsEnergyPct="20" WarpSpeed="1" WarpEngineEnergyRechargeRate="15" WeaponDamage="0.5" AvailProduction="0" BaseInfluence="8" DockSize="4" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Sleep WakeUp DoNothing StayAlert Dock Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.75</float>
+        <float>0</float>
+        <float>0</float>
+        <float>1.25</float>
+        <float>0</float>
+        <float>0.75</float>
+        <float>0</float>
+        <float>0.05</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="6" FactoryTypeName="EmptyKeys.Strategy.Units.Destroyer" BaseProductionCost="30" ItemType="Unit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="10" MaintenanceCost="1" TotalEnergy="15" EnginesEnergyPct="35" ShieldsEnergyPct="15" ShieldsRechargeRate="5" WeaponsEnergyPct="35" SensorsEnergyPct="15" WarpSpeed="3" WarpEngineEnergyRechargeRate="15" WeaponDamage="1" AvailProduction="0" BaseInfluence="7" DockSize="2" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Sleep WakeUp DoNothing StayAlert Dock Orbit MiniJump Destroy Cancel" AttackState="MissileAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.25</float>
+        <float>0</float>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="7" FactoryTypeName="EmptyKeys.Strategy.Units.Frigate" BaseProductionCost="30" ItemType="Unit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="10" MaintenanceCost="1" TotalEnergy="15" EnginesEnergyPct="20" ShieldsEnergyPct="40" ShieldsRechargeRate="10" WeaponsEnergyPct="10" SensorsEnergyPct="30" WarpSpeed="3" WarpEngineEnergyRechargeRate="20" WeaponDamage="1" AvailProduction="0" BaseInfluence="7" DockSize="2" MaxDockSize="0" WeaponShieldDamage="1" Actions="WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock ShieldRecharge Orbit MiniJump Destroy Cancel" AttackState="BigLaserAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.25</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="8" FactoryTypeName="EmptyKeys.Strategy.Units.DefenseTowerUnit" BaseProductionCost="40" ItemType="StaticUnit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="25" MaintenanceCost="0.25" TotalEnergy="15" EnginesEnergyPct="0" ShieldsEnergyPct="50" ShieldsRechargeRate="5" WeaponsEnergyPct="40" SensorsEnergyPct="30" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="1" AvailProduction="0" BaseInfluence="10" DockSize="0" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="Attack Scan Sleep WakeUp DoNothing StayAlert Destroy WarpMagnet" AttackState="SmallLaserAttack MissileAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="90" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.3</float>
+        <float>0</float>
+        <float>0.15</float>
+        <float>0.5</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="9" FactoryTypeName="EmptyKeys.Strategy.Units.Station" BaseProductionCost="180" ItemType="StaticUnit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <UnitConfig HullMax="50" MaintenanceCost="2" TotalEnergy="40" EnginesEnergyPct="0" ShieldsEnergyPct="40" ShieldsRechargeRate="10" WeaponsEnergyPct="40" SensorsEnergyPct="20" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="2" AvailProduction="0" BaseInfluence="20" DockSize="0" MaxDockSize="20" WeaponShieldDamage="1" Actions="Attack Scan Sleep WakeUp DoNothing StayAlert Destroy" AttackState="SmallLaserAttack MissileAttack" KillScorePoints="4">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="90" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>3</float>
+        <float>2</float>
+        <float>2</float>
+        <float>3</float>
+        <float>0</float>
+        <float>3</float>
+        <float>1</float>
+        <float>0.1</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="10" FactoryTypeName="EmptyKeys.Strategy.Units.ResourcesExtractor" BaseProductionCost="30" ItemType="StaticUnit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="12" MaintenanceCost="0.5" TotalEnergy="20" EnginesEnergyPct="0" ShieldsEnergyPct="20" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="80" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="0" AvailProduction="0" BaseInfluence="0" DockSize="0" MaxDockSize="0" WeaponShieldDamage="0" Actions="Sleep WakeUp DoNothing Extract Destroy" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="11" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="30" ModifierType="Resources" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="12" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="4" ModifierType="Resources" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="13" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="4" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="14" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="2" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="15" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="16" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="17" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="15" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="18" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="2.5" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.05</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="19" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="15" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>1</float>
+        <float>1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="20" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="Population" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.5</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="21" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="0.25" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="22" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="23" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPercentageMultiUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="2" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="2" ModifierType="Research" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="10" ModifierType="Research" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>2</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>2</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="24" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="UnitsStartingRank" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="25" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="25" ModifierType="UpgradeMaintenanceCost" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>1</float>
+        <float>0</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="26" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="RepairCost" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="27" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="TradeRoutesCount" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="28" FactoryTypeName="EmptyKeys.Strategy.Units.Freighter" BaseProductionCost="20" ItemType="Unit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="5" MaintenanceCost="0.5" TotalEnergy="10" EnginesEnergyPct="60" ShieldsEnergyPct="30" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="10" WarpSpeed="5" WarpEngineEnergyRechargeRate="10" WeaponDamage="0" AvailProduction="0" BaseInfluence="5" DockSize="100" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Sleep WakeUp DoNothing Orbit MiniJump Destroy EstablishTradeRoute Cancel" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.15</float>
+        <float>0</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0.01</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="29" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.DoubleNumberMultiUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="1" ModifierType="TradeRoutesCount" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="50" ModifierType="TradeDistanceBonus" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem>27</PrerequisiteFactoryItem>
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="30" FactoryTypeName="EmptyKeys.Strategy.Units.DysonSphere" BaseProductionCost="1000" ItemType="StaticUnit" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="100">
+      <UnitConfig HullMax="1000" MaintenanceCost="0" TotalEnergy="200" EnginesEnergyPct="0" ShieldsEnergyPct="50" ShieldsRechargeRate="20" WeaponsEnergyPct="0" SensorsEnergyPct="50" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="1" AvailProduction="0" BaseInfluence="100" DockSize="0" MaxDockSize="100" WeaponShieldDamage="1" Actions="Sleep WakeUp DoNothing Destroy" AttackState="None" KillScorePoints="8">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>5</float>
+        <float>10</float>
+        <float>10</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>4</float>
+        <float>4</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="31" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="2" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="32" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="Intelligence" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="33" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="5" ModifierType="Intelligence" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="34" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Intelligence" MaintenanceCost="2" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="35" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPercentageMultiUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="3" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="3" ModifierType="Intelligence" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="10" ModifierType="Intelligence" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="0" FactoryTypeName="EmptyKeys.Strategy.Units.ColonyShip" BaseProductionCost="50" ItemType="Unit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="5" MaintenanceCost="2" TotalEnergy="10" EnginesEnergyPct="40" ShieldsEnergyPct="40" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="20" WarpSpeed="2" WarpEngineEnergyRechargeRate="50" WeaponDamage="0" AvailProduction="0" BaseInfluence="5" DockSize="100" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Scan Sleep WakeUp DoNothing Colonize Orbit MiniJump Destroy Cancel" AttackState="None" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="2" FactoryTypeName="EmptyKeys.Strategy.Units.Builder" BaseProductionCost="20" ItemType="Unit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="5" MaintenanceCost="0.1" TotalEnergy="10" EnginesEnergyPct="40" ShieldsEnergyPct="40" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="20" WarpSpeed="1" WarpEngineEnergyRechargeRate="10" WeaponDamage="0" AvailProduction="10" BaseInfluence="5" DockSize="2" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Sleep WakeUp DoNothing Dock Orbit MiniJump Destroy Cancel" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="3" FactoryTypeName="EmptyKeys.Strategy.Units.Scout" BaseProductionCost="15" ItemType="Unit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0" CustomRaceName="Skuldelev">
+      <UnitConfig HullMax="5" MaintenanceCost="0.5" TotalEnergy="10" EnginesEnergyPct="50" ShieldsEnergyPct="20" ShieldsRechargeRate="2" WeaponsEnergyPct="10" SensorsEnergyPct="20" WarpSpeed="3" WarpEngineEnergyRechargeRate="25" WeaponDamage="1" AvailProduction="0" BaseInfluence="5" DockSize="1" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing Dock Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="50" />
+          <ShieldConfiguration Direction="AftLeft" Strength="50" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="50" />
+          <ShieldConfiguration Direction="FrontRight" Strength="50" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="4" FactoryTypeName="EmptyKeys.Strategy.Units.Carrier" BaseProductionCost="100" ItemType="Unit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5" CustomRaceName="Karve">
+      <UnitConfig HullMax="15" MaintenanceCost="2" TotalEnergy="20" EnginesEnergyPct="50" ShieldsEnergyPct="10" ShieldsRechargeRate="7" WeaponsEnergyPct="10" SensorsEnergyPct="30" WarpSpeed="5" WarpEngineEnergyRechargeRate="20" WeaponDamage="0.5" AvailProduction="0" BaseInfluence="10" DockSize="100" MaxDockSize="14" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="4">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>3</float>
+        <float>0</float>
+        <float>3</float>
+        <float>0</float>
+        <float>0</float>
+        <float>3</float>
+        <float>3</float>
+        <float>0.1</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="5" FactoryTypeName="EmptyKeys.Strategy.Units.Battleship" BaseProductionCost="50" ItemType="Unit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="3" CustomRaceName="Gokstad">
+      <UnitConfig HullMax="20" MaintenanceCost="1.5" TotalEnergy="20" EnginesEnergyPct="30" ShieldsEnergyPct="40" ShieldsRechargeRate="7" WeaponsEnergyPct="10" SensorsEnergyPct="20" WarpSpeed="1" WarpEngineEnergyRechargeRate="15" WeaponDamage="0.5" AvailProduction="0" BaseInfluence="8" DockSize="4" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Sleep WakeUp DoNothing StayAlert Dock Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.75</float>
+        <float>0</float>
+        <float>0</float>
+        <float>1.25</float>
+        <float>0</float>
+        <float>0.75</float>
+        <float>0</float>
+        <float>0.05</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="6" FactoryTypeName="EmptyKeys.Strategy.Units.Destroyer" BaseProductionCost="30" ItemType="Unit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Oseberg">
+      <UnitConfig HullMax="10" MaintenanceCost="1" TotalEnergy="15" EnginesEnergyPct="35" ShieldsEnergyPct="15" ShieldsRechargeRate="5" WeaponsEnergyPct="35" SensorsEnergyPct="15" WarpSpeed="3" WarpEngineEnergyRechargeRate="15" WeaponDamage="1" AvailProduction="0" BaseInfluence="7" DockSize="2" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Sleep WakeUp DoNothing StayAlert Dock Orbit MiniJump Destroy Cancel" AttackState="MissileAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.25</float>
+        <float>0</float>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="7" FactoryTypeName="EmptyKeys.Strategy.Units.Frigate" BaseProductionCost="30" ItemType="Unit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Kvalsund">
+      <UnitConfig HullMax="10" MaintenanceCost="1" TotalEnergy="15" EnginesEnergyPct="20" ShieldsEnergyPct="40" ShieldsRechargeRate="10" WeaponsEnergyPct="10" SensorsEnergyPct="30" WarpSpeed="3" WarpEngineEnergyRechargeRate="20" WeaponDamage="1" AvailProduction="0" BaseInfluence="7" DockSize="2" MaxDockSize="0" WeaponShieldDamage="1" Actions="WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock ShieldRecharge Orbit MiniJump Destroy Cancel" AttackState="BigLaserAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.25</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="8" FactoryTypeName="EmptyKeys.Strategy.Units.DefenseTowerUnit" BaseProductionCost="40" ItemType="StaticUnit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="25" MaintenanceCost="0.25" TotalEnergy="15" EnginesEnergyPct="0" ShieldsEnergyPct="50" ShieldsRechargeRate="5" WeaponsEnergyPct="40" SensorsEnergyPct="30" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="1" AvailProduction="0" BaseInfluence="10" DockSize="0" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="Attack Scan Sleep WakeUp DoNothing StayAlert Destroy WarpMagnet" AttackState="SmallLaserAttack MissileAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="90" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.3</float>
+        <float>0</float>
+        <float>0.15</float>
+        <float>0.5</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="9" FactoryTypeName="EmptyKeys.Strategy.Units.Station" BaseProductionCost="180" ItemType="StaticUnit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <UnitConfig HullMax="50" MaintenanceCost="2" TotalEnergy="40" EnginesEnergyPct="0" ShieldsEnergyPct="40" ShieldsRechargeRate="10" WeaponsEnergyPct="40" SensorsEnergyPct="20" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="2" AvailProduction="0" BaseInfluence="20" DockSize="0" MaxDockSize="20" WeaponShieldDamage="1" Actions="Attack Scan Sleep WakeUp DoNothing StayAlert Destroy" AttackState="SmallLaserAttack MissileAttack" KillScorePoints="4">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="90" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>3</float>
+        <float>2</float>
+        <float>2</float>
+        <float>3</float>
+        <float>0</float>
+        <float>3</float>
+        <float>1</float>
+        <float>0.1</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="10" FactoryTypeName="EmptyKeys.Strategy.Units.ResourcesExtractor" BaseProductionCost="30" ItemType="StaticUnit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="12" MaintenanceCost="0.5" TotalEnergy="20" EnginesEnergyPct="0" ShieldsEnergyPct="20" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="80" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="0" AvailProduction="0" BaseInfluence="0" DockSize="0" MaxDockSize="0" WeaponShieldDamage="0" Actions="Sleep WakeUp DoNothing Extract Destroy" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="11" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="30" ModifierType="Resources" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="12" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="4" ModifierType="Resources" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="13" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="4" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="14" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="2" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="15" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="16" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="17" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="15" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="18" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="2.5" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.05</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="19" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="15" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>1</float>
+        <float>1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="20" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="Population" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.5</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="21" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="0.25" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="22" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="23" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPercentageMultiUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="2" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="2" ModifierType="Research" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="10" ModifierType="Research" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>2</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>2</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="24" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="UnitsStartingRank" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="25" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="25" ModifierType="UpgradeMaintenanceCost" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>1</float>
+        <float>0</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="26" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="RepairCost" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="27" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="TradeRoutesCount" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="28" FactoryTypeName="EmptyKeys.Strategy.Units.Freighter" BaseProductionCost="20" ItemType="Unit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Knarr">
+      <UnitConfig HullMax="5" MaintenanceCost="0.5" TotalEnergy="10" EnginesEnergyPct="60" ShieldsEnergyPct="30" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="10" WarpSpeed="5" WarpEngineEnergyRechargeRate="10" WeaponDamage="0" AvailProduction="0" BaseInfluence="5" DockSize="100" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Sleep WakeUp DoNothing Orbit MiniJump Destroy EstablishTradeRoute Cancel" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.15</float>
+        <float>0</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0.01</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="29" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.DoubleNumberMultiUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="1" ModifierType="TradeRoutesCount" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="50" ModifierType="TradeDistanceBonus" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem>27</PrerequisiteFactoryItem>
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="30" FactoryTypeName="EmptyKeys.Strategy.Units.DysonSphere" BaseProductionCost="1000" ItemType="StaticUnit" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="100">
+      <UnitConfig HullMax="1000" MaintenanceCost="0" TotalEnergy="200" EnginesEnergyPct="0" ShieldsEnergyPct="50" ShieldsRechargeRate="20" WeaponsEnergyPct="0" SensorsEnergyPct="50" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="1" AvailProduction="0" BaseInfluence="100" DockSize="0" MaxDockSize="100" WeaponShieldDamage="1" Actions="Sleep WakeUp DoNothing Destroy" AttackState="None" KillScorePoints="8">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>5</float>
+        <float>10</float>
+        <float>10</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>4</float>
+        <float>4</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="31" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="2" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="32" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="Intelligence" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="33" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="5" ModifierType="Intelligence" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="34" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Intelligence" MaintenanceCost="2" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="35" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPercentageMultiUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="3" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="3" ModifierType="Intelligence" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="10" ModifierType="Intelligence" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="0" FactoryTypeName="EmptyKeys.Strategy.Units.ColonyShip" BaseProductionCost="50" ItemType="Unit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="5" MaintenanceCost="2" TotalEnergy="10" EnginesEnergyPct="40" ShieldsEnergyPct="40" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="20" WarpSpeed="2" WarpEngineEnergyRechargeRate="50" WeaponDamage="0" AvailProduction="0" BaseInfluence="5" DockSize="100" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Scan Sleep WakeUp DoNothing Colonize Orbit MiniJump Destroy Cancel" AttackState="None" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="2" FactoryTypeName="EmptyKeys.Strategy.Units.Builder" BaseProductionCost="20" ItemType="Unit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="5" MaintenanceCost="0.1" TotalEnergy="10" EnginesEnergyPct="40" ShieldsEnergyPct="40" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="20" WarpSpeed="1" WarpEngineEnergyRechargeRate="10" WeaponDamage="0" AvailProduction="10" BaseInfluence="5" DockSize="2" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Sleep WakeUp DoNothing Dock Orbit MiniJump Destroy Cancel" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="3" FactoryTypeName="EmptyKeys.Strategy.Units.Scout" BaseProductionCost="15" ItemType="Unit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0" CustomRaceName="Lembos">
+      <UnitConfig HullMax="5" MaintenanceCost="0.5" TotalEnergy="10" EnginesEnergyPct="50" ShieldsEnergyPct="20" ShieldsRechargeRate="2" WeaponsEnergyPct="10" SensorsEnergyPct="20" WarpSpeed="3" WarpEngineEnergyRechargeRate="25" WeaponDamage="1" AvailProduction="0" BaseInfluence="5" DockSize="1" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing Dock Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="50" />
+          <ShieldConfiguration Direction="AftLeft" Strength="50" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="50" />
+          <ShieldConfiguration Direction="FrontRight" Strength="50" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="4" FactoryTypeName="EmptyKeys.Strategy.Units.Carrier" BaseProductionCost="100" ItemType="Unit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5" CustomRaceName="Deceres">
+      <UnitConfig HullMax="15" MaintenanceCost="2" TotalEnergy="20" EnginesEnergyPct="50" ShieldsEnergyPct="10" ShieldsRechargeRate="7" WeaponsEnergyPct="10" SensorsEnergyPct="30" WarpSpeed="5" WarpEngineEnergyRechargeRate="20" WeaponDamage="0.5" AvailProduction="0" BaseInfluence="10" DockSize="100" MaxDockSize="14" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="4">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>3</float>
+        <float>0</float>
+        <float>3</float>
+        <float>0</float>
+        <float>0</float>
+        <float>3</float>
+        <float>3</float>
+        <float>0.1</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="5" FactoryTypeName="EmptyKeys.Strategy.Units.Battleship" BaseProductionCost="50" ItemType="Unit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="3" CustomRaceName="Enneres">
+      <UnitConfig HullMax="20" MaintenanceCost="1.5" TotalEnergy="20" EnginesEnergyPct="30" ShieldsEnergyPct="40" ShieldsRechargeRate="7" WeaponsEnergyPct="10" SensorsEnergyPct="20" WarpSpeed="1" WarpEngineEnergyRechargeRate="15" WeaponDamage="0.5" AvailProduction="0" BaseInfluence="8" DockSize="4" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Sleep WakeUp DoNothing StayAlert Dock Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.75</float>
+        <float>0</float>
+        <float>0</float>
+        <float>1.25</float>
+        <float>0</float>
+        <float>0.75</float>
+        <float>0</float>
+        <float>0.05</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="6" FactoryTypeName="EmptyKeys.Strategy.Units.Destroyer" BaseProductionCost="30" ItemType="Unit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Octeres">
+      <UnitConfig HullMax="10" MaintenanceCost="1" TotalEnergy="15" EnginesEnergyPct="35" ShieldsEnergyPct="15" ShieldsRechargeRate="5" WeaponsEnergyPct="35" SensorsEnergyPct="15" WarpSpeed="3" WarpEngineEnergyRechargeRate="15" WeaponDamage="1" AvailProduction="0" BaseInfluence="7" DockSize="2" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Sleep WakeUp DoNothing StayAlert Dock Orbit MiniJump Destroy Cancel" AttackState="MissileAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.25</float>
+        <float>0</float>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="7" FactoryTypeName="EmptyKeys.Strategy.Units.Frigate" BaseProductionCost="30" ItemType="Unit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Septireme">
+      <UnitConfig HullMax="10" MaintenanceCost="1" TotalEnergy="15" EnginesEnergyPct="20" ShieldsEnergyPct="40" ShieldsRechargeRate="10" WeaponsEnergyPct="10" SensorsEnergyPct="30" WarpSpeed="3" WarpEngineEnergyRechargeRate="20" WeaponDamage="1" AvailProduction="0" BaseInfluence="7" DockSize="2" MaxDockSize="0" WeaponShieldDamage="1" Actions="WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock ShieldRecharge Orbit MiniJump Destroy Cancel" AttackState="BigLaserAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.25</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="8" FactoryTypeName="EmptyKeys.Strategy.Units.DefenseTowerUnit" BaseProductionCost="40" ItemType="StaticUnit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="25" MaintenanceCost="0.25" TotalEnergy="15" EnginesEnergyPct="0" ShieldsEnergyPct="50" ShieldsRechargeRate="5" WeaponsEnergyPct="40" SensorsEnergyPct="30" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="1" AvailProduction="0" BaseInfluence="10" DockSize="0" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="Attack Scan Sleep WakeUp DoNothing StayAlert Destroy WarpMagnet" AttackState="SmallLaserAttack MissileAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="90" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.3</float>
+        <float>0</float>
+        <float>0.15</float>
+        <float>0.5</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="9" FactoryTypeName="EmptyKeys.Strategy.Units.Station" BaseProductionCost="180" ItemType="StaticUnit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <UnitConfig HullMax="50" MaintenanceCost="2" TotalEnergy="40" EnginesEnergyPct="0" ShieldsEnergyPct="40" ShieldsRechargeRate="10" WeaponsEnergyPct="40" SensorsEnergyPct="20" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="2" AvailProduction="0" BaseInfluence="20" DockSize="0" MaxDockSize="20" WeaponShieldDamage="1" Actions="Attack Scan Sleep WakeUp DoNothing StayAlert Destroy" AttackState="SmallLaserAttack MissileAttack" KillScorePoints="4">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="90" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>3</float>
+        <float>2</float>
+        <float>2</float>
+        <float>3</float>
+        <float>0</float>
+        <float>3</float>
+        <float>1</float>
+        <float>0.1</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="10" FactoryTypeName="EmptyKeys.Strategy.Units.ResourcesExtractor" BaseProductionCost="30" ItemType="StaticUnit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="12" MaintenanceCost="0.5" TotalEnergy="20" EnginesEnergyPct="0" ShieldsEnergyPct="20" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="80" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="0" AvailProduction="0" BaseInfluence="0" DockSize="0" MaxDockSize="0" WeaponShieldDamage="0" Actions="Sleep WakeUp DoNothing Extract Destroy" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="11" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="30" ModifierType="Resources" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="12" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="4" ModifierType="Resources" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="13" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="4" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="14" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="2" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="15" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="16" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="17" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="15" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="18" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="2.5" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.05</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="19" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="15" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>1</float>
+        <float>1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="20" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="Population" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.5</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="21" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="0.25" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="22" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="23" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPercentageMultiUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="2" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="2" ModifierType="Research" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="10" ModifierType="Research" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>2</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>2</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="24" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="UnitsStartingRank" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="25" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="25" ModifierType="UpgradeMaintenanceCost" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>1</float>
+        <float>0</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="26" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="RepairCost" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="27" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="TradeRoutesCount" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="28" FactoryTypeName="EmptyKeys.Strategy.Units.Freighter" BaseProductionCost="20" ItemType="Unit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Corbita">
+      <UnitConfig HullMax="5" MaintenanceCost="0.5" TotalEnergy="10" EnginesEnergyPct="60" ShieldsEnergyPct="30" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="10" WarpSpeed="5" WarpEngineEnergyRechargeRate="10" WeaponDamage="0" AvailProduction="0" BaseInfluence="5" DockSize="100" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Sleep WakeUp DoNothing Orbit MiniJump Destroy EstablishTradeRoute Cancel" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.15</float>
+        <float>0</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0.01</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="29" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.DoubleNumberMultiUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="1" ModifierType="TradeRoutesCount" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="50" ModifierType="TradeDistanceBonus" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem>27</PrerequisiteFactoryItem>
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="30" FactoryTypeName="EmptyKeys.Strategy.Units.DysonSphere" BaseProductionCost="1000" ItemType="StaticUnit" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="100">
+      <UnitConfig HullMax="1000" MaintenanceCost="0" TotalEnergy="200" EnginesEnergyPct="0" ShieldsEnergyPct="50" ShieldsRechargeRate="20" WeaponsEnergyPct="0" SensorsEnergyPct="50" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="1" AvailProduction="0" BaseInfluence="100" DockSize="0" MaxDockSize="100" WeaponShieldDamage="1" Actions="Sleep WakeUp DoNothing Destroy" AttackState="None" KillScorePoints="8">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>5</float>
+        <float>10</float>
+        <float>10</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>4</float>
+        <float>4</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="31" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="2" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="32" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="Intelligence" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="33" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="5" ModifierType="Intelligence" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="34" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Intelligence" MaintenanceCost="2" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="35" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPercentageMultiUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="3" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="3" ModifierType="Intelligence" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="10" ModifierType="Intelligence" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="0" FactoryTypeName="EmptyKeys.Strategy.Units.ColonyShip" BaseProductionCost="50" ItemType="Unit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="5" MaintenanceCost="2" TotalEnergy="10" EnginesEnergyPct="40" ShieldsEnergyPct="40" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="20" WarpSpeed="2" WarpEngineEnergyRechargeRate="50" WeaponDamage="0" AvailProduction="0" BaseInfluence="5" DockSize="100" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Scan Sleep WakeUp DoNothing Colonize Orbit MiniJump Destroy Cancel" AttackState="None" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="2" FactoryTypeName="EmptyKeys.Strategy.Units.Builder" BaseProductionCost="20" ItemType="Unit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="5" MaintenanceCost="0.1" TotalEnergy="10" EnginesEnergyPct="40" ShieldsEnergyPct="40" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="20" WarpSpeed="1" WarpEngineEnergyRechargeRate="10" WeaponDamage="0" AvailProduction="10" BaseInfluence="5" DockSize="2" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Sleep WakeUp DoNothing Dock Orbit MiniJump Destroy Cancel" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="3" FactoryTypeName="EmptyKeys.Strategy.Units.Scout" BaseProductionCost="15" ItemType="Unit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0" CustomRaceName="Raider">
+      <UnitConfig HullMax="5" MaintenanceCost="0.5" TotalEnergy="10" EnginesEnergyPct="50" ShieldsEnergyPct="20" ShieldsRechargeRate="2" WeaponsEnergyPct="10" SensorsEnergyPct="20" WarpSpeed="3" WarpEngineEnergyRechargeRate="25" WeaponDamage="1" AvailProduction="0" BaseInfluence="5" DockSize="1" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing Dock Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="50" />
+          <ShieldConfiguration Direction="AftLeft" Strength="50" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="50" />
+          <ShieldConfiguration Direction="FrontRight" Strength="50" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="4" FactoryTypeName="EmptyKeys.Strategy.Units.Carrier" BaseProductionCost="100" ItemType="Unit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5" CustomRaceName="Karr">
+      <UnitConfig HullMax="15" MaintenanceCost="2" TotalEnergy="20" EnginesEnergyPct="50" ShieldsEnergyPct="10" ShieldsRechargeRate="7" WeaponsEnergyPct="10" SensorsEnergyPct="30" WarpSpeed="5" WarpEngineEnergyRechargeRate="20" WeaponDamage="0.5" AvailProduction="0" BaseInfluence="10" DockSize="100" MaxDockSize="14" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="4">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>3</float>
+        <float>0</float>
+        <float>3</float>
+        <float>0</float>
+        <float>0</float>
+        <float>3</float>
+        <float>3</float>
+        <float>0.1</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="5" FactoryTypeName="EmptyKeys.Strategy.Units.Battleship" BaseProductionCost="50" ItemType="Unit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="3" CustomRaceName="Enere">
+      <UnitConfig HullMax="20" MaintenanceCost="1.5" TotalEnergy="20" EnginesEnergyPct="30" ShieldsEnergyPct="40" ShieldsRechargeRate="7" WeaponsEnergyPct="10" SensorsEnergyPct="20" WarpSpeed="1" WarpEngineEnergyRechargeRate="15" WeaponDamage="0.5" AvailProduction="0" BaseInfluence="8" DockSize="4" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Sleep WakeUp DoNothing StayAlert Dock Orbit MiniJump Destroy Cancel" AttackState="SmallLaserAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.75</float>
+        <float>0</float>
+        <float>0</float>
+        <float>1.25</float>
+        <float>0</float>
+        <float>0.75</float>
+        <float>0</float>
+        <float>0.05</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="6" FactoryTypeName="EmptyKeys.Strategy.Units.Destroyer" BaseProductionCost="30" ItemType="Unit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Otere">
+      <UnitConfig HullMax="10" MaintenanceCost="1" TotalEnergy="15" EnginesEnergyPct="35" ShieldsEnergyPct="15" ShieldsRechargeRate="5" WeaponsEnergyPct="35" SensorsEnergyPct="15" WarpSpeed="3" WarpEngineEnergyRechargeRate="15" WeaponDamage="1" AvailProduction="0" BaseInfluence="7" DockSize="2" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="WarpJump Explore Move Attack Sleep WakeUp DoNothing StayAlert Dock Orbit MiniJump Destroy Cancel" AttackState="MissileAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.25</float>
+        <float>0</float>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="7" FactoryTypeName="EmptyKeys.Strategy.Units.Frigate" BaseProductionCost="30" ItemType="Unit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Sepir">
+      <UnitConfig HullMax="10" MaintenanceCost="1" TotalEnergy="15" EnginesEnergyPct="20" ShieldsEnergyPct="40" ShieldsRechargeRate="10" WeaponsEnergyPct="10" SensorsEnergyPct="30" WarpSpeed="3" WarpEngineEnergyRechargeRate="20" WeaponDamage="1" AvailProduction="0" BaseInfluence="7" DockSize="2" MaxDockSize="0" WeaponShieldDamage="1" Actions="WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock ShieldRecharge Orbit MiniJump Destroy Cancel" AttackState="BigLaserAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0.375</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.25</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="8" FactoryTypeName="EmptyKeys.Strategy.Units.DefenseTowerUnit" BaseProductionCost="40" ItemType="StaticUnit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <UnitConfig HullMax="25" MaintenanceCost="0.25" TotalEnergy="15" EnginesEnergyPct="0" ShieldsEnergyPct="50" ShieldsRechargeRate="5" WeaponsEnergyPct="40" SensorsEnergyPct="30" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="1" AvailProduction="0" BaseInfluence="10" DockSize="0" MaxDockSize="0" WeaponShieldDamage="0.5" Actions="Attack Scan Sleep WakeUp DoNothing StayAlert Destroy WarpMagnet" AttackState="SmallLaserAttack MissileAttack" KillScorePoints="2">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="90" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.3</float>
+        <float>0</float>
+        <float>0.15</float>
+        <float>0.5</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="9" FactoryTypeName="EmptyKeys.Strategy.Units.Station" BaseProductionCost="180" ItemType="StaticUnit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <UnitConfig HullMax="50" MaintenanceCost="2" TotalEnergy="40" EnginesEnergyPct="0" ShieldsEnergyPct="40" ShieldsRechargeRate="10" WeaponsEnergyPct="40" SensorsEnergyPct="20" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="2" AvailProduction="0" BaseInfluence="20" DockSize="0" MaxDockSize="20" WeaponShieldDamage="1" Actions="Attack Scan Sleep WakeUp DoNothing StayAlert Destroy" AttackState="SmallLaserAttack MissileAttack" KillScorePoints="4">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="90" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="90" />
+          <ShieldConfiguration Direction="AftLeft" Strength="90" />
+          <ShieldConfiguration Direction="Aft" Strength="90" />
+          <ShieldConfiguration Direction="AftRight" Strength="90" />
+          <ShieldConfiguration Direction="FrontRight" Strength="90" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>3</float>
+        <float>2</float>
+        <float>2</float>
+        <float>3</float>
+        <float>0</float>
+        <float>3</float>
+        <float>1</float>
+        <float>0.1</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="10" FactoryTypeName="EmptyKeys.Strategy.Units.ResourcesExtractor" BaseProductionCost="30" ItemType="StaticUnit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+      <UnitConfig HullMax="12" MaintenanceCost="0.5" TotalEnergy="20" EnginesEnergyPct="0" ShieldsEnergyPct="20" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="80" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="0" AvailProduction="0" BaseInfluence="0" DockSize="0" MaxDockSize="0" WeaponShieldDamage="0" Actions="Sleep WakeUp DoNothing Extract Destroy" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="11" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="30" ModifierType="Resources" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="12" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="4" ModifierType="Resources" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="13" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="4" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="14" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="2" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="15" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="Production" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="16" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="17" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="15" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="18" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="2.5" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.05</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="19" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="15" ModifierType="Energy" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>1</float>
+        <float>1</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="20" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="Population" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.5</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="21" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="0.25" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="22" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="23" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPercentageMultiUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="2" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="2" ModifierType="Research" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="10" ModifierType="Research" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>2</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>2</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="24" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="UnitsStartingRank" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="25" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="25" ModifierType="UpgradeMaintenanceCost" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>1</float>
+        <float>0</float>
+        <float>0.25</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="26" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="RepairCost" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="27" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="1" ModifierType="TradeRoutesCount" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="28" FactoryTypeName="EmptyKeys.Strategy.Units.Freighter" BaseProductionCost="20" ItemType="Unit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2" CustomRaceName="Junk">
+      <UnitConfig HullMax="5" MaintenanceCost="0.5" TotalEnergy="10" EnginesEnergyPct="60" ShieldsEnergyPct="30" ShieldsRechargeRate="1" WeaponsEnergyPct="0" SensorsEnergyPct="10" WarpSpeed="5" WarpEngineEnergyRechargeRate="10" WeaponDamage="0" AvailProduction="0" BaseInfluence="5" DockSize="100" MaxDockSize="0" WeaponShieldDamage="0" Actions="WarpJump Explore Move Sleep WakeUp DoNothing Orbit MiniJump Destroy EstablishTradeRoute Cancel" AttackState="None" KillScorePoints="1">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="75" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="75" />
+          <ShieldConfiguration Direction="AftLeft" Strength="75" />
+          <ShieldConfiguration Direction="Aft" Strength="75" />
+          <ShieldConfiguration Direction="AftRight" Strength="75" />
+          <ShieldConfiguration Direction="FrontRight" Strength="75" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0.15</float>
+        <float>0</float>
+        <float>0.1</float>
+        <float>0</float>
+        <float>0.01</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="29" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.DoubleNumberMultiUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="0" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="1" ModifierType="TradeRoutesCount" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="50" ModifierType="TradeDistanceBonus" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem>27</PrerequisiteFactoryItem>
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="30" FactoryTypeName="EmptyKeys.Strategy.Units.DysonSphere" BaseProductionCost="1000" ItemType="StaticUnit" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="100">
+      <UnitConfig HullMax="1000" MaintenanceCost="0" TotalEnergy="200" EnginesEnergyPct="0" ShieldsEnergyPct="50" ShieldsRechargeRate="20" WeaponsEnergyPct="0" SensorsEnergyPct="50" WarpSpeed="0" WarpEngineEnergyRechargeRate="0" WeaponDamage="1" AvailProduction="0" BaseInfluence="100" DockSize="0" MaxDockSize="100" WeaponShieldDamage="1" Actions="Sleep WakeUp DoNothing Destroy" AttackState="None" KillScorePoints="8">
+        <Upgrades />
+        <Shields>
+          <ShieldConfiguration Direction="Front" Strength="100" />
+          <ShieldConfiguration Direction="FrontLeft" Strength="100" />
+          <ShieldConfiguration Direction="AftLeft" Strength="100" />
+          <ShieldConfiguration Direction="Aft" Strength="100" />
+          <ShieldConfiguration Direction="AftRight" Strength="100" />
+          <ShieldConfiguration Direction="FrontRight" Strength="100" />
+        </Shields>
+      </UnitConfig>
+      <RareResourceCostModifiers>
+        <float>5</float>
+        <float>10</float>
+        <float>10</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>4</float>
+        <float>4</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="31" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="2" ModifierType="Research" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="32" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="20" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="20" ModifierType="Intelligence" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="33" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="30" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="1">
+      <PlanetUpgradeConfig Modifier="5" ModifierType="Intelligence" MaintenanceCost="1" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="34" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPerPopulationUpgrade" BaseProductionCost="50" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="2">
+      <PlanetUpgradeConfig Modifier="10" ModifierType="Intelligence" MaintenanceCost="2" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades />
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+    <FactoryItem Id="35" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberPercentageMultiUpgrade" BaseProductionCost="100" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="30" ModelRaceIdOverride="0" IsStartUpItem="false" ModelIdOverride="0" AcquiredScoreReward="5">
+      <PlanetUpgradeConfig Modifier="0" ModifierType="Multi" MaintenanceCost="3" IsRemovable="true" AutoUpgrade="false">
+        <Upgrades>
+          <PlanetUpgradeConfiguration Modifier="3" ModifierType="Intelligence" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+          <PlanetUpgradeConfiguration Modifier="10" ModifierType="Intelligence" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="false">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfiguration>
+        </Upgrades>
+        <PrerequisiteFactoryItem xsi:nil="true" />
+      </PlanetUpgradeConfig>
+      <RareResourceCostModifiers>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+        <float>0</float>
+      </RareResourceCostModifiers>
+    </FactoryItem>
+  </FactoryItems>
+</FactoryConfiguration>

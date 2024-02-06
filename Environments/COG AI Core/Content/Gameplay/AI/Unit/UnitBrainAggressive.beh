@@ -1,0 +1,94 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainAggressive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <UnitIsHullBelow HullPercentage="0.25" />
+          </Inverter>
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <UnitHasEnvTarget />
+                  <UnitIsEnvTargetSystem />
+                  <Inverter>
+                    <UnitIsInEnvTargetSystem />
+                  </Inverter>
+                  <Inverter>
+                    <UnitIsInGalaxyEnvironment />
+                  </Inverter>
+                  <UnitCanWarp />
+                  <UnitWarpJumpAction />
+                </Behaviors>
+              </Sequence>
+
+              <Sequence>
+                <Behaviors>
+                  <UnitIsInGalaxyEnvironment />
+                  <Inverter>
+                    <UnitIsMoving />
+                  </Inverter>
+                  <Inverter>
+                    <UnitIsInEnvTargetPosition />
+                  </Inverter>
+                  <FindPathToEnvTarget />
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+              <BehaviorReference ReferenceName="Explore" />
+
+              <Sequence>
+                <Behaviors>
+
+                  <Selector>
+                    <Behaviors>
+                      <UnitIsInEnvTargetSystem />
+
+                      <Inverter>
+                        <UnitHasEnvTarget />
+                      </Inverter>
+                    </Behaviors>
+                  </Selector>                                                                        
+                  
+                  <BehaviorReference ReferenceName="SearchAndAttack" />
+                </Behaviors>
+              </Sequence>
+
+              <Sequence>
+                <Behaviors>
+                  <Inverter>
+                    <UnitIsInGalaxyEnvironment />
+                  </Inverter>
+                  <FindWeakestEnemyPlanet />
+                  <UnitSetBehavior BehaviorName="UnitBrainSiege" />
+                </Behaviors>
+              </Sequence>
+
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+
+          <Inverter>
+            <UnitIsOnOrbit />
+          </Inverter>
+          <UnitIsHullBelow HullPercentage="0.25" />
+          <UnitSetBehavior BehaviorName="UnitBrainRepair" />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

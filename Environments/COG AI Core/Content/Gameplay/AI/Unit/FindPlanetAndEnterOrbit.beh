@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="FindPlanetAndEnterOrbit" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>          
+          <UnitCanWarp />
+          <FindOwnedPlanet />
+          <UnitMiniWarpAction />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsInGalaxyEnvironment />
+          </Inverter>
+          <UnitCanOrbit />
+          <UnitIsInEnvTargetPosition />
+          <UnitEnterOrbitAction />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <FindOwnedPlanet />
+          <Inverter>
+            <UnitCanOrbit />
+          </Inverter>
+          <UnitDoNothingAction />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+
+</Behavior>

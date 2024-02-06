@@ -1,0 +1,266 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainUnitUpgrade" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <RepeatUntilFail>
+    <Sequence>
+      <Behaviors>
+
+        <PlayerHasAnyUpgrade />
+        <FindUnitWithUpgradePoint />
+
+        <Selector>
+          <Behaviors>                       
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="Battleship" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="12" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="1" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="4" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="6" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="7" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="8" GoalPercentage="0.125"/>                      
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="Builder" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.25"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.25"/>
+                      <UnitUpgradeLeaf UpgradeId="4" GoalPercentage="0.25"/>
+                      <UnitUpgradeLeaf UpgradeId="14" GoalPercentage="0.25"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="Carrier" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="4" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="6" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="7" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="10" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="8" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="11" GoalPercentage="0.125"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="ColonyShip" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.33"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.33"/>
+                      <UnitUpgradeLeaf UpgradeId="4" GoalPercentage="0.33"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="DefenseTowerUnit" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="1" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="2" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="6" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="9" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="7" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="8" GoalPercentage="0.125"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="Destroyer" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="1" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="2" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="4" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="9" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="7" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="8" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="11" GoalPercentage="0.125"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="Frigate" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="5" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="4" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="6" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="9" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="7" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="8" GoalPercentage="0.125"/>
+
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="ResourcesExtractor" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.33"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.33"/>
+                      <UnitUpgradeLeaf UpgradeId="5" GoalPercentage="0.33"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="Scout" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="4" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="6" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="7" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="10" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="8" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="11" GoalPercentage="0.125"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="Station" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="1" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="2" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="6" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="9" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="7" GoalPercentage="0.125"/>
+                      <UnitUpgradeLeaf UpgradeId="8" GoalPercentage="0.125"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="Freighter" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.5"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.5"/>                      
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+            <Sequence>
+              <Behaviors>
+                <PlayerIsUnitType UnitTypeName="DysonSphere" />
+
+                <DecisionTree>
+                  <Branch Name="Root" GoalPercentage="1" >
+                    <Children>
+                      <UnitUpgradeLeaf UpgradeId="0" GoalPercentage="0.16"/>
+                      <UnitUpgradeLeaf UpgradeId="3" GoalPercentage="0.16"/>
+                      <UnitUpgradeLeaf UpgradeId="6" GoalPercentage="0.16"/>
+                      <UnitUpgradeLeaf UpgradeId="9" GoalPercentage="0.16"/>
+                      <UnitUpgradeLeaf UpgradeId="7" GoalPercentage="0.16"/>
+                      <UnitUpgradeLeaf UpgradeId="8" GoalPercentage="0.16"/>
+                    </Children>
+                  </Branch>
+                </DecisionTree>
+
+              </Behaviors>
+            </Sequence>
+
+          </Behaviors>
+        </Selector>
+
+        <PlayerUpgradeUnit />
+
+      </Behaviors>
+    </Sequence>
+  </RepeatUntilFail>
+
+</Behavior>

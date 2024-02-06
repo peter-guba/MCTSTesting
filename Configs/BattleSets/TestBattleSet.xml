@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BattleSet>
+  <Battle Id="4v4_2D-2B" />
+  <Battle Id="8v8_4D-4B" />
+  <Battle Id="16v16_8D-8B" />
+  <!--<Battle Id="32v32_16D-16B" />
+  <Battle Id="48v48_24D-24B" />
+  <Battle Id="64v64_32D-32B" />-->
+</BattleSet>

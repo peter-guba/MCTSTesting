@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UpgradePlanet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <Inverter>
+        <PlanetIsBuilding />
+      </Inverter>
+      <FindPlanetUpgradeToBuild UpgradeModifier="None" />
+      <PlanetBuildFactoryItem />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

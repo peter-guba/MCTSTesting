@@ -1,0 +1,370 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="TutorialBasicUI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="Init" />
+          
+          <CreateGameSession SessionMode="Tutorial" />
+          <AddPlayer IsAIControlled="false" RaceId="0" Energy="10000" 
+                     UnitActions="AutoExplore WarpJump Explore Move Attack Scan Sleep WakeUp DoNothing StayAlert Dock Extract ShieldRecharge Colonize Orbit MiniJump EstablishTradeRoute Cancel">
+            <Color>
+              <R>45</R>
+              <G>100</G>
+              <B>140</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>135</R>
+              <G>182</G>
+              <B>217</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+          <SetSessionPlayer PlayerIndex="0" />
+
+          <CreateGalaxy GalaxyType="Spiral" GalaxyBodyCount="1" GalaxyRadius="25" GalaxyBodyMinDistance="2" PlayersMinDistance="2">
+            <StarSystems>
+              <StarSystemData Name="Solar System" StarSpectralType="ClassG" StarName="Sun" StarTemperature="5778" StarMass="1" StarRadius="1" StarAge="4600000000" StarComfortZone="1.34" IsHomeSystem="true">
+                <Planets>
+                  <PlanetData Name="Mercury" Type="Iron" Distance="0.4" Mass="0.055" Radius="0.38" OrbitalPeriod="88" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Venus" Type="Desert" Distance="0.7" Mass="0.815" Radius="0.94" OrbitalPeriod="225" Population="0" BaseEnergy="0" PrefabName="Venus"/>
+                  <PlanetData Name="Earth" Type="Rocky" Distance="1" Mass="1" Radius="1" OrbitalPeriod="350" HexDistance="8" Population="1" BaseEnergy="10" ConstructionSlotsCount="10" IsHomePlanet="true"/>
+                  <PlanetData Name="Mars" Type="Desert" Distance="1.5" Mass="0.107" Radius="0.53" OrbitalPeriod="687" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Jupiter" Type="Gas" Distance="5.2" Mass="318" Radius="11.2" OrbitalPeriod="4333" Population="0" BaseEnergy="0" PrefabName="Jupiter"/>
+                  <PlanetData Name="Saturn" Type="Gas" Distance="9.5" Mass="95" Radius="9.4" OrbitalPeriod="10759" Population="0" BaseEnergy="0" PrefabName="Saturn"/>
+                  <PlanetData Name="Uranus" Type="Ice" Distance="19.2" Mass="14" Radius="4" OrbitalPeriod="30689" Population="0" BaseEnergy="0"  PrefabName="Uranus"/>
+                  <PlanetData Name="Neptune" Type="Ice" Distance="30.1" Mass="17" Radius="3.88" OrbitalPeriod="60182" Population="0" BaseEnergy="0" PrefabName="Neptune"/>
+                </Planets>
+              </StarSystemData>
+            </StarSystems>            
+          </CreateGalaxy>
+
+          <AddTradeRoute StarSystemName="Solar System" FromPlanet="Earth" ToPlanet="Mars" PlayerIndex="0" />
+          <AddTradeRoute StarSystemName="Solar System" FromPlanet="Earth" ToPlanet="Jupiter" PlayerIndex="0" />
+          <AddTradeRoute StarSystemName="Solar System" FromPlanet="Earth" ToPlanet="Venus" PlayerIndex="0" />
+         
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionStart" />
+
+          <SetHudVisibility Visibility="None" Force="true" />
+          <CreateTutorialWindow Top="300" Left="10" />
+          <SetPhase Phase="PhaseIntro" />          
+          
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseIntro" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase1_Text" NextPhase="PhaseTopBar" />          
+          <SetPhase Phase="Phase1_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseTopBar" />
+          <SetHudVisibility Visibility="TopBar" Force="true" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase2_Text" NextPhase="PhaseGalaxyPanel" />
+          <SetPhase Phase="Phase2_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>          
+          <IsPhaseActive Phase="PhaseGalaxyPanel" />
+          <SetHudVisibility Visibility="TopBar GalaxyPanel" Force="true" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase3_Text" NextPhase="PhaseMiniMap" />
+          <SetHighlightWindow HighlightedElementName="galaxyPanel" IsVisible="true" />
+          <SetPhase Phase="PhaseGalaxyPanel_InProgress" />
+
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseMiniMap" />
+          <SetHudVisibility Visibility="TopBar GalaxyPanel MiniMap" Force="true" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase4_Text" NextPhase="PhaseSelectStarSystem" />
+          <SetHighlightWindow HighlightedElementName="miniMap" IsVisible="true" />
+          <SetPhase Phase="PhaseMiniMap_InProgress" />
+
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectStarSystem" />
+          <SetCameraToStarSystem StarSystemName="Solar System" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase5_Text" IsNextButtonVisible="false" />
+          <SetHighlightWindow IsVisible="false" />
+          <SetPhase Phase="Phase5_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="Phase5_InProgress" />
+          <IsStarSystemView StarSystemName="Solar System" />
+          <SetPhase Phase="PhaseStarSystemSelected" />
+        </Behaviors>
+      </Sequence>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseStarSystemSelected" />          
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase6_Text" NextPhase="PhaseSelectPlanet" />
+          <SetHudVisibility Visibility="TopBar MiniMap StarSystemPanel" Force="true" />
+          <SetInputState Enabled="true" />
+          <SetPhase Phase="Phase6_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectPlanet" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase7_Text" IsNextButtonVisible="false" />
+          <SetHudVisibility Visibility="TopBar GalaxyPanel MiniMap StarBodyPanels" />          
+          <SetPhase Phase="PhaseSelectPlanet_InProgress" />
+        </Behaviors>
+      </Sequence>
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectPlanet_InProgress" />
+          <IsPlanetSelected PlanetName="Earth" />          
+          <SetPhase Phase="PhaseSelectedEarth" />
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectedEarth" />          
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase8_Text" NextPhase="PhaseOrbitPanel" />
+          <SetHighlightWindow HighlightedElementName="starSystemBodyPanel" IsVisible="true" />
+          <SetInputState Enabled="false" />
+          <SetPhase Phase="PhaseCheck_SelectedEarth" />
+        </Behaviors>
+      </Sequence>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseCheck_SelectedEarth" />
+          <Inverter>
+            <IsPlanetSelected PlanetName="Earth" />
+          </Inverter>
+          <SetSelectedPlanet StarSystemName="Solar System" PlanetName="Earth" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseOrbitPanel" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase9_Text" NextPhase="PhaseFactoryPanel" />
+          <SetHudVisibility Visibility="TopBar MiniMap StarBodyPanels OrbitPanel" Force="true" />          
+          <SetSelectedPlanet StarSystemName="Solar System" PlanetName="Earth" />
+          <SetHighlightWindow HighlightedElementName="orbitPanel" IsVisible="true" />
+          <SetPhase Phase="PhaseCheck_SelectedEarth" />
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseFactoryPanel" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase10_Text" NextPhase="PhaseUnitOnOrbit" />
+          <SetHudVisibility Visibility="TopBar MiniMap StarBodyPanels OrbitPanel FactoryPanel" Force="true" />
+          <SetHighlightWindow HighlightedElementName="factoryPanel" IsVisible="true" />
+          <SetPhase Phase="PhaseCheck_SelectedEarth" />
+        </Behaviors>
+      </Sequence>
+
+      <!--Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhasePlanetUpgradePanel" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Phase11_Text" NextPhase="PhaseUnitOnOrbit" />
+          <SetHudVisibility Visibility="TopBar MiniMap StarBodyPanels OrbitPanel FactoryPanel PlanetUpgradePanel" Force="true" />
+          <SetHighlightWindow HighlightedElementName="planetUpgradePanel" IsVisible="true" />
+          <SetPhase Phase="PhaseCheck_SelectedEarth" />
+        </Behaviors>
+      </Sequence-->
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseUnitOnOrbit" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_UnitOnOrbit_Text" NextPhase="PhaseUnits" />
+          <SetHighlightWindow IsVisible="false" />
+          <BuyUnit FactoryItemId="3" />
+          <SetPhase Phase="PhaseCheck_SelectedEarth" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseUnits" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_Units_Text" NextPhase="PhaseUnitUpgradePanel" />
+          <SetHudVisibility Visibility="TopBar MiniMap UnitPanel" />
+          <AddUnit Name="Scout" PlayerIndex="0" FactoryItemId="3" Rank="10" Q="1" R="1"/>
+          <SetHighlightWindow HighlightedElementName="unitPanel" IsVisible="true" />
+          <SetPhase Phase="PhaseUnits_SelectedUnit" />
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseUnits_SelectedUnit" />          
+          <Inverter>
+            <IsUnitSelected UnitName="Scout" />
+          </Inverter>
+          <SetSelectedUnit UnitName="Scout" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseUnitUpgradePanel" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_UnitUpgradePanel_Text" NextPhase="PhaseBackToGalaxyView" />
+          <SetHudVisibility Visibility="TopBar MiniMap UnitPanel UnitUpgradePanel" Force="true" />
+          <SetHighlightWindow HighlightedElementName="unitUpgrade" IsVisible="true" />
+          <SetPhase Phase="PhaseUnits_SelectedUnit" />
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseBackToGalaxyView" />          
+          <ExecuteUnitAction UnitAction="Sleep" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_BackToGalaxyView_Text" IsNextButtonVisible="false" />
+          <SetHudVisibility Visibility="TopBar MiniMap BackToGalaxyButton TopBarButtons" Force="true" />
+          <SetInputState Enabled="true" />
+          <SetHighlightWindow HighlightedElementName="galaxyMap" IsVisible="true" />
+          <SetPhase Phase="PhaseBackToGalaxyView_InProgress" />
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseBackToGalaxyView_InProgress" />          
+          <IsGalaxyView />
+          <SetPhase Phase="PhaseTopBarButtons" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseTopBarButtons" />          
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_TopBarButtons_Text" NextPhase="PhaseGovernmentInfoPanel" />
+          <SetHudVisibility Visibility="TopBar MiniMap BackToGalaxyButton TopBarButtons" Force="true" />
+          <SetHighlightWindow HighlightedElementName="menuPanel" IsVisible="true" />
+          <SetPhase Phase="PhaseTopBarButtons_InProgress" />
+        </Behaviors>
+      </Sequence>      
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseGovernmentInfoPanel" />
+          <SetHighlightWindow IsVisible="false" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_GovernmentInfoPanel_Text" NextPhase="PhaseMilitaryPanel" SetPosition="true" Top="350" Left="10" />
+          <SetHudVisibility Visibility="TopBar MiniMap BackToGalaxyButton TopBarButtons GovernmentInfoPanel" Force="true" />
+          <SetPhase Phase="PhaseGovernmentInfoPanel_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseMilitaryPanel" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_MilitaryPanel_Text" NextPhase="PhaseResearchPanel" SetPosition="true" Top="350" Left="10" />
+          <SetHudVisibility Visibility="TopBar MiniMap BackToGalaxyButton TopBarButtons MilitaryPanel" Force="true" />
+          <SetPhase Phase="PhaseMilitaryPanel_InProgress" />
+        </Behaviors>
+      </Sequence>
+      
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseResearchPanel" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_ResearchPanel_Text" NextPhase="PhaseSelectTechnology" />
+          <SetHudVisibility Visibility="TopBar MiniMap BackToGalaxyButton TopBarButtons ResearchPanel" Force="true" />
+          <SetPhase Phase="PhaseResearchPanel_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectTechnology" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_SelectTechnology_Text" IsNextButtonVisible="false" />          
+          <SetPhase Phase="PhaseSelectTechnology_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseSelectTechnology_InProgress" />
+          <IsTechnologySelected />
+          <SetPhase Phase="PhaseTechnologySelected" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseTechnologySelected" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_TechnologySelected_Text" NextPhase="PhaseTradePanel" />          
+          <SetPhase Phase="PhaseTechnologySelected_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseTradePanel" />
+          <SetTechnologyState TechnologyId="0" State="InProgress" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_TradePanel_Text" NextPhase="PhaseNextTurn" />
+          <SetHudVisibility Visibility="TopBar MiniMap BackToGalaxyButton TopBarButtons TradePanel" Force="true" />
+          <SetPhase Phase="PhaseTradePanel_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseNextTurn" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_NextTurn_Text" IsNextButtonVisible="false" />
+          <SetHudVisibility Visibility="TopBar MiniMap GameButtons" Force="true" />
+          <SetHighlightWindow HighlightedElementName="nextRound" IsVisible="true" />
+          <SetPhase Phase="PhaseNextTurn_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseNextTurn_InProgress" />          
+          <IsCurrentTurn TurnNumber="2" />
+          <SetPhase Phase="SessionEnd" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionEnd" />
+          <SetHighlightWindow IsVisible="false" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialBasicUI_SessionEnd_Text" NextPhase="BackToMenu" />          
+          <SetPhase Phase="SessionEnd_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="BackToMenu" />
+          <BackToMainMenu />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

@@ -1,0 +1,285 @@
+﻿<?xml version="1.0"?>
+<SetupConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GalaxySizes>
+    <GalaxySetupConfiguration Id="1" GalaxyBodyCount="25" GalaxyRadius="30" GalaxyBodyMinDistance="4" PlayersMinDistance="10" MaxPlayers="2" />
+    <GalaxySetupConfiguration Id="2" GalaxyBodyCount="90" GalaxyRadius="45" GalaxyBodyMinDistance="5" PlayersMinDistance="15" MaxPlayers="4" IsDefault="true"/>
+    <GalaxySetupConfiguration Id="3" GalaxyBodyCount="120" GalaxyRadius="60" GalaxyBodyMinDistance="6" PlayersMinDistance="30" MaxPlayers="8" />
+    <GalaxySetupConfiguration Id="4" GalaxyBodyCount="150" GalaxyRadius="60" GalaxyBodyMinDistance="6" PlayersMinDistance="30" MaxPlayers="8" />
+  </GalaxySizes>
+  <PlayerColors>
+    <PlayerColor>
+      <Fill>
+        <R>45</R>
+        <G>100</G>
+        <B>140</B>
+        <A>255</A>
+      </Fill>
+      <Stroke>
+        <R>135</R>
+        <G>182</G>
+        <B>217</B>
+        <A>255</A>
+      </Stroke>
+    </PlayerColor>
+
+    <PlayerColor>
+      <Fill>
+        <R>140</R>
+        <G>45</G>
+        <B>45</B>
+        <A>255</A>
+      </Fill>
+      <Stroke>
+        <R>216</R>
+        <G>135</G>
+        <B>135</B>
+        <A>255</A>
+      </Stroke>
+    </PlayerColor>
+
+    <PlayerColor>
+      <Fill>
+        <R>178</R>
+        <G>105</G>
+        <B>46</B>
+        <A>255</A>
+      </Fill>
+      <Stroke>
+        <R>254</R>
+        <G>192</G>
+        <B>142</B>
+        <A>255</A>
+      </Stroke>
+    </PlayerColor>
+
+    <PlayerColor>
+      <Fill>
+        <R>45</R>
+        <G>140</G>
+        <B>100</B>
+        <A>255</A>
+      </Fill>
+      <Stroke>
+        <R>135</R>
+        <G>216</G>
+        <B>182</B>
+        <A>255</A>
+      </Stroke>
+    </PlayerColor>
+
+    <PlayerColor>
+      <Fill>
+        <R>130</R>
+        <G>64</G>
+        <B>153</B>
+        <A>255</A>
+      </Fill>
+      <Stroke>
+        <R>213</R>
+        <G>165</G>
+        <B>229</B>
+        <A>255</A>
+      </Stroke>
+    </PlayerColor>
+
+    <PlayerColor>
+      <Fill>
+        <R>122</R>
+        <G>88</G>
+        <B>37</B>
+        <A>255</A>
+      </Fill>
+      <Stroke>
+        <R>250</R>
+        <G>150</G>
+        <B>0</B>
+        <A>255</A>
+      </Stroke>
+    </PlayerColor>
+
+    <PlayerColor>
+      <Fill>
+        <R>77</R>
+        <G>77</G>
+        <B>77</B>
+        <A>77</A>
+      </Fill>
+      <Stroke>
+        <R>178</R>
+        <G>178</G>
+        <B>178</B>
+        <A>255</A>
+      </Stroke>
+    </PlayerColor>
+
+    <PlayerColor>
+      <Fill>
+        <R>72</R>
+        <G>76</G>
+        <B>153</B>
+        <A>255</A>
+      </Fill>
+      <Stroke>
+        <R>131</R>
+        <G>136</G>
+        <B>230</B>
+        <A>255</A>
+      </Stroke>
+    </PlayerColor>
+  </PlayerColors>
+  <GameSpeeds>
+    <float>1.5</float>
+    <float>1.25</float>
+    <float>1</float>
+    <float>0.75</float>
+    <float>0.5</float>
+  </GameSpeeds>
+  <Player AvailableUnitActions="Attack AutoExplore Colonize Dock DoNothing Explore Scan Extract Move MiniJump Orbit Sleep StayAlert WakeUp WarpJump Destroy Cancel"
+          AvailDiplomaticActions="DeclareWar" ResearchProgressPool="100"
+          UnitsStartingRank="1" UnitMaintenanceCostPercentage="100" UnitRepairCostPercentage="100" PlanetUpgradeMaintenanceCostPercentage="100" UnitXpPerTurnPercentage="1" MaxEnergy="1000">
+    <SetupUnitUpgrades>
+      <BaseUnitUpgrade xsi:type="HullUpgrade" Id="100" AvailRank="1" Modifier="5" UsageLimit="0" />
+      <BaseUnitUpgrade xsi:type="TotalEnergyUpgrade" Id="101" AvailRank="1" Modifier="5" UsageLimit="0" />
+      <BaseUnitUpgrade xsi:type="WarpSpeedUpgrade" Id="102" AvailRank="1" Modifier="1" UsageLimit="0" />
+      <BaseUnitUpgrade xsi:type="WeaponDamageUpgrade" Id="103" AvailRank="1" Modifier="5" UsageLimit="0" />
+
+      <BaseUnitUpgrade xsi:type="WeaponEnergyUpgrade" Id="104" AvailRank="1" Modifier="5" UsageLimit="0" />
+      <BaseUnitUpgrade xsi:type="ShieldsEnergyUpgrade" Id="105" AvailRank="1" Modifier="10" UsageLimit="0" />
+      <BaseUnitUpgrade xsi:type="EngineUpgrade" Id="106" AvailRank="1" Modifier="5" UsageLimit="0" />
+      <BaseUnitUpgrade xsi:type="SensorsEnergyUpgrade" Id="107" AvailRank="1" Modifier="10" UsageLimit="0" />
+      <BaseUnitUpgrade xsi:type="WeaponShieldDamageUpgrade" Id="108" AvailRank="1" Modifier="10" UsageLimit="0" />
+      <BaseUnitUpgrade xsi:type="WarpRechargeRateUpgrade" Id="109" AvailRank="1" Modifier="10" UsageLimit="0" />
+
+    </SetupUnitUpgrades>
+    <SetupPlanetConstructions>
+      <FactoryItem Id="100" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="0" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="0" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+        <PlanetUpgradeConfig Modifier="5" ModifierType="Population" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="true">
+          <Upgrades />
+          <PrerequisiteFactoryItem xsi:nil="true" />
+        </PlanetUpgradeConfig>
+        <RareResourceCostModifiers>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+        </RareResourceCostModifiers>
+      </FactoryItem>
+
+      <FactoryItem Id="1100" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="0" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="0" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+        <PlanetUpgradeConfig Modifier="5" ModifierType="Production" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="true">
+          <Upgrades />
+          <PrerequisiteFactoryItem xsi:nil="true" />
+        </PlanetUpgradeConfig>
+        <RareResourceCostModifiers>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+        </RareResourceCostModifiers>
+      </FactoryItem>
+
+      <FactoryItem Id="2100" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="0" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="0" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+        <PlanetUpgradeConfig Modifier="5" ModifierType="Energy" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="true">
+          <Upgrades />
+          <PrerequisiteFactoryItem xsi:nil="true" />
+        </PlanetUpgradeConfig>
+        <RareResourceCostModifiers>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+        </RareResourceCostModifiers>
+      </FactoryItem>
+
+      <FactoryItem Id="3100" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="0" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="0" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+        <PlanetUpgradeConfig Modifier="1" ModifierType="UnitsStartingRank" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="true">
+          <Upgrades />
+          <PrerequisiteFactoryItem xsi:nil="true" />
+        </PlanetUpgradeConfig>
+        <RareResourceCostModifiers>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+          <float>0</float>
+        </RareResourceCostModifiers>
+      </FactoryItem>
+    </SetupPlanetConstructions>
+  </Player>
+  <ImageCategories>
+    <LogoLayerImageCategory Id="0">
+      <TextureIDs>
+        <int>7</int>
+        <int>8</int>
+        <int>9</int>
+        <int>10</int>
+        <int>11</int>
+        <int>12</int>
+        <int>13</int>
+        <int>14</int>
+        <int>15</int>
+        <int>16</int>
+        <int>17</int>
+        <int>18</int>
+        <int>19</int>
+      </TextureIDs>
+    </LogoLayerImageCategory>
+    <LogoLayerImageCategory Id="1">
+      <TextureIDs>
+        <int>20</int>
+        <int>21</int>
+        <int>22</int>
+        <int>23</int>
+      </TextureIDs>
+    </LogoLayerImageCategory>
+    <LogoLayerImageCategory Id="2">
+      <TextureIDs>
+        <int>25</int>
+        <int>26</int>
+        <int>27</int>
+        <int>28</int>
+        <int>29</int>
+        <int>30</int>
+        <int>31</int>
+        <int>33</int>
+        <int>34</int>
+        <int>35</int>
+        <int>36</int>
+        <int>42</int>
+        <int>43</int>
+        <int>45</int>
+        <int>46</int>
+      </TextureIDs>
+    </LogoLayerImageCategory>
+    <LogoLayerImageCategory Id="3">
+      <TextureIDs>
+        <int>24</int>
+        <int>32</int>
+        <int>37</int>
+        <int>38</int>
+        <int>39</int>
+        <int>40</int>
+        <int>41</int>
+        <int>44</int>
+        <int>47</int>
+        <int>48</int>
+        <int>49</int>
+      </TextureIDs>
+    </LogoLayerImageCategory>
+  </ImageCategories>
+</SetupConfiguration>

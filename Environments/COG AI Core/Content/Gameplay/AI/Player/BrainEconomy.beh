@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainEconomy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <PlayerNeedsTradeRoute />
+            <FindPlanetWithMinValue PlanetValueType="TradeRoutesCount" />
+            <FindPlanetUpgradeToBuild UpgradeModifier="TradeRoutesCount" />
+            <PlayerSetPlanetBehavior BehaviorName="PlanetTrade" />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      
+      <PlayerTradeBehavior />
+    </Behaviors>
+  </Sequence>
+</Behavior>

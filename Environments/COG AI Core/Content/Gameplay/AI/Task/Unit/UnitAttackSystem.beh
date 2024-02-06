@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<Behavior Name="UnitAttackSystem" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Selector>
+    <Behaviors>
+      <Sequence>
+        <Behaviors>
+          <UnitIsInEnvTargetSystem/>
+          <Succeeder>
+            <BehaviorReference ReferenceName="UnitMicroAttackValue"/>
+          </Succeeder>
+        </Behaviors>
+      </Sequence>
+      <Sequence>
+        <Behaviors>
+          <UnitIsInGalaxyEnvironment/>
+          <Inverter>
+            <UnitIsMoving/>
+          </Inverter>
+          <Inverter>
+            <UnitIsInEnvTargetPosition/>
+          </Inverter>
+          <FindPathToEnvTarget/>
+          <UnitMoveAction/>
+        </Behaviors>
+      </Sequence>
+      <BehaviorReference ReferenceName="Explore"/>
+      <Sequence>
+        <Behaviors>
+          <UnitCanWarp/>
+          <UnitWarpJumpAction/>
+        </Behaviors>
+      </Sequence>
+    </Behaviors>
+  </Selector>
+</Behavior>

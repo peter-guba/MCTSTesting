@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<MissionsConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Missions>
+    <MissionData Id="0" BehaviorName="MissionTest" MissionType="Normal" />
+    <MissionData Id="1" BehaviorName="MissionTest1" MissionType="Normal" />
+    <MissionData Id="2" BehaviorName="ExpansionVictory" MissionType="GlobalVictory" />
+    <MissionData Id="3" BehaviorName="DominationVictory" MissionType="GlobalVictory" />
+    <MissionData Id="4" BehaviorName="ResearchVictory" MissionType="GlobalVictory" />
+    <MissionData Id="5" BehaviorName="DysonSphere" MissionType="GlobalVictory" />
+
+    <MissionData Id="10" BehaviorName="Mission_ExploreStarSystems" MissionType="Normal" />
+    <MissionData Id="11" BehaviorName="Mission_ScanPlanets" MissionType="Normal" />
+    <MissionData Id="12" BehaviorName="Mission_ColonizePlanet" MissionType="Normal" />
+    <MissionData Id="13" BehaviorName="Mission_BuildConstruction" MissionType="Normal" />
+    <MissionData Id="14" BehaviorName="Mission_BuildShip" MissionType="Normal" />
+
+    <MissionData Id="999" BehaviorName="Mission_ScanAnomaly" MissionType="Normal" />
+    <MissionData Id="1000" BehaviorName="Anomaly_Nothing" MissionType="Anomalies" IsRepeatable="true" />
+    <MissionData Id="1001" BehaviorName="Anomaly_Particle" MissionType="Anomalies" IsRepeatable="true" Probability="5" />
+    <MissionData Id="1002" BehaviorName="Anomaly_Energy" MissionType="Anomalies" IsRepeatable="true" Probability="35" />
+    <MissionData Id="1003" BehaviorName="Anomaly_Cargo" MissionType="Anomalies" IsRepeatable="true" Probability="50" />
+  </Missions>
+</MissionsConfiguration>

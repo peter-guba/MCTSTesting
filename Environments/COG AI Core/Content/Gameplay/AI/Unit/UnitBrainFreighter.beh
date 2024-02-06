@@ -1,0 +1,102 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainFreighter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <UnitHasTradeRoute />
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <UnitIsOnOrbit />
+
+            <SwapTradeRouteTarget />
+
+            <UnitLeaveOrbitAction />
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Inverter>
+        <UnitIsOnOrbit />
+      </Inverter>
+      <UnitHasEnvTarget />      
+
+      <Selector>
+        <Behaviors>
+
+          <Sequence>
+            <Behaviors>
+              <UnitCanWarp />
+              <UnitIsInPlanetSystem />
+              <UnitMiniWarpAction />
+            </Behaviors>
+          </Sequence>
+
+          <Sequence>
+            <Behaviors>
+              <Inverter>
+                <UnitIsInPlanetSystem />
+              </Inverter>
+              <Inverter>
+                <UnitIsInGalaxyEnvironment />
+              </Inverter>
+              <UnitCanWarp />
+              <UnitWarpJumpAction />
+              <SetPlanetSystemAsEnvTarget />
+              <Inverter>
+                <UnitIsInEnvTargetPosition />
+              </Inverter>
+              <FindPathToEnvTarget />
+              <UnitMoveAction />
+            </Behaviors>
+          </Sequence>
+
+          <Sequence>
+            <Behaviors>
+              <Inverter>
+                <UnitIsInGalaxyEnvironment />
+              </Inverter>
+              <UnitIsInPlanetSystem />
+              <UnitIsInEnvTargetPosition />
+              <UnitEnterOrbitAction />
+            </Behaviors>
+          </Sequence>
+
+          <Sequence>
+            <Behaviors>
+              <UnitIsInGalaxyEnvironment />
+
+              <Selector>
+                <Behaviors>
+
+                  <Sequence>
+                    <Behaviors>
+                      <Inverter>
+                        <UnitIsInEnvTargetPosition />
+                      </Inverter>
+                      <FindPathToEnvTarget />
+                      <UnitMoveAction />
+                    </Behaviors>
+                  </Sequence>
+
+                  <Sequence>
+                    <Behaviors>
+                      <BehaviorReference ReferenceName="Explore" />
+                      <SetTradeUnitTargetFromSystem />
+                    </Behaviors>
+                  </Sequence>
+
+                </Behaviors>
+              </Selector>
+
+
+
+            </Behaviors>
+          </Sequence>
+
+        </Behaviors>
+      </Selector>
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

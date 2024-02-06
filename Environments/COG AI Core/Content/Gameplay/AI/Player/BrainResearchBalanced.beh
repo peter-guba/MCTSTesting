@@ -1,0 +1,45 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainResearchBalanced" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <Inverter>
+        <PlayerIsResearching />
+      </Inverter>
+
+      <Selector>
+        <Behaviors>
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="GoalOne" GoalPercentage="1" >
+                  <Children>
+                    <ResearchGoalLeaf GoalTechnologyId="0" GoalPercentage="1"/>                    
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>
+          
+          
+          <Sequence>
+            <Behaviors>
+              <DecisionTree>
+                <Branch Name="GoalTwo" GoalPercentage="1" >
+                  <Children>
+                    <ResearchGoalLeaf GoalTechnologyId="120" GoalPercentage="0.26"/>
+                    <ResearchGoalLeaf GoalTechnologyId="121" GoalPercentage="0.24"/>
+                    <ResearchGoalLeaf GoalTechnologyId="122" GoalPercentage="0.26"/>
+                    <ResearchGoalLeaf GoalTechnologyId="123" GoalPercentage="0.24"/>                    
+                  </Children>
+                </Branch >
+              </DecisionTree>
+              <PlayerResearchTech />
+            </Behaviors>
+          </Sequence>
+
+        </Behaviors>
+      </Selector>
+    </Behaviors>
+  </Sequence>
+</Behavior>

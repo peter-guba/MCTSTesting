@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<SpectralTypeConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpectralTypesProportion>
+    <ProportionValueOfSpectralType Proportion="0.0023" Value="ClassO" />
+    <ProportionValueOfSpectralType Proportion="0.089" Value="ClassB" />
+    <ProportionValueOfSpectralType Proportion="0.161" Value="ClassA" />
+    <ProportionValueOfSpectralType Proportion="0.221" Value="ClassF" />
+    <ProportionValueOfSpectralType Proportion="0.197" Value="ClassG" />
+    <ProportionValueOfSpectralType Proportion="0.277" Value="ClassK" />
+    <ProportionValueOfSpectralType Proportion="0.0527" Value="ClassM" />
+  </SpectralTypesProportion>
+  <SpectralTypesMinMaxValues>
+    <SpectralTypeMinMax SpectralType="ClassO" MaxTemperature="50000" MinTemperature="30000" MaxMass="150" MinMass="18" HexRadius="2" />
+    <SpectralTypeMinMax SpectralType="ClassB" MaxTemperature="30000" MinTemperature="10000" MaxMass="130" MinMass="2.9" HexRadius="2" />
+    <SpectralTypeMinMax SpectralType="ClassA" MaxTemperature="10000" MinTemperature="7500" MaxMass="2.9" MinMass="1.6" HexRadius="1" />
+    <SpectralTypeMinMax SpectralType="ClassF" MaxTemperature="7500" MinTemperature="6000" MaxMass="1.6" MinMass="1.05" HexRadius="1" />
+    <SpectralTypeMinMax SpectralType="ClassG" MaxTemperature="6000" MinTemperature="5200" MaxMass="1.05" MinMass="0.8" HexRadius="1" />
+    <SpectralTypeMinMax SpectralType="ClassK" MaxTemperature="5200" MinTemperature="3700" MaxMass="0.8" MinMass="0.5" HexRadius="0" />
+    <SpectralTypeMinMax SpectralType="ClassM" MaxTemperature="3700" MinTemperature="2400" MaxMass="0.5" MinMass="0.07" HexRadius="0" />
+  </SpectralTypesMinMaxValues>
+</SpectralTypeConfiguration>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AI>
+ <RQBonusMcts
+  MaxPlayouts="100"
+  K="0.1"
+  PlayoutRoundLimit="100"
+  RelativeBonusEnabled="true"
+  QualitativeBonusEnabled="false"
+ >
+
+  <Script>NOKAV</Script>
+  <Script>Kiter</Script>
+
+</RQBonusMcts>
+</AI>

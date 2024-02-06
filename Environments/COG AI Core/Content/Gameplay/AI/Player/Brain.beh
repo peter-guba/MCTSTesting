@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<Behavior Name="Brain" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sequence>
+    <Behaviors>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainCore"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainEconomy"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainResearch"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainExplore"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainColonize"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainMicroAttack"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainDefense"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainUnitUpgrade"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainRareResources"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+            <BehaviorReference ReferenceName="BrainDiplomacy"/>
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+    </Behaviors>
+  </Sequence>
+</Behavior>

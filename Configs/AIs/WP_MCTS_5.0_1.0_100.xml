@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AI>
+ <WPMcts
+  MaxPlayouts="100"
+  VB="5.0"
+  PB="1.0"
+  Normalize="false"
+  PlayoutRoundLimit="100"
+ >
+
+  <Script>NOKAV</Script>
+  <Script>Kiter</Script>
+
+</WPMcts>
+</AI>

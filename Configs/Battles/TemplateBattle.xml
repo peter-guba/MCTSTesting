@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- 
+Battle can be either regular or symmetric.
+In symmetric battle only one army may be specified.
+The other army is placed symmetrically around the origin.
+
+To create a regular battle simply use tag <Battle> instead of <SymmetricBattle>.
+-->
+<SymmetricBattle>
+  <!-- 
+  Reference to an environment file.
+  In this case a file called DefaultEnv.xml needs to be places in Environments directory.
+  -->
+  <Environment Id="DefaultEnv" />
+  
+  <!-- For symmetric battle specify only one player. -->
+  <Player Index="0">
+    <Units>
+      <!-- Specify all units where Id is a reference to a XML file with given unit. -->
+      <Unit Id="destroyer_0" Q="11" R="-4" />
+      <Unit Id="battleship_0"  Q="10" R="-3" />
+      <Unit Id="destroyer_0" Q="15" R="-3" />
+      <Unit Id="destroyer_0"  Q="11" R="-1" />
+    </Units>
+  </Player>
+</SymmetricBattle>

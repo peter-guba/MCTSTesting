@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="AutoColonize" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <UnitIsColonizing />
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+
+          <SetPlanetAsEnvTarget />
+          
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <UnitCanWarp />
+                  <UnitCanColonize />
+                  <UnitIsInPlanetSystem />
+                  <UnitMiniWarpAction />
+                </Behaviors>
+              </Sequence>
+
+              <Sequence>
+                <Behaviors>
+                  <UnitIsInPlanetSystem />
+                  <UnitIsInEnvTargetPosition />
+                  <UnitCanOrbit />
+                  <UnitCanColonize />
+                  <UnitEnterOrbitAction />                  
+                  <UnitColonizeAction />
+                </Behaviors>
+              </Sequence>
+
+              <Sequence>
+                <Behaviors>
+                  <Inverter>
+                    <UnitIsInPlanetSystem />
+                  </Inverter>
+                  <Inverter>
+                    <UnitIsInGalaxyEnvironment />
+                  </Inverter>
+                  <UnitCanWarp />
+                  <UnitWarpJumpAction />
+                  <SetPlanetSystemAsEnvTarget />
+                  <Inverter>
+                    <UnitIsInEnvTargetPosition />
+                  </Inverter>
+                  <FindPathToEnvTarget />
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitIsInGalaxyEnvironment />
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+          <SetPlanetSystemAsEnvTarget />
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <Inverter>
+                    <UnitIsInEnvTargetPosition />
+                  </Inverter>
+                  <FindPathToEnvTarget />
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+              <BehaviorReference ReferenceName="Explore" />
+
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitIsOnOrbit />
+          <SetTargetPlanet />
+          <UnitLeaveOrbitAction />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+
+</Behavior>

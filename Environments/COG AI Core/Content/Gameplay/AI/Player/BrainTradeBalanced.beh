@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainTradeBalanced" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <RepeatUntilFail>
+          <Sequence>
+            <Behaviors>
+
+              <FindTradeUnitWithoutRoute />
+
+              <Sequence>
+                <Behaviors>
+                  <PlayerSetTradeRoute IncludeDomestic="true" IncludeGlobal="true" AutoRenew="true" TradeBallance="0.5" />
+
+                  <PlayerSetUnitBehavior BehaviorName="FindTradeRouteSystem"/>
+                </Behaviors>
+              </Sequence>
+
+            </Behaviors>
+          </Sequence>
+        </RepeatUntilFail>
+      </Succeeder>
+
+      <PlayerNeedsTradeShip RouteShipRatio="0.5" />
+      <FindPlanetForBuild PlanetWithTradeRoute="true" IgnoreBehaviorName="BuildTradeShip"/>
+      <PlayerSetPlanetBehavior BehaviorName="BuildTradeShip" />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

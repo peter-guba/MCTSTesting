@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BenchmarkSet>
+ <Benchmark Id="Basic_MCTS_100_vs_Simple_Regret_MCTS_EG_0.25_100"/>
+</BenchmarkSet>

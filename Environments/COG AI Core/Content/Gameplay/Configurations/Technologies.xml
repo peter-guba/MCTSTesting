@@ -1,0 +1,567 @@
+﻿<?xml version="1.0"?>
+<TechnologiesConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MinExperimentChance="30" MaxExperimentChance="60" MinProgressMinChance="50" MaxProgressMaxChance="90" ExperimentFailPenalty="2" AcquiredScoreReward="1">
+  <Technologies>
+    <TechnologyData Id="0" BaseResearchCost="100">
+      <Parents />
+    </TechnologyData>
+    <TechnologyData Id="1" BaseResearchCost="100">
+      <Parents />
+    </TechnologyData>
+    <TechnologyData Id="2" BaseResearchCost="100">
+      <Parents />
+    </TechnologyData>
+    <TechnologyData Id="3" BaseResearchCost="100">
+      <Parents />
+    </TechnologyData>
+    <TechnologyData Id="4" BaseResearchCost="100">
+      <Parents />
+    </TechnologyData>
+    <TechnologyData Id="5" BaseResearchCost="100">
+      <Parents />
+    </TechnologyData>
+    <TechnologyData Id="9" BaseResearchCost="300">
+      <Parents>
+        <int>5</int>
+        <int>0</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="10" BaseResearchCost="300">
+      <Parents>
+        <int>0</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="11" BaseResearchCost="300">
+      <Parents>
+        <int>0</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="12" BaseResearchCost="300">
+      <Parents>
+        <int>0</int>
+        <int>1</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="13" BaseResearchCost="300">
+      <Parents>
+        <int>1</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="14" BaseResearchCost="300">
+      <Parents>
+        <int>1</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="15" BaseResearchCost="300">
+      <Parents>
+        <int>1</int>
+        <int>2</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="16" BaseResearchCost="300">
+      <Parents>
+        <int>2</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="17" BaseResearchCost="300">
+      <Parents>
+        <int>2</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="18" BaseResearchCost="300">
+      <Parents>
+        <int>2</int>
+        <int>3</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="19" BaseResearchCost="300">
+      <Parents>
+        <int>3</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="20" BaseResearchCost="300">
+      <Parents>
+        <int>3</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="21" BaseResearchCost="300">
+      <Parents>
+        <int>3</int>
+        <int>4</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="22" BaseResearchCost="300">
+      <Parents>
+        <int>4</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="23" BaseResearchCost="300">
+      <Parents>
+        <int>4</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="24" BaseResearchCost="300">
+      <Parents>
+        <int>4</int>
+        <int>5</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="25" BaseResearchCost="300">
+      <Parents>
+        <int>5</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="26" BaseResearchCost="300">
+      <Parents>
+        <int>5</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="27" BaseResearchCost="750">
+      <Parents>
+        <int>26</int>
+        <int>9</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="28" BaseResearchCost="750">
+      <Parents>
+        <int>9</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="29" BaseResearchCost="750">
+      <Parents>
+        <int>9</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="30" BaseResearchCost="750">
+      <Parents>
+        <int>9</int>
+        <int>10</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="31" BaseResearchCost="750">
+      <Parents>
+        <int>10</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="32" BaseResearchCost="750">
+      <Parents>
+        <int>10</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="33" BaseResearchCost="750">
+      <Parents>
+        <int>10</int>
+        <int>11</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="34" BaseResearchCost="750">
+      <Parents>
+        <int>11</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="35" BaseResearchCost="750">
+      <Parents>
+        <int>11</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="36" BaseResearchCost="750">
+      <Parents>
+        <int>11</int>
+        <int>12</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="37" BaseResearchCost="750">
+      <Parents>
+        <int>12</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="38" BaseResearchCost="750">
+      <Parents>
+        <int>12</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="39" BaseResearchCost="750">
+      <Parents>
+        <int>12</int>
+        <int>13</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="40" BaseResearchCost="750">
+      <Parents>
+        <int>13</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="41" BaseResearchCost="750">
+      <Parents>
+        <int>13</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="42" BaseResearchCost="750">
+      <Parents>
+        <int>13</int>
+        <int>14</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="43" BaseResearchCost="750">
+      <Parents>
+        <int>14</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="44" BaseResearchCost="750">
+      <Parents>
+        <int>14</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="45" BaseResearchCost="750">
+      <Parents>
+        <int>14</int>
+        <int>15</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="46" BaseResearchCost="750">
+      <Parents>
+        <int>15</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="47" BaseResearchCost="750">
+      <Parents>
+        <int>15</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="48" BaseResearchCost="750">
+      <Parents>
+        <int>15</int>
+        <int>16</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="49" BaseResearchCost="750">
+      <Parents>
+        <int>16</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="50" BaseResearchCost="750">
+      <Parents>
+        <int>16</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="51" BaseResearchCost="750">
+      <Parents>
+        <int>16</int>
+        <int>17</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="52" BaseResearchCost="750">
+      <Parents>
+        <int>17</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="53" BaseResearchCost="750">
+      <Parents>
+        <int>17</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="54" BaseResearchCost="750">
+      <Parents>
+        <int>17</int>
+        <int>18</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="55" BaseResearchCost="750">
+      <Parents>
+        <int>18</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="56" BaseResearchCost="750">
+      <Parents>
+        <int>18</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="57" BaseResearchCost="750">
+      <Parents>
+        <int>18</int>
+        <int>19</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="58" BaseResearchCost="750">
+      <Parents>
+        <int>19</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="59" BaseResearchCost="750">
+      <Parents>
+        <int>19</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="60" BaseResearchCost="750">
+      <Parents>
+        <int>19</int>
+        <int>20</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="61" BaseResearchCost="750">
+      <Parents>
+        <int>20</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="62" BaseResearchCost="750">
+      <Parents>
+        <int>20</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="63" BaseResearchCost="750">
+      <Parents>
+        <int>20</int>
+        <int>21</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="64" BaseResearchCost="750">
+      <Parents>
+        <int>21</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="65" BaseResearchCost="750">
+      <Parents>
+        <int>21</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="66" BaseResearchCost="750">
+      <Parents>
+        <int>21</int>
+        <int>22</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="67" BaseResearchCost="750">
+      <Parents>
+        <int>22</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="68" BaseResearchCost="750">
+      <Parents>
+        <int>22</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="69" BaseResearchCost="750">
+      <Parents>
+        <int>22</int>
+        <int>23</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="70" BaseResearchCost="750">
+      <Parents>
+        <int>23</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="71" BaseResearchCost="750">
+      <Parents>
+        <int>23</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="72" BaseResearchCost="750">
+      <Parents>
+        <int>23</int>
+        <int>24</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="73" BaseResearchCost="750">
+      <Parents>
+        <int>24</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="74" BaseResearchCost="750">
+      <Parents>
+        <int>24</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="75" BaseResearchCost="750">
+      <Parents>
+        <int>24</int>
+        <int>25</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="76" BaseResearchCost="750">
+      <Parents>
+        <int>25</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="77" BaseResearchCost="750">
+      <Parents>
+        <int>25</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="78" BaseResearchCost="750">
+      <Parents>
+        <int>25</int>
+        <int>26</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="79" BaseResearchCost="750">
+      <Parents>
+        <int>26</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="80" BaseResearchCost="750">
+      <Parents>
+        <int>26</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="98" BaseResearchCost="1500">
+      <Parents>
+        <int>80</int>
+        <int>27</int>
+        <int>28</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="99" BaseResearchCost="1500">
+      <Parents>
+        <int>29</int>
+        <int>30</int>
+        <int>31</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="100" BaseResearchCost="1500">
+      <Parents>
+        <int>32</int>
+        <int>33</int>
+        <int>34</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="101" BaseResearchCost="1500">
+      <Parents>
+        <int>35</int>
+        <int>36</int>
+        <int>37</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="102" BaseResearchCost="1500">
+      <Parents>
+        <int>38</int>
+        <int>39</int>
+        <int>40</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="103" BaseResearchCost="1500">
+      <Parents>
+        <int>41</int>
+        <int>42</int>
+        <int>43</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="104" BaseResearchCost="1500">
+      <Parents>
+        <int>44</int>
+        <int>45</int>
+        <int>46</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="105" BaseResearchCost="1500">
+      <Parents>
+        <int>47</int>
+        <int>48</int>
+        <int>49</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="106" BaseResearchCost="1500">
+      <Parents>
+        <int>50</int>
+        <int>51</int>
+        <int>52</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="107" BaseResearchCost="1500">
+      <Parents>
+        <int>53</int>
+        <int>54</int>
+        <int>55</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="108" BaseResearchCost="1500">
+      <Parents>
+        <int>56</int>
+        <int>57</int>
+        <int>58</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="109" BaseResearchCost="1500">
+      <Parents>
+        <int>59</int>
+        <int>60</int>
+        <int>61</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="110" BaseResearchCost="1500">
+      <Parents>
+        <int>62</int>
+        <int>63</int>
+        <int>64</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="111" BaseResearchCost="1500">
+      <Parents>
+        <int>65</int>
+        <int>66</int>
+        <int>67</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="112" BaseResearchCost="1500">
+      <Parents>
+        <int>68</int>
+        <int>69</int>
+        <int>70</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="113" BaseResearchCost="1500">
+      <Parents>
+        <int>71</int>
+        <int>72</int>
+        <int>73</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="114" BaseResearchCost="1500">
+      <Parents>
+        <int>74</int>
+        <int>75</int>
+        <int>76</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="115" BaseResearchCost="1500">
+      <Parents>
+        <int>77</int>
+        <int>78</int>
+        <int>79</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="120" BaseResearchCost="4500">
+      <Parents>
+        <int>98</int>
+        <int>99</int>
+        <int>100</int>
+        <int>101</int>
+        <int>102</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="121" BaseResearchCost="4500">
+      <Parents>
+        <int>103</int>
+        <int>104</int>
+        <int>105</int>
+        <int>106</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="122" BaseResearchCost="4500">
+      <Parents>
+        <int>107</int>
+        <int>108</int>
+        <int>109</int>
+        <int>110</int>
+        <int>111</int>
+      </Parents>
+    </TechnologyData>
+    <TechnologyData Id="123" BaseResearchCost="4500">
+      <Parents>
+        <int>112</int>
+        <int>113</int>
+        <int>114</int>
+        <int>115</int>
+      </Parents>
+    </TechnologyData>
+  </Technologies>
+</TechnologiesConfiguration>

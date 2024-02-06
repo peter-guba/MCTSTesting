@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="ExploreSystems" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <BehaviorReference ReferenceName="JumpAway" />
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+          <UnitIsInGalaxyEnvironment />
+          <FindClosestUnexploredSystem />
+          <Inverter>
+            <UnitIsInEnvTargetPosition />
+          </Inverter>
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <FindPathToEnvTarget />
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+              <UnitDestroyAction />
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <BehaviorReference ReferenceName="Explore" />
+
+    </Behaviors>
+  </Selector>
+</Behavior>

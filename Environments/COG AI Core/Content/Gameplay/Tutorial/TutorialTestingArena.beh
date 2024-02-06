@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<Behavior Name="TutorialTestingArena" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="Init" />
+
+          <CreateGameSession SessionMode="Tutorial" />
+          <AddPlayer IsAIControlled="false" RaceId="0" Energy="10000"
+                     UnitActions="All" DiplomaticActions="All">
+            <Color>
+              <R>45</R>
+              <G>100</G>
+              <B>140</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>135</R>
+              <G>182</G>
+              <B>217</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+
+          <AddPlayer IsAIControlled="true" RaceId="0" Energy="10000"
+                     UnitActions="All" DiplomaticActions="All">
+            <Color>
+              <R>213</R>
+              <G>15</G>
+              <B>255</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>221</R>
+              <G>201</G>
+              <B>174</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+
+
+          <AddPlayer IsAIControlled="true" RaceId="1" Energy="10000"
+                     UnitActions="All" DiplomaticActions="All">
+            <Color>
+              <R>213</R>
+              <G>15</G>
+              <B>0</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>221</R>
+              <G>201</G>
+              <B>174</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+
+
+          <SetSessionPlayer PlayerIndex="0" />
+
+          <CreateGalaxy GalaxyType="Spiral" GalaxyBodyCount="4" GalaxyRadius="25" GalaxyBodyMinDistance="2" PlayersMinDistance="2">
+            <StarSystems>
+              <StarSystemData Name="Skirmish" StarSpectralType="ClassG" StarName="Sun" StarTemperature="5778" StarMass="1" StarRadius="1" StarAge="4600000000" StarComfortZone="1.34" IsHomeSystem="true">
+                <Planets>
+                   <!-- <PlanetData Name="Mercury" Type="Iron" Distance="0.4" Mass="0.055" Radius="0.38" OrbitalPeriod="88" Population="0" BaseEnergy="0" />
+                   <PlanetData Name="Venus" Type="Desert" Distance="0.7" Mass="0.815" Radius="0.94" OrbitalPeriod="225" Population="0" BaseEnergy="0" PrefabName="Venus" ConstructionSlotsCount="10"/>  -->
+                  <PlanetData Name="Earth" Type="Rocky" Distance="0.4" Mass="1" Radius="1" OrbitalPeriod="350" HexDistance="8" Population="1" BaseEnergy="10" ConstructionSlotsCount="10" IsHomePlanet="true"/>
+                  <!-- <PlanetData Name="Mars" Type="Desert" Distance="1.5" Mass="0.107" Radius="0.53" OrbitalPeriod="687" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Jupiter" Type="Gas" Distance="5.2" Mass="318" Radius="11.2" OrbitalPeriod="4333" Population="0" BaseEnergy="0" PrefabName="Jupiter"/>
+                  <PlanetData Name="Saturn" Type="Gas" Distance="9.5" Mass="95" Radius="9.4" OrbitalPeriod="10759" Population="0" BaseEnergy="0" PrefabName="Saturn"/>
+                  <PlanetData Name="Uranus" Type="Ice" Distance="19.2" Mass="14" Radius="4" OrbitalPeriod="30689" Population="0" BaseEnergy="0" PrefabName="Uranus"/>
+                  <PlanetData Name="Neptune" Type="Ice" Distance="30.1" Mass="17" Radius="3.88" OrbitalPeriod="60182" Population="0" BaseEnergy="0" PrefabName="Neptune"/> -->
+                </Planets>
+              </StarSystemData>
+
+              <StarSystemData Name="HD 10180" StarSpectralType="ClassG" StarName="HD 10180" StarTemperature="5911" StarMass="1.062" StarRadius="1.2" StarAge="7300000000" StarComfortZone="1.35">
+                <Planets>
+                  <PlanetData Name="HD 10180 b" Type="Lava" Distance="0.0222" Mass="1.3" Radius="1" OrbitalPeriod="1" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 c" Type="Iron" Distance="0.0641" Mass="13" Radius="3" OrbitalPeriod="6" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 i" Type="Iron" Distance="0.0904" Mass="1.9" Radius="1.5" OrbitalPeriod="10" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 d" Type="Desert" Distance="0.1284" Mass="11.9" Radius="2.8" OrbitalPeriod="16" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 e" Type="Desert" Distance="0.270" Mass="25" Radius="4.5" OrbitalPeriod="50" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 j" Type="Desert" Distance="0.330" Mass="5.1" Radius="2" OrbitalPeriod="68" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 f" Type="Desert" Distance="0.494" Mass="22.8" Radius="4.3" OrbitalPeriod="123" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 g" Type="Rocky" Distance="1.415" Mass="22" Radius="4" OrbitalPeriod="596" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 h" Type="Gas" Distance="3.49" Mass="65.8" Radius="3.8" OrbitalPeriod="2300" Population="0" BaseEnergy="0" />
+                </Planets>
+              </StarSystemData>
+
+              <StarSystemData Name="HD 10181" StarSpectralType="ClassG" StarName="HD 10180" StarTemperature="5911" StarMass="1.062" StarRadius="1.2" StarAge="7300000000" StarComfortZone="1.35">
+                <Planets>
+                  <PlanetData Name="HD 10180 b" Type="Lava" Distance="0.0222" Mass="1.3" Radius="1" OrbitalPeriod="1" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 c" Type="Iron" Distance="0.0641" Mass="13" Radius="3" OrbitalPeriod="6" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 i" Type="Iron" Distance="0.0904" Mass="1.9" Radius="1.5" OrbitalPeriod="10" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 d" Type="Desert" Distance="0.1284" Mass="11.9" Radius="2.8" OrbitalPeriod="16" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 e" Type="Desert" Distance="0.270" Mass="25" Radius="4.5" OrbitalPeriod="50" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 j" Type="Desert" Distance="0.330" Mass="5.1" Radius="2" OrbitalPeriod="68" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 f" Type="Desert" Distance="0.494" Mass="22.8" Radius="4.3" OrbitalPeriod="123" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 g" Type="Rocky" Distance="1.415" Mass="22" Radius="4" OrbitalPeriod="596" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 h" Type="Gas" Distance="3.49" Mass="65.8" Radius="3.8" OrbitalPeriod="2300" Population="0" BaseEnergy="0" />
+                </Planets>
+              </StarSystemData>
+
+              <StarSystemData Name="HD 10182" StarSpectralType="ClassG" StarName="HD 10180" StarTemperature="5911" StarMass="1.062" StarRadius="1.2" StarAge="7300000000" StarComfortZone="1.35">
+                <Planets>
+                  <PlanetData Name="HD 10180 b" Type="Lava" Distance="0.0222" Mass="1.3" Radius="1" OrbitalPeriod="1" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 c" Type="Iron" Distance="0.0641" Mass="13" Radius="3" OrbitalPeriod="6" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 i" Type="Iron" Distance="0.0904" Mass="1.9" Radius="1.5" OrbitalPeriod="10" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 d" Type="Desert" Distance="0.1284" Mass="11.9" Radius="2.8" OrbitalPeriod="16" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 e" Type="Desert" Distance="0.270" Mass="25" Radius="4.5" OrbitalPeriod="50" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 j" Type="Desert" Distance="0.330" Mass="5.1" Radius="2" OrbitalPeriod="68" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 f" Type="Desert" Distance="0.494" Mass="22.8" Radius="4.3" OrbitalPeriod="123" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 g" Type="Rocky" Distance="1.415" Mass="22" Radius="4" OrbitalPeriod="596" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="HD 10180 h" Type="Gas" Distance="3.49" Mass="65.8" Radius="3.8" OrbitalPeriod="2300" Population="0" BaseEnergy="0" />
+                </Planets>
+              </StarSystemData>
+
+            </StarSystems>
+          </CreateGalaxy>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionStart" />
+
+          <SetHudVisibility Visibility="All" />
+          <SetInputState Enabled="true" />
+
+          <!-- <AcquireAllTechnologies /> -->
+          <SetStarSystem StarSystemName="Skirmish"/>
+
+          <!-- <AddUnit Name="Carrier" PlayerIndex="0" FactoryItemId="4" Rank="1" Q="-30" R="-30"/> -->
+
+          <!-- Player 1 -->
+          <AddUnit Name="Destroyer" PlayerIndex="1" FactoryItemId="6" Rank="1" Q="11" R="-4"/>
+          <AddUnit Name="Destroyer" PlayerIndex="1" FactoryItemId="6" Rank="1" Q="10" R="-3"/>
+          <AddUnit Name="Destroyer" PlayerIndex="1" FactoryItemId="6" Rank="1" Q="12" R="-2"/>
+          <AddUnit Name="Destroyer" PlayerIndex="1" FactoryItemId="6" Rank="1" Q="15" R="-2"/>
+          <AddUnit Name="Battleship" PlayerIndex="1" FactoryItemId="5" Rank="1" Q="15" R="-3"/>
+          <AddUnit Name="Destroyer" PlayerIndex="1" FactoryItemId="6" Rank="1" Q="11" R="-1"/>
+          <AddUnit Name="Destroyer" PlayerIndex="1" FactoryItemId="6" Rank="1" Q="11" R="-5"/>
+          <!-- <AddUnit Name="Destroyer" PlayerIndex="1" FactoryItemId="6" Rank="1" Q="11" R="-2"/> -->
+          <!-- <AddUnit Name="Frigate" PlayerIndex="1" FactoryItemId="7" Rank="1" Q="11" R="-2"/> -->
+
+          <!-- Player 2 -->
+          <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="-11" R="4"/>
+          <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="-10" R="3"/>
+          <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="-12" R="2"/>
+          <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="-15" R="2"/>
+          <AddUnit Name="Battleship" PlayerIndex="2" FactoryItemId="5" Rank="1" Q="-15" R="3"/>
+          <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="-11" R="1"/>
+          <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="-11" R="5"/>
+
+          <!-- <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="19" R="-3"/> -->
+          <!-- <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="20" R="-4"/> -->
+          <!-- <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="19" R="-5"/> -->
+          <!-- <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="20" R="-6"/> -->
+
+          <!--
+          <AddUnit Name="Battleship" PlayerIndex="2" FactoryItemId="5" Rank="1" Q="13" R="-6"/>
+          <AddUnit Name="Destroyer" PlayerIndex="2" FactoryItemId="6" Rank="1" Q="13" R="-5"/>
+          <AddUnit Name="Frigate" PlayerIndex="2" FactoryItemId="7" Rank="1" Q="13" R="-4"/>
+          -->
+
+          <SetPhase Phase="Next" />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

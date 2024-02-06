@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+  attributeFormDefault="unqualified" 
+  elementFormDefault="qualified" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:simpleType name="PlayerIndex">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="AI">
+    <xs:choice>
+      <xs:element name="Kiter" type="Kiter" />
+      <xs:element name="KiterSimple" type="KiterSimple" />
+      <xs:element name="NOKAV" type="NOKAV" />
+      <xs:element name="NOKAVSimple" type="NOKAVSimple" />
+      <xs:element name="PortfolioGreedySearch" type="PortfolioGreedySearch" />
+	  <xs:element name="FapMcts" type="FapMcts" />
+      <xs:element name="Mcts" type="Mcts" />
+	  <xs:element name="MctsHP" type="MctsHP" />
+	  <xs:element name="RQBonusMcts" type="RQBonusMcts" />
+	  <xs:element name="SigmoidMcts" type="SigmoidMcts" />
+	  <xs:element name="SimpleRegretMcts" type="SimpleRegretMcts" />
+	  <xs:element name="UcbTunedMcts" type="UcbTunedMcts" />
+	  <xs:element name="VoiMcts" type="VoiMcts" />
+	  <xs:element name="WPMcts" type="WPMcts" />
+	  <xs:element name="MixMcts" type="MixMcts" />
+      <xs:element name="RandomScriptSelector" type="RandomScriptSelector" />
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="NOKAV" />
+  <xs:complexType name="NOKAVSimple" />
+  <xs:complexType name="Kiter" />
+  <xs:complexType name="KiterSimple" />
+  <xs:complexType name="PortfolioGreedySearch">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="ImproveCount" type="xs:int" use="required" />
+    <xs:attribute name="ResponseCount" type="xs:int" use="required" />
+    <xs:attribute name="DefaultScript" type="Script" use="required" />
+    <xs:attribute name="TimeLimit" type="xs:int" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="FapMcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+	<xs:attribute name="NumOfSegments" type="xs:int" use="required" />
+	<xs:attribute name="ExponentialSegmentation" type="xs:boolean" use="required" />
+	<xs:attribute name="ExponentialMultiplication" type="xs:boolean" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="Mcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="MctsHP">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="RQBonusMcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+	<xs:attribute name="K" type="xs:double" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+	<xs:attribute name="RelativeBonusEnabled" type="xs:boolean" use="required" />
+	<xs:attribute name="QualitativeBonusEnabled" type="xs:boolean" use="required" />
+  </xs:complexType>
+  <xs:complexType name="SigmoidMcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+	<xs:attribute name="K" type="xs:double" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="SimpleRegretMcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+	<xs:attribute name="UseEpsilonGreedy" type="xs:boolean" use="required" />
+    <xs:attribute name="Epsilon" type="xs:double" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="UcbTunedMcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="VoiMcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="WPMcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+    <xs:attribute name="VB" type="xs:double" use="required" />
+    <xs:attribute name="PB" type="xs:double" use="required" />
+    <xs:attribute name="Normalize" type="xs:boolean" use="required" />
+  </xs:complexType>
+  <xs:complexType name="MixMcts">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+	  <xs:element name="Constituent" type="AI" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="MaxPlayouts" type="xs:int" use="required" />
+    <xs:attribute name="PlayoutRoundLimit" type="xs:int" use="required" />
+  </xs:complexType>
+  <xs:complexType name="RandomScriptSelector">
+    <xs:sequence>
+      <xs:element name="Script" type="Script" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Script">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NOKAV" />
+      <xs:enumeration value="Kiter" />
+      <xs:enumeration value="KiterSimple" />
+      <xs:enumeration value="NOKAVSimple" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

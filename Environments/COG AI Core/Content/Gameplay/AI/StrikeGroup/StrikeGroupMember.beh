@@ -1,0 +1,245 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="StrikeGroupMember" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsOnOrbit />
+          </Inverter>
+          <Inverter>
+            <UnitIsInDock />
+          </Inverter>
+          <Inverter>
+            <UnitIsInGalaxyEnvironment />
+          </Inverter>
+          <StrikeGroupLeaderIsInSameSystem />
+          <Inverter>
+            <StrikeGroupLeaderIsOnOrbit />
+          </Inverter>
+          <Inverter>
+            <StrikeGroupLeaderIsInDock />
+          </Inverter>
+
+          <Selector>
+            <Behaviors>
+
+              <!-- Mini Jump -->
+              <Sequence>
+                <Behaviors>
+                  <StrikeGroupLeaderMiniJumped />
+                  <SetStrikeGroupLeaderAsEnvTarget />
+                  <UnitStopMoving />
+                  <UnitMiniWarpAction />
+                </Behaviors>
+              </Sequence>
+
+              <!-- Attacking strike group leader target -->
+              <Sequence>
+                <Behaviors>
+
+                  <Succeeder>
+                    <Sequence>
+                      <Behaviors>
+
+                        <StrikeGroupLeaderIsAttacking />
+                        <SetUnitTargetInStrikeGroup />
+
+                      </Behaviors>
+                    </Sequence>
+                  </Succeeder>
+
+                  <UnitHasTarget />
+
+                  <Selector>
+                    <Behaviors>
+
+                      <Sequence>
+                        <Behaviors>
+
+                          <UnitIsTargetInRange />
+                          <UnitAttackAction />
+
+                        </Behaviors>
+                      </Sequence>
+
+                      <Sequence>
+                        <Behaviors>
+
+                          <Inverter>
+                            <UnitIsTargetInRange />
+                          </Inverter>
+                          <FindPathToTarget />
+                          <UnitMoveAction />
+
+                        </Behaviors>
+                      </Sequence>
+
+
+                    </Behaviors>
+                  </Selector>
+
+                </Behaviors>
+              </Sequence>
+
+              <!-- Moving in system view -->
+              <Sequence>
+                <Behaviors>
+
+                  <Inverter>
+                    <UnitHasTarget />
+                  </Inverter>
+                  <FindPathFormationPoint />
+                  <UnitMoveAction />
+
+                </Behaviors>
+              </Sequence>
+
+            </Behaviors>
+          </Selector>
+
+          <!-- Target reset -->
+          <Succeeder>
+            <Sequence>
+              <Behaviors>
+
+                <UnitHasTarget />
+                <UnitIsTargetDead />
+                <UnitResetTarget />
+
+              </Behaviors>
+            </Sequence>
+          </Succeeder>
+
+        </Behaviors>
+      </Sequence>
+
+      <!-- Moving in galaxy view -->
+      <Sequence>
+        <Behaviors>
+          <UnitIsInGalaxyEnvironment />
+          <StrikeGroupLeaderIsInGalaxy />
+
+          <FindPathToStrikeGroupLeader />
+          <UnitMoveAction />
+
+        </Behaviors>
+      </Sequence>
+
+      <!-- Explore -->
+      <Sequence>
+        <Behaviors>
+          <UnitIsInGalaxyEnvironment />
+          <Inverter>
+            <StrikeGroupLeaderIsInGalaxy />
+          </Inverter>
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <Inverter>
+                    <UnitIsMoving />
+                  </Inverter>
+
+                  <SetStrikeGroupLeaderSystemAsEnvTarget />
+
+                  <Inverter>
+                    <UnitIsInEnvTargetPosition />
+                  </Inverter>
+                  <FindPathToEnvTarget />
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+              <BehaviorReference ReferenceName="Explore" />
+
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <!-- Warp Jump -->
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsOnOrbit />
+          </Inverter>
+          <Inverter>
+            <UnitIsInDock />
+          </Inverter>
+          <StrikeGroupLeaderIsInGalaxy />
+
+          <UnitStopMoving />
+          <BehaviorReference ReferenceName="JumpAway" />
+
+        </Behaviors>
+      </Sequence>
+
+      <!-- Enter Orbit -->
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsOnOrbit />
+          </Inverter>
+          <StrikeGroupLeaderIsInSameSystem />
+          <StrikeGroupLeaderIsOnOrbit />
+
+          <UnitStopMoving />
+          <UnitEnterOrbitAction />
+
+        </Behaviors>
+      </Sequence>
+
+      <!-- Leave Orbit -->
+      <Sequence>
+        <Behaviors>
+          <UnitIsOnOrbit />
+          <Inverter>
+            <StrikeGroupLeaderIsOnOrbit />
+          </Inverter>
+
+          <UnitLeaveOrbitAction />
+
+        </Behaviors>
+      </Sequence>
+
+      <!-- Enter Dock -->
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsInDock />
+          </Inverter>
+          <StrikeGroupLeaderIsInDock />
+          <StrikeGroupLeaderIsInSameSystem />
+          <SetStrikeGroupLeaderDockAsTarget />
+
+          <UnitStopMoving />
+          <UnitEnterDockAction />
+          <UnitResetTarget />
+
+        </Behaviors>
+      </Sequence>
+
+      <!-- Leave Dock -->
+      <Sequence>
+        <Behaviors>
+          <UnitIsInDock />
+          <Inverter>
+            <StrikeGroupLeaderIsInDock />
+          </Inverter>
+          <Inverter>
+            <StrikeGroupIsDockUnitMember />
+          </Inverter>
+
+          <UnitLeaveDockAction />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

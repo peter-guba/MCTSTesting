@@ -1,0 +1,69 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="ScanAnomaly" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+      
+      <Sequence>
+        <Behaviors>
+          <UnitHasEnvTarget />
+          <Inverter>
+            <UnitIsInGalaxyEnvironment />
+          </Inverter>          
+          <UnitCanScan />
+          <UnitIsInEnvTargetRange />
+          <UnitScanAction />
+
+          <FindUnscannedAnomaly />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <UnitHasEnvTarget />
+
+          <Selector>
+            <Behaviors>
+
+              <Sequence>
+                <Behaviors>
+                  <UnitCanMiniJump />
+                  <UnitMiniWarpAction />
+                </Behaviors>
+              </Sequence>
+
+              <Sequence>
+                <Behaviors>
+
+                  <Inverter>
+                    <UnitOwnerCanDoUnitAction Action="MiniJump" />
+                  </Inverter>
+                  
+                  <Inverter>
+                    <UnitIsMoving />
+                  </Inverter>
+                  
+                  <Inverter>
+                    <UnitIsInEnvTargetPosition />
+                  </Inverter>
+                  <FindPathToEnvTarget />
+                  <UnitMoveAction />
+                </Behaviors>
+              </Sequence>
+
+            </Behaviors>
+          </Selector>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <FindUnscannedAnomaly />
+          <UnitDoNothingAction />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+
+</Behavior>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<PlanetConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ResourcesPopulationExponent="3" IntelligenceExponent="1.2" BaseIntelligence="5" NextPopulationModifier="0.5" BaseInfluence="5" InfluenceExponent="0.715" SiegeDefenseUnitHullThreshold="0.1" SiegeDefenseUnitHullFalloff="0.9" SiegeOffenseUnitHullThreshold="0.1" SiegeOffenseUnitHullFalloff="0.9" SiegePopulationFalloff="0.1" MaxUnitsOnOrbitPerPlayer="10" ColonizePopulationIncrease="1" ColonizeBaseEnergyIncrease="2" ColonizeBaseProductionIncrease="1" TurnsToColonize="5" ColonyShipPopulationMin="2" ColonyShipPopulation="1" MinConstructionSlots="5" MaxConstructionSlots="20" RareResourcesCoefficient="50" RareResourcesChance="75" ColonizationScoreReward="10">
+  <ResearchPopulationCoefficient>
+    <float>4</float>
+    <float>2</float>
+    <float>3</float>
+    <float>0.5</float>
+    <float>0.5</float>
+    <float>0.75</float>
+    <float>0.5</float>
+  </ResearchPopulationCoefficient>
+  <ProductionPopulationCoefficient>
+    <float>1</float>
+    <float>0.75</float>
+    <float>0.75</float>
+    <float>0.1</float>
+    <float>0.1</float>
+    <float>0.1</float>
+    <float>0.5</float>
+  </ProductionPopulationCoefficient>
+</PlanetConfiguration>

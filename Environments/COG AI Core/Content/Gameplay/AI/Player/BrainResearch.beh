@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainResearch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+      <Succeeder>
+        <PlayerResearchBehavior />
+      </Succeeder>
+
+      <Sequence>
+        <Behaviors>
+          <PlayerHasFactoryItem FactoryItemId="30" />
+          <Inverter>
+            <PlayerHasUnitType UnitTypeName="DysonSphere" />
+          </Inverter>
+          <Inverter>
+            <PlayerIsBuildingFactoryItem FactoryItemId="30" />
+          </Inverter>          
+          
+          <PlayerHasUnitType UnitTypeName="Builder" />
+          <FindUnitWithoutBehavior UnitTypeName="Builder" />
+          <PlayerSetUnitBehavior BehaviorName="UnitBrainBuilderDysonSphere" />
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

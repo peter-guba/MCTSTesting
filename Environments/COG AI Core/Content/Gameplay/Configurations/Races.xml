@@ -1,0 +1,160 @@
+﻿<?xml version="1.0"?>
+<RaceConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Races>
+    <Race Id="0" ResearchBehaviorName="BrainResearchBalanced" DefaultRelationValue="0" TradeBehaviorName="BrainTradeBalanced" Name="Humans" Description="Humans desc" StateName="Earth Union" IdOverride="255" IsPlayable="true" ExcludeInRandomSelection="false" CoreBehaviorName="BrainCoreBalanced" DiplomacyBehaviorName="BrainDiplomacyFriendly">
+      <UnitUpgrades>
+        <BaseUnitUpgrade xsi:type="HullUpgrade" Id="100" AvailRank="1" Modifier="5" UsageLimit="0" />
+      </UnitUpgrades>
+      <FactoryItems>
+        <FactoryItem Id="100" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="0" ItemType="PlanetUpgrade" RaceId="0" EnergyCostMultiplier="0" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+          <PlanetUpgradeConfig Modifier="5" ModifierType="Population" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="true">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfig>
+          <RareResourceCostModifiers>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+          </RareResourceCostModifiers>
+        </FactoryItem>
+      </FactoryItems>
+      <PlanetTypePreferences>
+        <unsignedByte>100</unsignedByte>
+        <unsignedByte>75</unsignedByte>
+        <unsignedByte>75</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+        <unsignedByte>50</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+      </PlanetTypePreferences>
+      <IncludeInRandomSelection>true</IncludeInRandomSelection>
+      <Logo BackgroundColorRed="0" BackgroundColorGreen="80" BackgroundColorBlue="130">
+        <Layers>
+          <LogoLayer ColorRed="225" ColorGreen="225" ColorBlue="225" ColorAlpha="255" TextureID="1" IsBackground="false" Rotation="0" />
+          <LogoLayer ColorRed="255" ColorGreen="180" ColorBlue="20" ColorAlpha="255" TextureID="2" IsBackground="false" Rotation="0" />
+        </Layers>
+      </Logo>
+    </Race>
+    <Race Id="1" ResearchBehaviorName="BrainResearchEconomy" DefaultRelationValue="0" TradeBehaviorName="BrainTradeBalanced" Name="Kaga" Description="Kaga desc" StateName="Kingdom of Kaga" IdOverride="255" IsPlayable="true" ExcludeInRandomSelection="false" CoreBehaviorName="BrainCoreBalanced" DiplomacyBehaviorName="BrainDiplomacyNeutral">
+      <UnitUpgrades>
+        <BaseUnitUpgrade xsi:type="WarpSpeedUpgrade" Id="102" AvailRank="1" Modifier="1" UsageLimit="0" />
+      </UnitUpgrades>
+      <FactoryItems>
+        <FactoryItem Id="1100" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="0" ItemType="PlanetUpgrade" RaceId="1" EnergyCostMultiplier="0" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+          <PlanetUpgradeConfig Modifier="5" ModifierType="Production" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="true">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfig>
+          <RareResourceCostModifiers>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+          </RareResourceCostModifiers>
+        </FactoryItem>
+      </FactoryItems>
+      <PlanetTypePreferences>
+        <unsignedByte>75</unsignedByte>
+        <unsignedByte>75</unsignedByte>
+        <unsignedByte>100</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+        <unsignedByte>50</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+      </PlanetTypePreferences>
+      <IncludeInRandomSelection>true</IncludeInRandomSelection>
+      <Logo BackgroundColorRed="175" BackgroundColorGreen="0" BackgroundColorBlue="10">
+        <Layers>
+          <LogoLayer ColorRed="225" ColorGreen="225" ColorBlue="225" ColorAlpha="255" TextureID="0" IsBackground="false" Rotation="0" />
+        </Layers>
+      </Logo>
+    </Race>
+    <Race Id="2" ResearchBehaviorName="BrainResearchAstronomy" DefaultRelationValue="0" TradeBehaviorName="BrainTradeBalanced" Name="Menron" Description="Menron desc" StateName="Menron Great Empire" IdOverride="255" IsPlayable="true" ExcludeInRandomSelection="false" CoreBehaviorName="BrainCoreAggressive" DiplomacyBehaviorName="BrainDiplomacyNeutral">
+      <UnitUpgrades>
+        <BaseUnitUpgrade xsi:type="TotalEnergyUpgrade" Id="101" AvailRank="1" Modifier="5" UsageLimit="0" />
+      </UnitUpgrades>
+      <FactoryItems>
+        <FactoryItem Id="2100" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.PercentageUpgrade" BaseProductionCost="0" ItemType="PlanetUpgrade" RaceId="2" EnergyCostMultiplier="0" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+          <PlanetUpgradeConfig Modifier="5" ModifierType="Energy" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="true">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfig>
+          <RareResourceCostModifiers>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+          </RareResourceCostModifiers>
+        </FactoryItem>
+      </FactoryItems>
+      <PlanetTypePreferences>
+        <unsignedByte>100</unsignedByte>
+        <unsignedByte>90</unsignedByte>
+        <unsignedByte>90</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+        <unsignedByte>25</unsignedByte>
+      </PlanetTypePreferences>
+      <IncludeInRandomSelection>true</IncludeInRandomSelection>
+      <Logo BackgroundColorRed="5" BackgroundColorGreen="105" BackgroundColorBlue="0">
+        <Layers>
+          <LogoLayer ColorRed="225" ColorGreen="225" ColorBlue="225" ColorAlpha="255" TextureID="3" IsBackground="true" Rotation="0" />
+          <LogoLayer ColorRed="5" ColorGreen="105" ColorBlue="0" ColorAlpha="255" TextureID="4" IsBackground="false" Rotation="0" />
+          <LogoLayer ColorRed="255" ColorGreen="180" ColorBlue="20" ColorAlpha="255" TextureID="5" IsBackground="false" Rotation="0" />
+        </Layers>
+      </Logo>
+    </Race>
+    <Race Id="3" ResearchBehaviorName="BrainResearchEnergy" DefaultRelationValue="-100" TradeBehaviorName="BrainTradeDomination" Name="Ata" Description="Ata desc" StateName="Ata Tribes" IdOverride="255" IsPlayable="true" ExcludeInRandomSelection="false" CoreBehaviorName="BrainCoreAggressive" DiplomacyBehaviorName="BrainDiplomacyHostile">
+      <UnitUpgrades>
+        <BaseUnitUpgrade xsi:type="WeaponDamageUpgrade" Id="103" AvailRank="1" Modifier="5" UsageLimit="0" />
+      </UnitUpgrades>
+      <FactoryItems>
+        <FactoryItem Id="3100" FactoryTypeName="EmptyKeys.Strategy.Environment.PlanetUpgrades.NumberUpgrade" BaseProductionCost="0" ItemType="PlanetUpgrade" RaceId="3" EnergyCostMultiplier="0" ModelRaceIdOverride="0" IsStartUpItem="true" ModelIdOverride="0" AcquiredScoreReward="0">
+          <PlanetUpgradeConfig Modifier="1" ModifierType="UnitsStartingRank" MaintenanceCost="0" IsRemovable="false" AutoUpgrade="true">
+            <Upgrades />
+            <PrerequisiteFactoryItem xsi:nil="true" />
+          </PlanetUpgradeConfig>
+          <RareResourceCostModifiers>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+            <float>0</float>
+          </RareResourceCostModifiers>
+        </FactoryItem>
+      </FactoryItems>
+      <PlanetTypePreferences>
+        <unsignedByte>90</unsignedByte>
+        <unsignedByte>90</unsignedByte>
+        <unsignedByte>75</unsignedByte>
+        <unsignedByte>50</unsignedByte>
+        <unsignedByte>50</unsignedByte>
+        <unsignedByte>50</unsignedByte>
+        <unsignedByte>50</unsignedByte>
+      </PlanetTypePreferences>
+      <IncludeInRandomSelection>true</IncludeInRandomSelection>
+      <Logo BackgroundColorRed="125" BackgroundColorGreen="20" BackgroundColorBlue="15">
+        <Layers>
+          <LogoLayer ColorRed="240" ColorGreen="120" ColorBlue="40" ColorAlpha="255" TextureID="6" IsBackground="false" Rotation="0" />
+        </Layers>
+      </Logo>
+    </Race>
+  </Races>
+</RaceConfiguration>

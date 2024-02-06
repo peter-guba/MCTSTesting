@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="SearchWeakEnemy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+
+            <UnitHasTarget />
+            <UnitIsTargetMoving />
+            <FindPathToTarget />
+            <UnitMoveAction />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+
+            <Inverter>
+              <UnitHasTarget />
+            </Inverter>
+            <FindWeakestEnemyTarget />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>      
+
+      <BehaviorReference ReferenceName="MoveToTarget" />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

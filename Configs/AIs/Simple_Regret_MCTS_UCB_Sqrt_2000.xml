@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AI>
+ <SimpleRegretMcts
+  MaxPlayouts="2000"
+  UseEpsilonGreedy="false"
+  Epsilon="0.0"
+  PlayoutRoundLimit="100"
+ >
+
+  <Script>NOKAV</Script>
+  <Script>Kiter</Script>
+
+</SimpleRegretMcts>
+</AI>

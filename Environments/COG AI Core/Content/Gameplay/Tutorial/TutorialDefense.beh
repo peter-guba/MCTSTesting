@@ -1,0 +1,154 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="TutorialDefense" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="Init" />
+
+          <CreateGameSession SessionMode="Tutorial" />
+          <AddPlayer IsAIControlled="false" RaceId="0" Energy="10000"
+                     UnitActions="All" DiplomaticActions="All">
+            <Color>
+              <R>45</R>
+              <G>100</G>
+              <B>140</B>
+              <A>255</A>
+            </Color>
+            <StrokeColor>
+              <R>135</R>
+              <G>182</G>
+              <B>217</B>
+              <A>255</A>
+            </StrokeColor>
+          </AddPlayer>
+
+          <SetSessionPlayer PlayerIndex="0" />
+
+          <CreateGalaxy GalaxyType="Spiral" GalaxyBodyCount="4" GalaxyRadius="25" GalaxyBodyMinDistance="2" PlayersMinDistance="2">
+            <StarSystems>
+              <StarSystemData Name="Solar System" StarSpectralType="ClassG" StarName="Sun" StarTemperature="5778" StarMass="1" StarRadius="1" StarAge="4600000000" StarComfortZone="1.34" IsHomeSystem="true">
+                <Planets>
+                  <PlanetData Name="Mercury" Type="Iron" Distance="0.4" Mass="0.055" Radius="0.38" OrbitalPeriod="88" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Venus" Type="Desert" Distance="0.7" Mass="0.815" Radius="0.94" OrbitalPeriod="225" Population="0" BaseEnergy="0" PrefabName="Venus" ConstructionSlotsCount="10"/>
+                  <PlanetData Name="Earth" Type="Rocky" Distance="1" Mass="1" Radius="1" OrbitalPeriod="350" HexDistance="8" Population="1" BaseEnergy="10" ConstructionSlotsCount="10" IsHomePlanet="true"/>
+                  <PlanetData Name="Mars" Type="Desert" Distance="1.5" Mass="0.107" Radius="0.53" OrbitalPeriod="687" Population="0" BaseEnergy="0" />
+                  <PlanetData Name="Jupiter" Type="Gas" Distance="5.2" Mass="318" Radius="11.2" OrbitalPeriod="4333" Population="0" BaseEnergy="0" PrefabName="Jupiter"/>
+                  <PlanetData Name="Saturn" Type="Gas" Distance="9.5" Mass="95" Radius="9.4" OrbitalPeriod="10759" Population="0" BaseEnergy="0" PrefabName="Saturn"/>
+                  <PlanetData Name="Uranus" Type="Ice" Distance="19.2" Mass="14" Radius="4" OrbitalPeriod="30689" Population="0" BaseEnergy="0" PrefabName="Uranus"/>
+                  <PlanetData Name="Neptune" Type="Ice" Distance="30.1" Mass="17" Radius="3.88" OrbitalPeriod="60182" Population="0" BaseEnergy="0" PrefabName="Neptune"/>
+                </Planets>
+              </StarSystemData>              
+
+            </StarSystems>
+          </CreateGalaxy>
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionStart" />
+
+          <SetHudVisibility Visibility="All" />
+          <CreateTutorialWindow Top="400" Left="10" />
+          <SetInputState Enabled="true" />
+
+          <AcquireAllTechnologies />
+          <SetStarSystem StarSystemName="Solar System"/>
+          
+          <AddUnit Name="Builder" PlayerIndex="0" FactoryItemId="2" Rank="1" Q="9" R="-7"/>
+          <SetSelectedUnit UnitName="Builder" />          
+          
+          <SetPhase Phase="PhaseIntro" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseIntro" />          
+          <SetTutorialWindow TutorialTextResourceKey="TutorialDefense_Intro_Text" NextPhase="PhaseBuildTower" />          
+          <SetPhase Phase="PhaseIntro_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseBuildTower" />
+          <GiveResourcesToPlayer PlayerIndex="0" Amount="10000" />
+          <SetSelectedUnit UnitName="Builder" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialDefense_BuildTower" IsNextButtonVisible="false" />          
+          <SetPhase Phase="PhaseBuildTower_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseBuildTower_InProgress" />
+          <HasUnit PlayerIndex="0" UnitTypeName="DefenseTowerUnit" />
+          <SetPhase Phase="PhaseTower" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseTower" />
+          <SetSelectedUnit UnitTypeName="DefenseTowerUnit"/>
+          <SetTutorialWindow TutorialTextResourceKey="TutorialDefense_Tower" NextPhase="PhaseRange" />
+          <SetPhase Phase="PhaseTower_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseRange" />
+          <SetSelectedUnit UnitName="Builder" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialDefense_Range" NextPhase="PhaseBuildStation" />
+          <SetPhase Phase="PhaseRange_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseBuildStation" />          
+          <SetSelectedUnit UnitName="Builder" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialDefense_BuildStation" IsNextButtonVisible="false" />
+          <SetPhase Phase="PhaseBuildStation_InProgress" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="PhaseBuildStation_InProgress" />
+          <HasUnit PlayerIndex="0" UnitTypeName="Station" />
+          <SetPhase Phase="SessionEnd" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="SessionEnd" />
+          <SetTutorialWindow TutorialTextResourceKey="TutorialDefense_SessionEnd_Text" NextPhase="BackToMenu" />
+          <SetPhase Phase="SessionEnd_InProgress" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>
+          <IsPhaseActive Phase="BackToMenu" />
+          <BackToMainMenu />
+
+        </Behaviors>
+      </Sequence>
+
+    </Behaviors>
+  </Selector>
+</Behavior>

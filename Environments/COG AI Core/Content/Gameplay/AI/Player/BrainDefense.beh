@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainDefense" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Sequence>
+    <Behaviors>
+      <PlayerHasEnergyForUnitMaintenance ItemTypeName="DefenseTowerUnit"/>      
+
+      <Succeeder>
+        <RepeatUntilFail>
+          <Sequence>
+            <Behaviors>
+
+              <FindSystemWithoutDefense />
+              <PlayerSetUnitBehavior BehaviorName="UnitBrainBuilderTower" />
+
+            </Behaviors>
+          </Sequence>
+        </RepeatUntilFail>
+      </Succeeder>
+
+      <Sequence>
+        <Behaviors>
+          <PlayerHasEnoughResources />
+          
+          <Succeeder>
+            <RepeatUntilFail>
+              <Sequence>
+                <Behaviors>
+
+                  <PlayerHasUnitType UnitTypeName="Builder" />
+                  <FindUnitWithoutBehavior UnitTypeName="Builder" />
+                  <PlayerSetUnitBehavior BehaviorName="UnitBrainBuilderTower" />
+
+                </Behaviors>
+              </Sequence>
+            </RepeatUntilFail>
+          </Succeeder>
+
+        </Behaviors>
+      </Sequence>
+      
+    </Behaviors>
+  </Sequence>
+</Behavior>

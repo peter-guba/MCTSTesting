@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Behavior Name="TaskAttackSystem" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Sequence>
+    <Behaviors>
+      <Sequence>
+        <Behaviors>
+          <FindRegroupTarget/>
+          <Inverter>
+            <IsSquadRegrouped/>
+          </Inverter>
+          <SquadRegroup/>
+        </Behaviors>
+      </Sequence>
+      <Sequence>
+        <Behaviors>
+          <FindRegroupTarget/>
+          <IsSquadRegrouped/>
+          <FindAttackTarget/>
+          <SquadAttackSystem/>
+        </Behaviors>
+      </Sequence>
+    </Behaviors>
+  </Sequence>
+</Behavior>

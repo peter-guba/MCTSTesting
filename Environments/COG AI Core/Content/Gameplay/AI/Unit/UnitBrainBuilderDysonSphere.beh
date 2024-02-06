@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainBuilderDysonSphere" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+          <UnitCanBuild />
+          <UnitResetBehavior />
+          <UnitBuildAction UnitTypeName="DysonSphere" UnitBehaviorName="UnitBrainDysonSphere" />
+        </Behaviors>
+      </Sequence>
+
+      <Sequence>
+        <Behaviors>          
+          <Inverter>
+            <UnitIsMoving />
+          </Inverter>
+          <SetStarAsEnvTarget />
+          <FindPathToEnvTarget />
+          <UnitMoveAction />
+        </Behaviors>
+      </Sequence>
+
+
+    </Behaviors>
+  </Selector>
+</Behavior>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0"?>
+<PlanetTypeConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Radius>
+    <PlanetTypeMixMaxValue PlanetType="Rocky" Minimum="0.5" Maximum="2" />
+    <PlanetTypeMixMaxValue PlanetType="Desert" Minimum="0.5" Maximum="2" />
+    <PlanetTypeMixMaxValue PlanetType="Ocean" Minimum="0.5" Maximum="2" />
+    <PlanetTypeMixMaxValue PlanetType="Gas" Minimum="6" Maximum="20" />
+    <PlanetTypeMixMaxValue PlanetType="Ice" Minimum="2" Maximum="6" />
+    <PlanetTypeMixMaxValue PlanetType="Lava" Minimum="0.2" Maximum="0.5" />
+    <PlanetTypeMixMaxValue PlanetType="Iron" Minimum="0.2" Maximum="0.5" />
+  </Radius>
+  <Mass>
+    <PlanetTypeMixMaxValue PlanetType="Rocky" Minimum="0.5" Maximum="10" />
+    <PlanetTypeMixMaxValue PlanetType="Desert" Minimum="0.5" Maximum="10" />
+    <PlanetTypeMixMaxValue PlanetType="Ocean" Minimum="0.5" Maximum="10" />
+    <PlanetTypeMixMaxValue PlanetType="Gas" Minimum="50" Maximum="400" />
+    <PlanetTypeMixMaxValue PlanetType="Ice" Minimum="10" Maximum="20" />
+    <PlanetTypeMixMaxValue PlanetType="Lava" Minimum="0.02" Maximum="0.5" />
+    <PlanetTypeMixMaxValue PlanetType="Iron" Minimum="0.02" Maximum="0.5" />
+  </Mass>
+  <PlanetTypesProportion>
+    <ProportionValueOfPlanetType Proportion="0.05" Value="Iron" />
+    <ProportionValueOfPlanetType Proportion="0.05" Value="Lava" />
+    <ProportionValueOfPlanetType Proportion="0.14" Value="Rocky" />
+    <ProportionValueOfPlanetType Proportion="0.13" Value="Desert" />
+    <ProportionValueOfPlanetType Proportion="0.13" Value="Ocean" />
+    <ProportionValueOfPlanetType Proportion="0.4" Value="Ice" />
+    <ProportionValueOfPlanetType Proportion="0.1" Value="Gas" />
+  </PlanetTypesProportion>
+  <BaseResourceCoefficient>
+    <float>4</float>
+    <float>2</float>
+    <float>4</float>
+    <float>3</float>
+    <float>3</float>
+    <float>2</float>
+    <float>2</float>
+  </BaseResourceCoefficient>
+  <BaseProductionCoefficient>
+    <float>3</float>
+    <float>3</float>
+    <float>3</float>
+    <float>0.5</float>
+    <float>2</float>
+    <float>4</float>
+    <float>4</float>
+  </BaseProductionCoefficient>
+  <BaseEnergyCoefficient>
+    <float>1</float>
+    <float>1</float>
+    <float>1</float>
+    <float>0.2</float>
+    <float>0.2</float>
+    <float>10</float>
+    <float>1</float>
+  </BaseEnergyCoefficient>
+</PlanetTypeConfiguration>

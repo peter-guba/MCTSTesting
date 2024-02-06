@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="BrainTradeDomination" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <Succeeder>
+        <RepeatUntilFail>
+          <Sequence>
+            <Behaviors>
+
+              <FindTradeUnitWithoutRoute />
+
+              <Sequence>
+                <Behaviors>
+                  <PlayerSetTradeRoute IncludeDomestic="true" IncludeGlobal="false" AutoRenew="true" TradeBallance="1" />
+
+                  <PlayerSetUnitBehavior BehaviorName="FindTradeRouteSystem"/>
+                </Behaviors>
+              </Sequence>
+
+            </Behaviors>
+          </Sequence>
+        </RepeatUntilFail>
+      </Succeeder>
+
+      <PlayerNeedsTradeShip RouteShipRatio="0.75" />
+      <FindPlanetForBuild PlanetWithTradeRoute="true" IgnoreBehaviorName="BuildTradeShip"/>
+      <PlayerSetPlanetBehavior BehaviorName="BuildTradeShip" />
+
+    </Behaviors>
+  </Sequence>
+</Behavior>

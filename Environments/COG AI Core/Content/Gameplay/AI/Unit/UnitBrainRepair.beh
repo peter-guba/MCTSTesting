@@ -1,0 +1,79 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="UnitBrainRepair" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Selector>
+    <Behaviors>
+
+      <Sequence>
+        <Behaviors>
+
+          <UnitIsHullAbove HullPercentage="0.99" />
+
+          <DecisionTree>
+            <Branch Name="Root" GoalPercentage="1" >
+              <Children>
+                <Branch Name="Agressive" GoalPercentage="0.7" >
+                  <Children>
+                    <UnitBehaviorLeaf BehaviorName="UnitBrainAggressive" />
+                  </Children>
+                </Branch>
+                <Branch Name="Defensive" GoalPercentage="0.3" >
+                  <Children>
+                    <UnitBehaviorLeaf BehaviorName="UnitBrainDefensive" />
+                  </Children>
+                </Branch>
+              </Children>
+            </Branch>
+          </DecisionTree>
+
+        </Behaviors>
+      </Sequence>      
+      
+      <Sequence>
+        <Behaviors>
+          <Inverter>
+            <UnitIsInGalaxyEnvironment />
+          </Inverter>
+
+          <BehaviorReference ReferenceName="FindPlanetAndEnterOrbit" />
+
+        </Behaviors>
+      </Sequence>
+
+      <Selector>
+        <Behaviors>
+
+          <Sequence>
+            <Behaviors>
+            
+              <BehaviorReference ReferenceName="JumpAway" />
+              <UnitResetTarget />
+              
+            </Behaviors>
+          </Sequence>
+
+          <BehaviorReference ReferenceName="MoveAwayFromTarget" />
+
+          <Sequence>
+            <Behaviors>
+
+              <Inverter>
+                <UnitIsMoving />
+              </Inverter>
+              <UnitIsInGalaxyEnvironment />
+              <FindClosestFriendlySystem />
+              <FindPathToEnvTarget />
+              <UnitMoveAction />
+
+            </Behaviors>
+          </Sequence>
+
+          <BehaviorReference ReferenceName="Explore" />
+
+        </Behaviors>
+      </Selector>
+
+    </Behaviors>
+  </Selector>
+
+</Behavior>

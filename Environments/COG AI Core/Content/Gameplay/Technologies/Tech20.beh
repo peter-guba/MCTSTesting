@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="Tech20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+      <AddPlanetBonus PlanetUpgradeType="Research" BonusValue="1" IsFlatBonus="true">
+        <PlanetType>Ocean</PlanetType>
+      </AddPlanetBonus>
+      <AddPlanetBonus PlanetUpgradeType="Research" BonusValue="1" IsFlatBonus="true">
+        <PlanetType>Desert</PlanetType>
+      </AddPlanetBonus>
+      <AddExperimentChance Increment="5"/>
+    </Behaviors>
+  </Sequence>
+</Behavior>

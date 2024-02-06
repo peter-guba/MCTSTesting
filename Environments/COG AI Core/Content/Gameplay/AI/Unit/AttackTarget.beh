@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<Behavior Name="AttackTarget" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sequence>
+    <Behaviors>
+
+      <UnitHasTarget />      
+
+      <Selector>
+        <Behaviors>
+          
+          <UnitIsTargetInRange />          
+          <FindEnemyTargetInRange />
+          
+        </Behaviors>
+      </Selector>
+      
+      <UnitAttackAction />
+
+      <Succeeder>
+        <Sequence>
+          <Behaviors>
+
+            <UnitIsTargetDead />
+            <UnitResetTarget />
+
+          </Behaviors>
+        </Sequence>
+      </Succeeder>      
+      
+    </Behaviors>
+  </Sequence>
+</Behavior>
