@@ -1,0 +1,125 @@
+The program needs a config file (simply called config.txt) from which it reads the addresses of the folders where the C# scripts and xml files are stored. If this file does not exist, or the data in it is invalid, the program will prompt the user to enter the paths to the aforementioned folders at the beginning. Otherwise, this step is skipped and the user can use the program directly (by entering the following commands). If the user types the string "quit" and presses enter instead of entering the folder addresses, the program will shut down.
+
+The following commands are available to the user:
+
+------------------------------------------------------------------------------------------
+
+makeai
+This command is used to create an xml file corresponding to the AI based on the Monte Carlo Tree Search algorithm. This file should contain the values of several parameters of this AI. The command takes the following arguments:
+1.	The name of the C# script from which the xml file is to be made. This parameter must be specified first, the rest can be in any order. The script must be specified without the ".cs" extension.
+2.	List of arguments from the C# class constructor to be omitted when creating the xml file. The beginning of this list is specified by the -e flag. The list continues until the next flag, or until the end of the arguments. This argument is optional, the default is an empty list.
+3.	A list of C# types whose instances are allowed to be stored in the xml file. The beginning of this list is specified by the -p flag. The list continues until the next flag, or until the end of the arguments. This argument is optional, the default list contains int and double.
+4.	A list of script names that the corresponding xml file's AI should have in its portfolio. The beginning of this list is specified by the -s flag. The list continues until the next flag, or until the end of the arguments. This argument is optional, the default is an empty list.
+
+If the specified C# script cannot be found, the program informs the user. If everything is successful, the program prompts the user to enter the values of all parameters and then the file name. When the file name is entered, it is checked to see if the name is allowed and whether a file with such a name doesn't already exist. After the xml file is created, the program informs the user of success.
+
+Example of correct usage:
+makeai MyAIFile -s NOKAV Kiter -e undesirableArg1 undesirableArg2
+
+------------------------------------------------------------------------------------------
+
+makemix
+Creates a mixed AI xml file from multiple supplied basic AI files. A mix AI is an that is a combination of various different algorithms. The supplied files have to be basic (not mixes themselves), have to be stored in the AI folder and have to be supplied without the ".xml" suffix. The last argument is the name of the resulting file.
+
+Example of correct usage:
+makemix MyAIFile1 MyAIFile2 resultingFileName
+
+------------------------------------------------------------------------------------------
+
+makebmrk
+This command is used to create an xml file corresponding to a benchmark for two AI files. It takes as arguments the names of the two AI files from which the benchmark file is to be created. The file names are specified without the xml extension. If one of the specified files does not exist, the program informs the user. The program attempts to create a file named "first_file_name_vs_second_file_name". If such a file already exists, it informs the user and asks him if he wants to overwrite it. The new name, if any, is then checked again for correctness and whether it overlaps with the name of an existing file.
+
+Example of correct usage:
+makebmrk AIFile1 AIFile2
+
+------------------------------------------------------------------------------------------
+
+makebmrks
+Takes any number of regexes as parameters and creates all possible combinations from the AI files that match the regexes.
+
+Example of correct usage:
+makebmrks (.*)MCTS_100 (.*)MCTS_500
+
+------------------------------------------------------------------------------------------
+
+makemnb
+Creates mixed AI xml files from combinations listed in a supplied file. It then also creates benchmarks where these mixes are pitted against their constituent parts. All the supplied arguments are accumulated into a single path.
+
+Example of correct usage:
+makemnb C:\Users\user_name\folder with space in name\sourceFile.txt
+
+------------------------------------------------------------------------------------------
+
+makebset
+With this command, the user can create a file corresponding to a set of benchmarks to be run one by one. This command takes as arguments a list of regexes, which are then mapped to the files in the benchmarks folder. The program appends the .xml extension to the regexes, so the user should omit it. After entering the command, the program will ask the user what the new file should be called. For the given name, the program will check if it is OK and if a file with that name does not already exist.
+
+Example of correct usage:
+makebset (.*)MCTS Kiter
+
+------------------------------------------------------------------------------------------
+
+makebsets
+Creates a benchmark set for every pair of MCTS algorithms from the AI folder. The files have to have MCTS in their name and the corresponding benchmarks have to already exist (so, the program first goes over the AIs in the AI folder, gathers their names, then looks for benchmarks that consist of both names and puts them into a benchmark set). This command doesn't take any arguments.
+
+Example of correct usage:
+makebsets
+
+------------------------------------------------------------------------------------------
+
+delete
+Allows you to delete certain files. When finished, it informs the user how many files have been deleted successfully and how many have failed. The command takes the following arguments:
+1. The location from which the program should delete files (ai/benchmark/set depending on whether files corresponding to ai's, benchmarks or benchmark sets are to be deleted). This argument must be the first argument.
+2. The list of regexes to which files from the specified folder will be matched and then all matched files will be deleted.
+
+Example of correct usage:
+delete ai (.*)MCTS_100 Kiter_([0-9]*)
+
+------------------------------------------------------------------------------------------
+
+change
+Used to change entries in xml files. When finished, it informs the user how many files have been changed successfully and how many have failed. The command takes the following arguments, in the order in which they are listed:
+1. The location in which to change the files (ai/benchmark/set, depending on whether the files corresponding to AIs, benchmarks, or benchmark sets are to be changed).
+2. The name of the item to be changed.
+3. The new value of this item.
+4. Specification whether it is an attribute or an element (attr/elem).
+5. The occurrence number of the variable to be changed.
+6. An arbitrary number of regular expressions to which to map the files to be changed.
+
+Example of correct usage:
+change benchmark Script Kiter elem 3 (.*)MCTS
+
+------------------------------------------------------------------------------------------
+
+sethome
+Changes the path to the folder where the xml files are located (this path is changed within the program as well as in the config file). Takes only one argument - the new path to the home folder.
+
+Example of correct usage:
+sethome C:\Users\user_name\C++ programs
+
+------------------------------------------------------------------------------------------
+
+setscripts
+Changes the path to the C# scripts folder. Takes only one argument - the new path to this folder.
+
+Example of correct usage:
+setscripts C:\Users\user_name\C# programs
+
+------------------------------------------------------------------------------------------
+
+help
+Displays a list of possible commands with short explanations. It does not take any arguments.
+
+Example of correct usage:
+help
+
+------------------------------------------------------------------------------------------
+
+quit
+Quits the program.
+
+Example of correct usage:
+quit
+
+------------------------------------------------------------------------------------------
+
+If the program detects an incorrect number of arguments for a command or an error in a parameter, it informs the user and aborts the execution of the command.

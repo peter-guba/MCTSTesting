@@ -48,8 +48,12 @@ void CommandProcessor::ProcessCommand(const vector<string>& args) {
 		ChangeTextToWhite();
 		cout << "Possible commands are:" << endl;
 		cout << "makeai     (Creates an xml file corresponding to an AI.)" << endl;
+		cout << "makemix    (Creates an xml file corresponding to a mixed AI.)" << endl;
 		cout << "makebmrk   (Creates a benchmark xml file.)" << endl;
+		cout << "makebmrks  (Creates all possible benchmark combinations from files that match the given regexes.)" << endl;
+		cout << "makemnb    (Creates mixed AI xml files from combinations listed in a supplied file as well as benchmarks where these mixes are pitted against their constituent parts.)" << endl;
 		cout << "makebset   (Creates a benchmark set xml file.)" << endl;
+		cout << "makebsets  (Creates a benchmark set for every pair of MCTS algorithms from the AI folder.)" << endl;
 		cout << "delete     (Deletes files matched by given regexes.)" << endl;
 		cout << "change     (Changes a given value in files matched by given regexes.)" << endl;
 		cout << "sethome    (Sets the home directory.)" << endl;
